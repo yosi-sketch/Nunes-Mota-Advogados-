@@ -1,22 +1,27 @@
-# Dra. Ângela Maria Gonçalves Rabelo | Advocacia, Consultoria & Assessoria Jurídica
+# Mariana Corsi Advocacia Previdenciária
 
-Landing page e site institucional de altíssimo padrão desenvolvido em Next.js 16 (App Router), Tailwind CSS v4 e Framer Motion para a **Dra. Ângela Maria Gonçalves Rabelo — Advocacia, Consultoria & Assessoria Jurídica** em Cláudio - MG e com atuação em todo o Brasil.
+Landing page e site institucional de altíssimo padrão desenvolvido em Next.js (App Router), Tailwind CSS v4 e Framer Motion para **Mariana Corsi Advocacia Previdenciária** em Pitangui - MG e com atendimento online em todo o Brasil.
 
-## ⚖️ Dados da Cliente
+## ⚖️ Dados da Profissional / Escritório
 
-- **Profissional / Escritório:** Dra. Ângela Maria Gonçalves Rabelo — Advocacia, Consultoria & Assessoria Jurídica
-- **Advogada Titular:** Dra. Ângela Maria Gonçalves Rabelo
-- **Slogan:** Comprometimento ético, profundo conhecimento jurídico e atendimento humanizado e combativo
-- **Localização:** Praça Levy Vitói de Freitas, n° 28 - Sl 303 - Centro, Cláudio - MG, 35530-000
-- **WhatsApp / Telefone:** (37) 99921-8631
-- **E-mail:** contato@angelamaria.adv.br
-- **Avaliações:** 5,0 ★ no Google (35 avaliações)
-- **Instagram:** [@angelamaria.advocacia](https://www.instagram.com/angelamaria.advocacia/)
+- **Nome Institucional:** Mariana Corsi Advocacia Previdenciária
+- **Advogada Titular:** Dra. Mariana Corsi
+- **Slogan / Posicionamento:** "Direito Previdenciário sem complicação. Cuidado com as pessoas, rigor técnico e agilidade para conquistar o seu melhor benefício do INSS."
+- **Localização:** R. Martinho Campos, 162 - Centro, Pitangui - MG, 35650-000
+- **WhatsApp / Telefone:** (38) 99930-8575 (`https://wa.me/5538999308575`)
+- **E-mail:** contato@marianacorsi.adv.br
+- **Avaliações:** 5,0 ★ no Google (29 avaliações)
+- **Instagram:** [@marianamunizcorsi](https://www.instagram.com/marianamunizcorsi/) (+3.170 seguidores)
 
-## 🎨 Identidade Visual
+## 🎨 Identidade Visual (Baseada no Logo)
 
-- **Paleta de Cores:** Carmine Ruby Red (`#b81424`, `#dc2626`, `#7a0812`, `#fda4af`) e Charcoal Obsidian & Carbon Noir (`#0a0d12`, `#0e1218`, `#141923`), combinados com superfícies em Silk Pearl & Pure White (`#ffffff`, `#f9fafb`, `#f1f4f8`) e detalhes metálicos em Platinum & Titanium (`#cbd5e1`, `#e2e8f0`).
-- **Tipografia:** Cinzel (`font-cinzel`), Playfair Display (`font-serif`) e Plus Jakarta Sans (`font-sans`).
+- **Paleta de Cores:**
+  - **Ouro Polido Imperial / Warm Gold:** `#c5a059` (primário), `#dfb967` (claro iluminado), `#ab8438` (rico sombreado), `#83591c` (profundo)
+  - **Midnight Royal Navy / Safira Noturno:** `#060f1e` (profundo), `#0a1628` (fundo principal nobre), `#0e1f38` (cards), `#162d4e` (hover), `#1e385c` (bordas)
+  - **Superfícies em Silk Pearl & Pure White:** `#ffffff`, `#faf9f6`, `#f3f4f6`
+- **Tipografia:**
+  - **Títulos:** Cinzel (`font-cinzel`), Playfair Display (`font-serif`)
+  - **Corpo & Interface:** Plus Jakarta Sans (`font-sans`)
 - **Assets:** Extraídos do logo oficial e organizados na pasta `public/` e `app/`.
 
 ## 🚀 Como Executar

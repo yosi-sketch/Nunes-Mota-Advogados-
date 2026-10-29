@@ -1,19 +1,37 @@
 Add-Type -AssemblyName System.Drawing
 
-$srcLogoPath = "C:\Users\matheus\.gemini\antigravity\brain\5a692096-e004-49db-abe4-dc4705733665\.user_uploaded\media_1793302691894_4b71df1b.png"
-$publicDir = "p:\Work\teste de oferta\página de vendas\antigravity\2Ângela Maria Gonçalves Rabelo — Advogada\public"
-$appDir = "p:\Work\teste de oferta\página de vendas\antigravity\2Ângela Maria Gonçalves Rabelo — Advogada\app"
+$srcLogoPath = "C:\Users\matheus\.gemini\antigravity\brain\dc7d0b50-83d9-4e54-97ae-a4cadae5c0ac\.user_uploaded\media_1793305350867_b63d1b88.png"
+$srcPhotoPath = "C:\Users\matheus\.gemini\antigravity\brain\dc7d0b50-83d9-4e54-97ae-a4cadae5c0ac\.user_uploaded\media_1793305344264_68f83446.jpg"
 
+$publicDir = "p:\Work\teste de oferta\página de vendas\antigravity\2Mariana Corsi Advocacia\public"
+$appDir = "p:\Work\teste de oferta\página de vendas\antigravity\2Mariana Corsi Advocacia\app"
+
+if (-not (Test-Path $publicDir)) {
+    New-Item -ItemType Directory -Path $publicDir -Force | Out-Null
+}
+
+# 1. Copy source logo as public\logo.png
+Copy-Item -Path $srcLogoPath -Destination "$publicDir\logo.png" -Force
+Write-Host "Saved $publicDir\logo.png"
+
+# 2. Copy source photo as mariana-corsi.jpg, hero-advogada.jpg, and sobre-advogada.jpg
+Copy-Item -Path $srcPhotoPath -Destination "$publicDir\mariana-corsi.jpg" -Force
+Copy-Item -Path $srcPhotoPath -Destination "$publicDir\hero-advogada.jpg" -Force
+Copy-Item -Path $srcPhotoPath -Destination "$publicDir\sobre-advogada.jpg" -Force
+Write-Host "Saved photo assets in public"
+
+# 3. Crop MC monogram
 $logoBmp = [System.Drawing.Bitmap]::FromFile($srcLogoPath)
 
-# Monogram bounds: X=[398, 622] (width 225), Y=[14, 205] (height 192)
-# Center: X = 510, Y = 109.5
-[int]$cropW = 236
-[int]$cropH = 202
-[int]$srcX = 393
-[int]$srcY = 9
+# Bounding box of MC monogram based on scan:
+# X from ~288 to ~744 (width ~456)
+# Y from ~68 to ~434 (height ~366)
+[int]$cropX = 286
+[int]$cropY = 66
+[int]$cropW = 460
+[int]$cropH = 370
 
-$srcCropRect = New-Object System.Drawing.Rectangle($srcX, $srcY, $cropW, $cropH)
+$srcCropRect = New-Object System.Drawing.Rectangle($cropX, $cropY, $cropW, $cropH)
 
 # Create 512x512 transparent symbol
 $symBmp = New-Object System.Drawing.Bitmap(512, 512, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
@@ -23,9 +41,9 @@ $gSym.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::HighQuality
 $gSym.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
 $gSym.Clear([System.Drawing.Color]::Transparent)
 
-# Fit into 512x512 with equal aspect ratio
+# Fit into 512x512
 [int]$destW = 440
-[int]$destH = [int](($cropH / $cropW) * $destW) # ~376
+[int]$destH = [int](($cropH / $cropW) * $destW) # ~354
 [int]$destX = [int]((512 - $destW) / 2)
 [int]$destY = [int]((512 - $destH) / 2)
 
@@ -34,9 +52,9 @@ $gSym.DrawImage($logoBmp, $destSymRect, $srcCropRect, [System.Drawing.GraphicsUn
 $gSym.Dispose()
 
 $symBmp.Save("$publicDir\logo-symbol.png", [System.Drawing.Imaging.ImageFormat]::Png)
-Write-Host "Created $publicDir\logo-symbol.png with perfect monogram crop"
+Write-Host "Saved $publicDir\logo-symbol.png"
 
-# Multi-resolution favicons
+# 4. Multi-resolution Favicons
 function CreateFaviconIcon([int]$size, [string]$outPath) {
     $iconBmp = New-Object System.Drawing.Bitmap($size, $size, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
     $g = [System.Drawing.Graphics]::FromImage($iconBmp)
@@ -45,19 +63,19 @@ function CreateFaviconIcon([int]$size, [string]$outPath) {
     $g.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
     $g.Clear([System.Drawing.Color]::Transparent)
 
-    # Rounded luxury dark charcoal badge (#0b0e14)
-    $bgBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(255, 11, 14, 20))
+    # Rounded luxury navy background (#07101E)
+    $bgBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(255, 7, 16, 30))
     $g.FillEllipse($bgBrush, 0, 0, $size, $size)
     $bgBrush.Dispose()
 
-    # Outer border ring in ruby carmine (#B81424)
-    [double]$penWidth = [Math]::Max(1.0, [double]$size / 22.0)
-    $rubyPen = New-Object System.Drawing.Pen([System.Drawing.Color]::FromArgb(255, 184, 20, 36), [float]$penWidth)
-    $g.DrawEllipse($rubyPen, 1, 1, [int]($size - 2), [int]($size - 2))
-    $rubyPen.Dispose()
+    # Outer border ring in warm gold (#C5A059)
+    [double]$penWidth = [Math]::Max(1.0, [double]$size / 20.0)
+    $goldPen = New-Object System.Drawing.Pen([System.Drawing.Color]::FromArgb(255, 197, 160, 89), [float]$penWidth)
+    $g.DrawEllipse($goldPen, 1, 1, [int]($size - 2), [int]($size - 2))
+    $goldPen.Dispose()
 
     # Draw monogram symbol inside
-    [int]$pad = [int]($size * 0.14)
+    [int]$pad = [int]($size * 0.15)
     [int]$innerW = [int]($size - ($pad * 2))
     [int]$innerH = [int]($innerW * ($destH / $destW))
     [int]$innerX = $pad
@@ -87,7 +105,6 @@ $icoBmp = New-Object System.Drawing.Bitmap("$publicDir\favicon-32x32.png")
 $icoHicon = $icoBmp.GetHicon()
 $iconObj = [System.Drawing.Icon]::FromHandle($icoHicon)
 
-# Remove old favicon files first to prevent lock/append issues
 if (Test-Path "$publicDir\favicon.ico") { Remove-Item "$publicDir\favicon.ico" -Force }
 if (Test-Path "$appDir\favicon.ico") { Remove-Item "$appDir\favicon.ico" -Force }
 

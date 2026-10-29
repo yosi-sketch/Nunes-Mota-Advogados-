@@ -3,67 +3,64 @@
 :root {
   color-scheme: light dark;
   
-  /* Primary Contrast: Obsidian Noir Charcoal & Silk Pearl */
-  --color-black-pure: #0a0d12;
-  --color-black-surface: #0e1218;
-  --color-black-card: #131822;
-  --color-black-hover: #1a2230;
+  /* Primary Midnight Navy (Safira Noturno Base) */
+  --color-black-pure: #060f1e;
+  --color-black-surface: #0a1628;
+  --color-black-card: #0e1f38;
+  --color-black-hover: #162d4e;
 
   --color-white-pure: #ffffff;
-  --color-white-surface: #f9fafb;
+  --color-white-surface: #faf9f6;
   --color-white-card: #ffffff;
-  --color-white-muted: #f1f4f8;
+  --color-white-muted: #f3f4f6;
 
-  /* Primary Logo Signature: Carmine Ruby Red (Dra. Ângela Maria Gonçalves Rabelo) */
-  --brand-ruby-blush: #fff1f2;
-  --brand-ruby-light: #fecdd3;
-  --brand-ruby-accent: #f43f5e;
-  --brand-ruby-vibrant: #dc2626;
-  --brand-ruby-primary: #b81424;
-  --brand-ruby-rich: #9e0b19;
-  --brand-ruby-deep: #7a0812;
-  --brand-ruby-noir: #42040a;
+  /* Primary Logo Accent: Polished Warm Gold (Mariana Corsi) */
+  --brand-gold-shimmer: #fdfaf2;
+  --brand-gold-blush: #fbf5e6;
+  --brand-gold-light: #f3dfa7;
+  --brand-gold-accent: #dfb967;
+  --brand-gold-primary: #c5a059;
+  --brand-gold-rich: #a88238;
+  --brand-gold-deep: #83591c;
+  --brand-gold-dark: #4e340c;
 
-  /* Secondary Brand Accent: Executive Prestige Charcoal / Deep Carbon Slate */
-  --brand-graphite-light: #64748b;
-  --brand-graphite-primary: #1e293b;
-  --brand-graphite-deep: #0f172a;
-  --brand-graphite-midnight: #0a0d12;
-
-  /* Platinum Silver Trim */
-  --brand-silver-light: #f8fafc;
-  --brand-silver-chrome: #e2e8f0;
-  --brand-silver-muted: #94a3b8;
+  /* Secondary Navy & Slate Tones */
+  --brand-navy-light: #e9f0f8;
+  --brand-navy-muted: #94a3b8;
+  --brand-navy-primary: #162d4e;
+  --brand-navy-deep: #0e1f38;
+  --brand-navy-midnight: #0a1628;
+  --brand-navy-pure: #060f1e;
 }
 
 @theme inline {
   --font-serif: var(--font-serif), var(--font-display), "Playfair Display", "Cormorant Garamond", serif;
-  --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
+  --font-cinzel: var(--font-cinzel), "Cinzel", "Playfair Display", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-ruby-50: #fff1f2;
-  --color-ruby-100: #ffe4e6;
-  --color-ruby-200: #fecdd3;
-  --color-ruby-300: #fda4af;
-  --color-ruby-400: #fb7185;
-  --color-ruby-500: #e11d48;
-  --color-ruby-600: #be123c;
-  --color-ruby-700: #9f1239;
-  --color-ruby-800: #881337;
-  --color-ruby-900: #4c0519;
-  --color-ruby-950: #29020d;
+  --color-gold-50: #fdfaf2;
+  --color-gold-100: #fbf5e6;
+  --color-gold-200: #f3dfa7;
+  --color-gold-300: #e7ca7c;
+  --color-gold-400: #dfb967;
+  --color-gold-500: #c5a059;
+  --color-gold-600: #a88238;
+  --color-gold-700: #83591c;
+  --color-gold-800: #654414;
+  --color-gold-900: #4e340c;
 
-  --color-carbon-50: #f8fafc;
-  --color-carbon-100: #f1f5f9;
-  --color-carbon-200: #e2e8f0;
-  --color-carbon-300: #cbd5e1;
-  --color-carbon-400: #94a3b8;
-  --color-carbon-500: #64748b;
-  --color-carbon-600: #475569;
-  --color-carbon-700: #334155;
-  --color-carbon-800: #1e293b;
-  --color-carbon-900: #0f172a;
-  --color-carbon-950: #0a0d12;
+  --color-navy-50: #f0f4f9;
+  --color-navy-100: #dde7f3;
+  --color-navy-200: #c0d2e8;
+  --color-navy-300: #95b4d7;
+  --color-navy-400: #628fc0;
+  --color-navy-500: #3f71a7;
+  --color-navy-600: #2a5385;
+  --color-navy-700: #1c3a63;
+  --color-navy-800: #162d4e;
+  --color-navy-900: #0e1f38;
+  --color-navy-950: #0a1628;
+  --color-navy-990: #060f1e;
 }
 
 html {
@@ -76,19 +73,18 @@ body {
   background: #ffffff;
   color: #0e141c;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #b81424;
+  caret-color: #c5a059;
 }
 
 ::selection {
-  background: #b81424;
-  color: #ffffff;
+  background: #c5a059;
+  color: #060f1e;
 }
 
 .font-cinzel {
   font-family: var(--font-cinzel), "Cinzel", "Playfair Display", serif;
 }
 
-.eyebrow-ruby,
 .eyebrow-gold,
 .eyebrow-navy,
 .eyebrow-dark,
@@ -103,13 +99,12 @@ body {
   text-transform: uppercase;
 }
 
-.eyebrow-ruby,
 .eyebrow-gold {
-  color: #b81424;
+  color: #c5a059;
 }
 
 .eyebrow-navy {
-  color: #1e293b;
+  color: #162d4e;
 }
 
 .eyebrow-dark {
@@ -117,10 +112,9 @@ body {
 }
 
 .eyebrow-light {
-  color: #fda4af;
+  color: #dfb967;
 }
 
-.eyebrow-ruby::before,
 .eyebrow-gold::before,
 .eyebrow-navy::before,
 .eyebrow-dark::before,
@@ -157,7 +151,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #b81424;
+  background: #c5a059;
   content: "";
   transform: scaleX(0);
   transform-origin: center;
@@ -165,7 +159,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #0e1218;
+  color: #0a1628;
 }
 
 .nav-link:hover::after {
@@ -179,6 +173,13 @@ body {
 }
 
 .footer-link:hover {
-  color: #fda4af;
+  color: #dfb967;
   transform: translateX(2px);
+}
+
+/* Luxury gold text gradient */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #dfb967 0%, #c5a059 50%, #f3dfa7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

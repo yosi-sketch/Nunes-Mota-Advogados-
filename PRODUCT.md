@@ -1,55 +1,59 @@
-# DRA. ÂNGELA MARIA GONÇALVES RABELO — ADVOCACIA
-## Advocacia de Excelência · Cláudio - MG & Atuação Nacional
-### Identidade Visual, Posicionamento Estratégico e Diretrizes de Engenharia
+# MARIANA CORSI ADVOCACIA PREVIDENCIÁRIA
+## Excelência em Direito Previdenciário & INSS · Pitangui - MG & Atuação Nacional
+### Identidade Visual, Posicionamento Estratégico, Paleta de Cores e Diretrizes
 
 ---
 
 ### 1. Dados Institucionais & Contato
 
-- **Razão Social / Nome Institucional:** Dra. Ângela Maria Gonçalves Rabelo — Advocacia, Consultoria & Assessoria Jurídica
-- **Advogada Titular:** Dra. Ângela Maria Gonçalves Rabelo
-- **Slogan / Posicionamento:** "Comprometimento ético, profundo conhecimento jurídico e atendimento humanizado e combativo."
-- **Endereço da Sede:** Praça Levy Vitói de Freitas, n° 28 - Sala 303 - Centro, Cláudio - MG, CEP 35530-000, Brasil.
-- **Telefone / WhatsApp Comercial:** (37) 99921-8631 (`https://wa.me/5537999218631`).
-- **E-mail de Contato:** contato@angelamaria.adv.br.
+- **Razão Social / Nome Institucional:** Mariana Corsi Advocacia Previdenciária
+- **Advogada Titular:** Dra. Mariana Corsi (OAB/MG)
+- **Slogan / Posicionamento:** "Direito Previdenciário sem complicação. Cuidado com as pessoas, rigor técnico e agilidade para conquistar o seu melhor benefício do INSS."
+- **Endereço da Sede:** R. Martinho Campos, 162 - Centro, Pitangui - MG, CEP 35650-000, Brasil.
+- **Telefone / WhatsApp Comercial:** (38) 99930-8575 (`https://wa.me/5538999308575`).
+- **E-mail de Contato:** contato@marianacorsi.adv.br
 - **Redes Sociais:**
-  - Instagram: [@angelamaria.advocacia](https://www.instagram.com/angelamaria.advocacia/) (1.450 seguidores).
+  - Instagram: [@marianamunizcorsi](https://www.instagram.com/marianamunizcorsi/) (+3.170 seguidores).
 - **Horário de Funcionamento:**
-  - Segunda a Sexta: 08:30 às 18:00 (Atendimento presencial no Centro de Cláudio e digital em todo o Brasil).
-  - Plantão Penal / Prisões: 24 horas para emergências e flagrantes.
-- **Prova Social Google:** Nota máxima 5,0 ★ em 35 avaliações no Google Meu Negócio ("Advogado em Cláudio, Minas Gerais").
+  - Segunda a Sexta: 09:00 às 18:00 (Atendimento presencial no Centro de Pitangui e digital em todo o Brasil).
+- **Prova Social Google:** Nota máxima 5,0 ★ em 29 avaliações no Google Meu Negócio ("Mariana Corsi Advocacia Previdenciária · Pitangui · MG").
 
 ---
 
 ### 2. Identidade Visual & Design System (Baseada no Novo Logo)
 
 - **Logotipo Oficial:**
-  - Monograma geométrico moderno "AM": elemento esquerdo em grafite escuro texturizado com chanfro e o "M" dinâmico em gradiente carmim rubi profundo com iluminação nobre.
-  - Tipografia serifada clássica imperial "ÂNGELA MARIA GONÇALVES RABELO" com acabamento nobre chanfrado.
-  - Divisor fino com losango central em platina/titânio.
-  - Subtítulo em caixa alta com espaçamento largo: "ADVOCACIA, CONSULTORIA & ASSESSORIA JURÍDICA".
+  - Monograma clássico entrelaçado "MC": serifado imperial refinado, preenchimento em safira/midnight navy nobre com bordas chanfradas em ouro polido/champagne.
+  - Tipografia monumental romana "MARIANA CORSI" com acabamento nobre e serifas geométricas nítidas.
+  - Divisor dourado de precisão com losango (diamond) facetado centralizado.
+  - Subtítulo em caixa alta com espaçamento largo: "ADVOCACIA PREVIDENCIÁRIA".
 - **Tema Visual & Paleta de Cores:**
-  - **Carmine Ruby Red (Cor Primária de Destaque):** `#b81424` (primário), `#dc2626` (vivo), `#7a0812` (profundo), `#42040a` (ruby noir), `#fda4af` / `#fecdd3` (realce suave).
-  - **Charcoal Obsidian & Carbon Noir (Fundo Escuro e Contraste):** `#0a0d12` (fundo principal escuro), `#0e1218` (cards escuros), `#141923` (hover/elevação), `#1e2532` (bordas).
-  - **Silk White & Alabastro Ivory (Fundo Claro de Alto Contraste):** `#ffffff` (branco puro), `#f9fafb` (superfície suave), `#f1f4f8` (neutro de apoio).
-  - **Platinum & Titanium Trim:** `#94a3b8`, `#cbd5e1`, `#e2e8f0` (acabamentos metálicos do divisor e textos secundários).
+  - **Polished Warm Gold & Champagne (Cor Primária de Destaque):**
+    - `#dfb967` (ouro claro iluminado), `#c5a059` (ouro central da marca), `#ab8438` (ouro rico sombreado), `#83591c` (ouro bronze profundo).
+    - `#fcf9f2` (creme perolado suave para cartões e destaques claros).
+  - **Midnight Royal Navy & Safira Escura (Fundo Escuro Nobre & Contraste):**
+    - `#060f1e` (navy mais profundo), `#0a1628` (fundo principal escuro), `#0e1f38` (superfície de cartões), `#162d4e` (hover/elevação), `#1e385c` (bordas).
+  - **Pure Silk White & Marfim Suave (Fundo Claro de Alto Contraste):**
+    - `#ffffff` (branco puro), `#faf9f6` (superfície suave), `#f3f4f6` (neutro de apoio).
+  - **Textos de Alta Legibilidade:**
+    - `#0a1628` e `#0e141c` (títulos e corpos escuros sobre claro), `#334155` (secundário slate), `#e2e8f0` (textos claros sobre navy).
 - **Tipografia:**
   - **Títulos & Display:** Cinzel (`--font-cinzel`) e Playfair Display (`--font-serif`).
-  - **Textos de Apoio & Interface:** Plus Jakarta Sans (`--font-body`), garantindo máxima legibilidade e clareza.
+  - **Textos de Apoio & Interface:** Plus Jakarta Sans (`--font-body`), garantindo máxima legibilidade, clareza e credibilidade.
 - **Assets Organizados na pasta `public/` e `app/`:**
-  - `public/logo.png` e `public/logo-full.png` (Logo completo de alta resolução).
-  - `public/logo-symbol.png` (Monograma AM isolado 512x512).
-  - `public/hero-advogada.jpg` e `public/hero.jpg` (Foto oficial da Dra. Ângela em seu escritório).
-  - `public/sobre-advogada.jpg` e `public/dra-angela-maria.jpg` (Foto oficial para a seção sobre a titular).
+  - `public/logo.png` (Logo oficial transparente em alta resolução).
+  - `public/logo-symbol.png` (Monograma MC isolado 512x512).
+  - `public/hero-advogada.jpg` e `public/mariana-corsi.jpg` (Retrato profissional oficial da Dra. Mariana Corsi).
+  - `public/sobre-advogada.jpg` (Foto oficial para a seção sobre a especialista).
   - Favicons multi-resolução: `public/favicon.ico`, `app/favicon.ico`, `public/icon.png`, `app/icon.png`, `public/apple-icon.png`, `app/apple-icon.png`, `public/favicon-32x32.png`, `public/favicon-16x16.png`, `public/icon-512x512.png`.
 
 ---
 
-### 3. Pilares de Atuação Especializada
+### 3. Pilares de Atuação Previdenciária
 
-1. **Direito Penal, Prisões & Audiências (Plantão 24h):** Prisões em flagrante, audiências de custódia, revogação de prisão preventiva, habeas corpus, defesas prévias, inquéritos policiais e Tribunal do Júri.
-2. **Direito de Família, Divórcios, Guarda & Pensão:** Divórcio consensual extrajudicial em cartório e litigioso judicial, partilha de bens, fixação/revisão/execução de alimentos, guarda compartilhada e plano de convivência.
-3. **Inventários, Heranças & Partilha de Bens:** Inventário em cartório de notas (rápido e econômico) e judicial, planejamento sucessório com usufruto, alvarás para liberação de saldos e regularização de imóveis herdados.
-4. **Usucapião & Regularização Fundiária de Imóveis:** Usucapião extrajudicial em cartório de imóveis e judicial, regularização de escrituras e contratos de gaveta, ações possessórias e defesas de propriedade urbana e rural.
-5. **Direito Civil, Contratos & Reparação de Danos:** Ações indenizatórias por danos morais e materiais, elaboração e auditoria de contratos, cobrança e execução de títulos de crédito.
-6. **Consultoria & Assessoria Jurídica Estratégica:** Atendimento consultivo preventivo, pareceres jurídicos, representação em audiências e atendimento digital para clientes em todo o Brasil.
+1. **Planejamento Previdenciário Estratégico:** Diagnóstico aprofundado do histórico contributivo (CNIS), projeção de cenários, simulação das regras de transição e indicação do momento exato para se aposentar com o maior benefício financeiro.
+2. **Aposentadorias do INSS:** Aposentadoria por Idade (Urbana e Rural), Tempo de Contribuição, Regras de Transição da EC 103/2019, Aposentadoria Especial (insalubridade, ruído, químicos e periculosidade) e da Pessoa com Deficiência (PCD).
+3. **BPC / LOAS (Benefício Assistencial):** Obtenção do benefício de 1 salário mínimo mensal para idosos a partir de 65 anos e pessoas de qualquer idade com deficiência ou enfermidade incapacitante em situação de baixa renda, sem exigência de contribuição prévia.
+4. **Benefícios por Incapacidade:** Auxílio por Incapacidade Temporária (Auxílio-Doença), Aposentadoria por Incapacidade Permanente (Invalidez) e Auxílio-Acidente. Reversão de perícias injustas e negativas médicas do INSS.
+5. **Pensão por Morte & Salário-Maternidade:** Garantia rápida do amparo financeiro e comprovação de união estável ou dependência econômica de familiares, além de salário-maternidade urbano e rural.
+6. **Revisões de Benefícios & Destrave de Negativas:** Recursos administrativos e ações judiciais com pedido de liminar e cobrança de todos os atrasados com juros e correção monetária desde a data do primeiro requerimento.

@@ -36,74 +36,75 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0a0d12",
+  themeColor: "#060f1e",
   colorScheme: "light dark",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.angelamaria.adv.br"),
+  metadataBase: new URL("https://www.marianacorsi.adv.br"),
   title:
-    "Dra. Ângela Maria Gonçalves Rabelo | Advocacia, Consultoria & Assessoria Jurídica · Cláudio - MG",
+    "Mariana Corsi | Advocacia Previdenciária & INSS · Pitangui - MG",
   description:
-    "⚖️ Dra. Ângela Maria Gonçalves Rabelo — Advocacia, Consultoria & Assessoria Jurídica. Defesas Criminais, Prisões 24h, Audiências, Divórcios, Guarda, Pensão Alimentícia, Inventários, Contratos e Usucapião. Nota máxima 5,0 ★ no Google (35 avaliações). Sede em Cláudio - MG e atendimento digital em todo o Brasil.",
+    "⚖️ Mariana Corsi Advocacia Previdenciária — Especialista em Direito Previdenciário e Benefícios do INSS. Planejamento Previdenciário, Aposentadorias, BPC/LOAS, Auxílio-Doença, Pensão por Morte e Revisões. Nota 5,0 ★ no Google (29 avaliações). Sede em Pitangui - MG e atendimento online para todo o Brasil.",
   keywords: [
-    "Dra. Ângela Maria Gonçalves Rabelo",
-    "Ângela Maria Advogada",
-    "Advogada Cláudio MG",
-    "Advogado em Cláudio Minas Gerais",
-    "angelamaria.advocacia",
-    "Advogada Criminalista Cláudio MG",
-    "Defesa Criminal e Prisões Cláudio",
-    "Divórcio e Pensão Cláudio MG",
-    "Inventário em Cartório Cláudio MG",
-    "Guarda de Filhos Cláudio MG",
-    "Usucapião e Contratos Cláudio MG",
-    "Assessoria Jurídica Cláudio MG",
-    "Divinópolis Carmo da Mata Itapecerica Cláudio MG",
-    "Atendimento Jurídico Online Brasil",
+    "Mariana Corsi Advocacia",
+    "Mariana Corsi Advocacia Previdenciária",
+    "Dra. Mariana Corsi",
+    "Mariana Corsi",
+    "Advogada Previdenciária Pitangui MG",
+    "Advogado INSS Pitangui MG",
+    "Aposentadoria Pitangui MG",
+    "BPC LOAS Pitangui MG",
+    "Planejamento Previdenciário MG",
+    "Auxílio Doença INSS Pitangui",
+    "Benefício Negado INSS Pitangui",
+    "Pensão por Morte Pitangui MG",
+    "marianamunizcorsi",
+    "Advocacia Previdenciária Minas Gerais",
+    "Atendimento INSS Online Brasil",
   ],
-  authors: [{ name: "Dra. Ângela Maria Gonçalves Rabelo" }],
-  creator: "Dra. Ângela Maria Gonçalves Rabelo — Advocacia",
-  publisher: "Dra. Ângela Maria Gonçalves Rabelo — Advocacia, Consultoria & Assessoria Jurídica",
+  authors: [{ name: "Dra. Mariana Corsi" }],
+  creator: "Mariana Corsi Advocacia Previdenciária",
+  publisher: "Mariana Corsi Advocacia Previdenciária",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=amr1", sizes: "any" },
-      { url: "/favicon-32x32.png?v=amr1", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=amr1", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=amr1", type: "image/png", sizes: "192x192" },
-      { url: "/icon-512x512.png?v=amr1", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=mc2", sizes: "any" },
+      { url: "/favicon-32x32.png?v=mc2", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=mc2", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=mc2", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512x512.png?v=mc2", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/favicon.ico?v=amr1",
-    apple: [{ url: "/apple-icon.png?v=amr1", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=mc2",
+    apple: [{ url: "/apple-icon.png?v=mc2", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.angelamaria.adv.br",
+    url: "https://www.marianacorsi.adv.br",
     title:
-      "Dra. Ângela Maria Gonçalves Rabelo | Advocacia & Consultoria Jurídica · Cláudio - MG",
+      "Mariana Corsi | Advocacia Previdenciária & INSS · Pitangui - MG",
     description:
-      "⚖️ Advocacia de alta excelência, acolhimento e combatividade. Defesas, Prisões, Audiências, Divórcios, Guarda, Pensão, Inventários, Contratos e Usucapião. 5,0 ★ no Google (35 avaliações). Sede em Cláudio - MG e atendimento digital em todo o Brasil.",
-    siteName: "Dra. Ângela Maria Gonçalves Rabelo — Advocacia",
+      "⚖️ Advocacia Previdenciária com foco no seu melhor benefício. Planejamento, Aposentadorias, BPC/LOAS e liberação de auxílios negados. 5,0 ★ no Google (29 avaliações). Sede em Pitangui - MG e atendimento online para todo o Brasil.",
+    siteName: "Mariana Corsi Advocacia Previdenciária",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 341,
-        alt: "Dra. Ângela Maria Gonçalves Rabelo — Advocacia, Consultoria & Assessoria Jurídica",
+        height: 682,
+        alt: "Mariana Corsi Advocacia Previdenciária",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Dra. Ângela Maria Gonçalves Rabelo | Advocacia de Excelência · Cláudio - MG",
+      "Mariana Corsi | Advocacia Previdenciária & INSS · Pitangui - MG",
     description:
-      "⚖️ Advocacia de Alto Padrão. Nota 5,0 ★ no Google (35 avaliações). Sede na Pça. Levy Vitói de Freitas, 28, Sl 303 - Centro, Cláudio - MG e atuação em todo o Brasil.",
+      "⚖️ Direito Previdenciário sem complicação. Nota 5,0 ★ no Google (29 avaliações). Sede na R. Martinho Campos, 162 - Centro, Pitangui - MG e atuação em todo o Brasil.",
     images: ["/logo.png"],
   },
 };
@@ -116,43 +117,43 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Dra. Ângela Maria Gonçalves Rabelo — Advocacia, Consultoria & Assessoria Jurídica",
-    alternateName: "Ângela Maria | Advogada",
-    legalName: "Dra. Ângela Maria Gonçalves Rabelo — Advocacia",
-    telephone: "+55-37-99921-8631",
-    email: "contato@angelamaria.adv.br",
-    url: "https://www.angelamaria.adv.br",
-    image: "https://www.angelamaria.adv.br/logo.png",
+    name: "Mariana Corsi Advocacia Previdenciária",
+    alternateName: "Mariana Corsi | Advogada Previdenciária",
+    legalName: "Mariana Corsi Advocacia Previdenciária",
+    telephone: "+55-38-99930-8575",
+    email: "contato@marianacorsi.adv.br",
+    url: "https://www.marianacorsi.adv.br",
+    image: "https://www.marianacorsi.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Praça Levy Vitói de Freitas, n° 28 - Sl 303 - Centro",
-      addressLocality: "Cláudio",
+      streetAddress: "R. Martinho Campos, 162 - Centro",
+      addressLocality: "Pitangui",
       addressRegion: "MG",
-      postalCode: "35530-000",
+      postalCode: "35650-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "-20.4447",
-      longitude: "-44.7675",
+      latitude: "-19.6800",
+      longitude: "-45.2100",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "35",
+      reviewCount: "29",
       bestRating: "5",
       worstRating: "1",
     },
     areaServed: [
-      "Cláudio",
+      "Pitangui",
+      "Leandro Ferreira",
+      "Conceição do Pará",
+      "Onça de Pitangui",
+      "Pará de Minas",
+      "Nova Serrana",
+      "Bom Despacho",
       "Divinópolis",
-      "Itapecerica",
-      "Carmo da Mata",
-      "Carmópolis de Minas",
-      "Oliveira",
-      "Campo Belo",
-      "Belo Horizonte",
       "Minas Gerais",
       "Brasil",
     ],
@@ -166,13 +167,13 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:30",
+        opens: "09:00",
         closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/angelamaria.advocacia/",
-      "https://wa.me/5537999218631",
+      "https://www.instagram.com/marianamunizcorsi/",
+      "https://wa.me/5538999308575",
     ],
   };
 
@@ -182,19 +183,20 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth dark`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=amr1" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=amr1" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=amr1" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=amr1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=amr1" />
-        <link rel="shortcut icon" href="/favicon.ico?v=amr1" />
-        <meta name="theme-color" content="#0a0d12" />
+        <link rel="icon" href="/favicon.ico?v=mc2" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=mc2" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=mc2" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=mc2" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon-512x512.png?v=mc2" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=mc2" />
+        <link rel="shortcut icon" href="/favicon.ico?v=mc2" />
+        <meta name="theme-color" content="#060f1e" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#b81424] selection:text-white">
+      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#c5a059] selection:text-[#060f1e]">
         {children}
       </body>
     </html>
