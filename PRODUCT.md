@@ -1,59 +1,68 @@
-# MARIANA CORSI ADVOCACIA PREVIDENCIÁRIA
-## Excelência em Direito Previdenciário & INSS · Pitangui - MG & Atuação Nacional
-### Identidade Visual, Posicionamento Estratégico, Paleta de Cores e Diretrizes
+# DR. YAN MARLON — ADVOCACIA, ASSESSORIA E CONSULTORIA JURÍDICA
+## Advocacia de Excelência & Soluções Jurídicas Estratégicas · Januária - MG & Atuação Nacional
+### Identidade Visual, Posicionamento de Marca, Paleta de Cores e Diretrizes Oficiais
 
 ---
 
 ### 1. Dados Institucionais & Contato
 
-- **Razão Social / Nome Institucional:** Mariana Corsi Advocacia Previdenciária
-- **Advogada Titular:** Dra. Mariana Corsi (OAB/MG)
-- **Slogan / Posicionamento:** "Direito Previdenciário sem complicação. Cuidado com as pessoas, rigor técnico e agilidade para conquistar o seu melhor benefício do INSS."
-- **Endereço da Sede:** R. Martinho Campos, 162 - Centro, Pitangui - MG, CEP 35650-000, Brasil.
-- **Telefone / WhatsApp Comercial:** (38) 99930-8575 (`https://wa.me/5538999308575`).
-- **E-mail de Contato:** contato@marianacorsi.adv.br
+- **Razão Social / Nome Institucional:** Dr. Yan Marlon — Advocacia, Assessoria e Consultoria Jurídica
+- **Advogado Titular:** Dr. Yan Marlon (Advogado • OAB/MG 195.229)
+- **Posicionamento & Proposta de Valor:** Advocacia moderna, estratégica e comprometida com a defesa intransigente dos direitos de cidadãos e empresas. Rigor técnico, soluções contratuais, assessoria jurídica preventiva e combativa com atendimento próximo, ágil e resolutivo.
+- **Endereço da Sede:** R. Cel. Serrão, n.190 - Centro, Januária - MG, CEP 39480-000, Brasil.
+- **Telefone / WhatsApp Comercial:** (38) 99928-0572 (`https://wa.me/5538999280572`).
+- **Link Direto WhatsApp Business:** `https://wa.me/message/CXIPL54ES4SJG1`
+- **E-mail de Contato:** contato@dryanmarlon.adv.br
 - **Redes Sociais:**
-  - Instagram: [@marianamunizcorsi](https://www.instagram.com/marianamunizcorsi/) (+3.170 seguidores).
+  - Instagram: [@dr.yan.marlon](https://www.instagram.com/dr.yan.marlon/) (1.272 seguidores · 97 publicações).
 - **Horário de Funcionamento:**
-  - Segunda a Sexta: 09:00 às 18:00 (Atendimento presencial no Centro de Pitangui e digital em todo o Brasil).
-- **Prova Social Google:** Nota máxima 5,0 ★ em 29 avaliações no Google Meu Negócio ("Mariana Corsi Advocacia Previdenciária · Pitangui · MG").
+  - Segunda a Sexta: 08:00 às 18:00 (Atendimento presencial no Centro de Januária/MG e digital em todo o Brasil).
+- **Prova Social Google:** Nota máxima 5,0 ★ em 28 avaliações no Google Meu Negócio ("Yan Marlon — Advocacia, Assessoria e Consultoria Jurídica · Januária · MG").
 
 ---
 
 ### 2. Identidade Visual & Design System (Baseada no Novo Logo)
 
 - **Logotipo Oficial:**
-  - Monograma clássico entrelaçado "MC": serifado imperial refinado, preenchimento em safira/midnight navy nobre com bordas chanfradas em ouro polido/champagne.
-  - Tipografia monumental romana "MARIANA CORSI" com acabamento nobre e serifas geométricas nítidas.
-  - Divisor dourado de precisão com losango (diamond) facetado centralizado.
-  - Subtítulo em caixa alta com espaçamento largo: "ADVOCACIA PREVIDENCIÁRIA".
+  - Emblema circular clássico da Balança da Justiça (Scales of Justice) em ouro polido metálico 3D com anel duplo e base monumental.
+  - Tipografia de prestígio romana/serifada imperial: "Dr. YAN MARLON" com acabamento em ouro real polido com chanfros luminosos.
+  - Divisor linear horizontal em ouro com losango (diamond) facetado ao centro.
+  - Subtítulo em caixa alta: "ADVOCACIA E CONSULTORIA JURÍDICA".
+  - Chancelas oficiais: "ADVOGADO • OAB/MG 195.229".
 - **Tema Visual & Paleta de Cores:**
-  - **Polished Warm Gold & Champagne (Cor Primária de Destaque):**
-    - `#dfb967` (ouro claro iluminado), `#c5a059` (ouro central da marca), `#ab8438` (ouro rico sombreado), `#83591c` (ouro bronze profundo).
-    - `#fcf9f2` (creme perolado suave para cartões e destaques claros).
-  - **Midnight Royal Navy & Safira Escura (Fundo Escuro Nobre & Contraste):**
-    - `#060f1e` (navy mais profundo), `#0a1628` (fundo principal escuro), `#0e1f38` (superfície de cartões), `#162d4e` (hover/elevação), `#1e385c` (bordas).
-  - **Pure Silk White & Marfim Suave (Fundo Claro de Alto Contraste):**
-    - `#ffffff` (branco puro), `#faf9f6` (superfície suave), `#f3f4f6` (neutro de apoio).
-  - **Textos de Alta Legibilidade:**
-    - `#0a1628` e `#0e141c` (títulos e corpos escuros sobre claro), `#334155` (secundário slate), `#e2e8f0` (textos claros sobre navy).
-- **Tipografia:**
-  - **Títulos & Display:** Cinzel (`--font-cinzel`) e Playfair Display (`--font-serif`).
-  - **Textos de Apoio & Interface:** Plus Jakarta Sans (`--font-body`), garantindo máxima legibilidade, clareza e credibilidade.
+  - **Polished Warm Gold & Champagne (Cores Primárias e Destaques):**
+    - `#f9f1d2` (champagne iluminado / reflexo de luz)
+    - `#eed68b` (ouro claro reluzente)
+    - `#d4af37` (ouro real polido - tom central do logo)
+    - `#c59b27` (ouro nobre)
+    - `#a17518` (ouro rico sombreado)
+    - `#7a520e` (ouro bronze profundo / contorno)
+  - **Midnight Onyx & Deep Royal Navy (Fundo Escuro Nobre & Contraste de Prestígio):**
+    - `#050a14` (navy mais profundo / noite pura)
+    - `#081020` (fundo principal escuro)
+    - `#0e182e` (superfície de cartões de alto padrão)
+    - `#15223e` (hover e elevação)
+    - `#1f3154` (bordas e divisores)
+  - **Pure Silk White & Ivory Pearl (Fundo Claro de Alto Contraste):**
+    - `#ffffff` (branco puro)
+    - `#fbfaf6` (creme perolado suave)
+    - `#f3f4f6` (neutro de apoio)
+  - **Tipografia:**
+    - **Títulos & Display:** Cinzel (`--font-cinzel`) e Playfair Display (`--font-serif`).
+    - **Textos de Apoio & Interface:** Plus Jakarta Sans (`--font-body`), garantindo legibilidade, autoridade e elegância.
 - **Assets Organizados na pasta `public/` e `app/`:**
   - `public/logo.png` (Logo oficial transparente em alta resolução).
-  - `public/logo-symbol.png` (Monograma MC isolado 512x512).
-  - `public/hero-advogada.jpg` e `public/mariana-corsi.jpg` (Retrato profissional oficial da Dra. Mariana Corsi).
-  - `public/sobre-advogada.jpg` (Foto oficial para a seção sobre a especialista).
+  - `public/logo-symbol.png` (Emblema da balança dourada isolado 512x512).
+  - `public/dr-yan-marlon.jpg`, `public/hero-advogado.jpg`, `public/sobre-advogado.jpg` (Retrato profissional oficial do Dr. Yan Marlon).
   - Favicons multi-resolução: `public/favicon.ico`, `app/favicon.ico`, `public/icon.png`, `app/icon.png`, `public/apple-icon.png`, `app/apple-icon.png`, `public/favicon-32x32.png`, `public/favicon-16x16.png`, `public/icon-512x512.png`.
 
 ---
 
-### 3. Pilares de Atuação Previdenciária
+### 3. Pilares de Atuação Jurídica
 
-1. **Planejamento Previdenciário Estratégico:** Diagnóstico aprofundado do histórico contributivo (CNIS), projeção de cenários, simulação das regras de transição e indicação do momento exato para se aposentar com o maior benefício financeiro.
-2. **Aposentadorias do INSS:** Aposentadoria por Idade (Urbana e Rural), Tempo de Contribuição, Regras de Transição da EC 103/2019, Aposentadoria Especial (insalubridade, ruído, químicos e periculosidade) e da Pessoa com Deficiência (PCD).
-3. **BPC / LOAS (Benefício Assistencial):** Obtenção do benefício de 1 salário mínimo mensal para idosos a partir de 65 anos e pessoas de qualquer idade com deficiência ou enfermidade incapacitante em situação de baixa renda, sem exigência de contribuição prévia.
-4. **Benefícios por Incapacidade:** Auxílio por Incapacidade Temporária (Auxílio-Doença), Aposentadoria por Incapacidade Permanente (Invalidez) e Auxílio-Acidente. Reversão de perícias injustas e negativas médicas do INSS.
-5. **Pensão por Morte & Salário-Maternidade:** Garantia rápida do amparo financeiro e comprovação de união estável ou dependência econômica de familiares, além de salário-maternidade urbano e rural.
-6. **Revisões de Benefícios & Destrave de Negativas:** Recursos administrativos e ações judiciais com pedido de liminar e cobrança de todos os atrasados com juros e correção monetária desde a data do primeiro requerimento.
+1. **Direito Civil & Contratos Estratégicos:** Elaboração, revisão minuciosa e execução de contratos cíveis e comerciais, segurança patrimonial, cobranças, responsabilidade civil e ações indenizatórias.
+2. **Direito do Trabalho Patronal & Relações de Emprego:** Assessoria preventiva e contenciosa para empresários e empregadores, resolução de questões com funcionários, redução de passivo trabalhista e conformidade legal.
+3. **Direito de Família & Sucessões:** Inventários judiciais e extrajudiciais, partilha de bens, divórcios consensuais e litigiosos, fixação e revisão de pensão alimentícia, guarda e planejamento sucessório.
+4. **Assessoria & Consultoria Jurídica Empresarial:** Acompanhamento jurídico contínuo para empresas e autônomos, mitigação de riscos operacionais, negociações estratégicas e pareceres técnicos fundamentados.
+5. **Direito Previdenciário & Benefícios do INSS:** Planejamento previdenciário, concessão de aposentadorias (tempo, idade, especial), BPC/LOAS, auxílio por incapacidade e reversão judicial de benefícios negados.
+6. **Direito do Consumidor & Defesa de Direitos:** Ações contra abusos de instituições financeiras, negativas de planos de saúde, negativações indevidas em cadastros de crédito e reparação por danos morais e materiais.

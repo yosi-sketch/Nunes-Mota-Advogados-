@@ -36,75 +36,75 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#060f1e",
+  themeColor: "#050a14",
   colorScheme: "light dark",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.marianacorsi.adv.br"),
+  metadataBase: new URL("https://www.dryanmarlon.adv.br"),
   title:
-    "Mariana Corsi | Advocacia Previdenciária & INSS · Pitangui - MG",
+    "Dr. Yan Marlon | Advocacia, Assessoria e Consultoria Jurídica · Januária - MG",
   description:
-    "⚖️ Mariana Corsi Advocacia Previdenciária — Especialista em Direito Previdenciário e Benefícios do INSS. Planejamento Previdenciário, Aposentadorias, BPC/LOAS, Auxílio-Doença, Pensão por Morte e Revisões. Nota 5,0 ★ no Google (29 avaliações). Sede em Pitangui - MG e atendimento online para todo o Brasil.",
+    "⚖️ Dr. Yan Marlon — Advocacia, Assessoria e Consultoria Jurídica (OAB/MG 195.229). Atuação em Direito Civil, Contratos, Família e Sucessões, Assessoria Empresarial, Trabalhista Patronal e Previdenciário. Nota 5,0 ★ no Google (28 avaliações). Sede em Januária - MG e atendimento online para todo o Brasil.",
   keywords: [
-    "Mariana Corsi Advocacia",
-    "Mariana Corsi Advocacia Previdenciária",
-    "Dra. Mariana Corsi",
-    "Mariana Corsi",
-    "Advogada Previdenciária Pitangui MG",
-    "Advogado INSS Pitangui MG",
-    "Aposentadoria Pitangui MG",
-    "BPC LOAS Pitangui MG",
-    "Planejamento Previdenciário MG",
-    "Auxílio Doença INSS Pitangui",
-    "Benefício Negado INSS Pitangui",
-    "Pensão por Morte Pitangui MG",
-    "marianamunizcorsi",
-    "Advocacia Previdenciária Minas Gerais",
-    "Atendimento INSS Online Brasil",
+    "Dr. Yan Marlon",
+    "Yan Marlon Advocacia",
+    "Dr. Yan Marlon Advogado",
+    "Advogado Januária MG",
+    "Advocacia em Januária",
+    "Consultoria Jurídica Januária",
+    "OAB MG 195229",
+    "Direito Civil Januária",
+    "Contratos Januária MG",
+    "Direito de Família Januária",
+    "Inventário Januária MG",
+    "Assessoria Jurídica Januária",
+    "Advogado Norte de Minas",
+    "dr.yan.marlon",
+    "Advocacia Minas Gerais",
   ],
-  authors: [{ name: "Dra. Mariana Corsi" }],
-  creator: "Mariana Corsi Advocacia Previdenciária",
-  publisher: "Mariana Corsi Advocacia Previdenciária",
+  authors: [{ name: "Dr. Yan Marlon" }],
+  creator: "Dr. Yan Marlon — Advocacia, Assessoria e Consultoria Jurídica",
+  publisher: "Dr. Yan Marlon — Advocacia, Assessoria e Consultoria Jurídica",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=mc2", sizes: "any" },
-      { url: "/favicon-32x32.png?v=mc2", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=mc2", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=mc2", type: "image/png", sizes: "192x192" },
-      { url: "/icon-512x512.png?v=mc2", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=ym1", sizes: "any" },
+      { url: "/favicon-32x32.png?v=ym1", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=ym1", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=ym1", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512x512.png?v=ym1", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/favicon.ico?v=mc2",
-    apple: [{ url: "/apple-icon.png?v=mc2", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=ym1",
+    apple: [{ url: "/apple-icon.png?v=ym1", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.marianacorsi.adv.br",
+    url: "https://www.dryanmarlon.adv.br",
     title:
-      "Mariana Corsi | Advocacia Previdenciária & INSS · Pitangui - MG",
+      "Dr. Yan Marlon | Advocacia, Assessoria e Consultoria Jurídica · Januária - MG",
     description:
-      "⚖️ Advocacia Previdenciária com foco no seu melhor benefício. Planejamento, Aposentadorias, BPC/LOAS e liberação de auxílios negados. 5,0 ★ no Google (29 avaliações). Sede em Pitangui - MG e atendimento online para todo o Brasil.",
-    siteName: "Mariana Corsi Advocacia Previdenciária",
+      "⚖️ Advocacia de excelência, compromisso inegociável e defesa estratégica dos seus direitos. 5,0 ★ no Google (28 avaliações). Sede em Januária - MG e atendimento online para todo o Brasil.",
+    siteName: "Dr. Yan Marlon — Advocacia e Consultoria Jurídica",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 682,
-        alt: "Mariana Corsi Advocacia Previdenciária",
+        height: 341,
+        alt: "Dr. Yan Marlon — Advocacia e Consultoria Jurídica",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Mariana Corsi | Advocacia Previdenciária & INSS · Pitangui - MG",
+      "Dr. Yan Marlon | Advocacia, Assessoria e Consultoria Jurídica · Januária - MG",
     description:
-      "⚖️ Direito Previdenciário sem complicação. Nota 5,0 ★ no Google (29 avaliações). Sede na R. Martinho Campos, 162 - Centro, Pitangui - MG e atuação em todo o Brasil.",
+      "⚖️ Advocacia e Consultoria Jurídica com rigor técnico e comprometimento. Nota 5,0 ★ no Google (28 avaliações). Sede na R. Cel. Serrão, n.190 - Centro, Januária - MG.",
     images: ["/logo.png"],
   },
 };
@@ -117,43 +117,43 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Mariana Corsi Advocacia Previdenciária",
-    alternateName: "Mariana Corsi | Advogada Previdenciária",
-    legalName: "Mariana Corsi Advocacia Previdenciária",
-    telephone: "+55-38-99930-8575",
-    email: "contato@marianacorsi.adv.br",
-    url: "https://www.marianacorsi.adv.br",
-    image: "https://www.marianacorsi.adv.br/logo.png",
+    name: "Yan Marlon — Advocacia, Assessoria e Consultoria Jurídica",
+    alternateName: "Dr. Yan Marlon | Advogado e Consultor Jurídico",
+    legalName: "Yan Marlon Advocacia, Assessoria e Consultoria Jurídica",
+    telephone: "+55-38-99928-0572",
+    email: "contato@dryanmarlon.adv.br",
+    url: "https://www.dryanmarlon.adv.br",
+    image: "https://www.dryanmarlon.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Martinho Campos, 162 - Centro",
-      addressLocality: "Pitangui",
+      streetAddress: "R. Cel. Serrão, n.190 - Centro",
+      addressLocality: "Januária",
       addressRegion: "MG",
-      postalCode: "35650-000",
+      postalCode: "39480-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "-19.6800",
-      longitude: "-45.2100",
+      latitude: "-15.4833",
+      longitude: "-44.3667",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "29",
+      reviewCount: "28",
       bestRating: "5",
       worstRating: "1",
     },
     areaServed: [
-      "Pitangui",
-      "Leandro Ferreira",
-      "Conceição do Pará",
-      "Onça de Pitangui",
-      "Pará de Minas",
-      "Nova Serrana",
-      "Bom Despacho",
-      "Divinópolis",
+      "Januária",
+      "Montes Claros",
+      "Itacarambi",
+      "São Francisco",
+      "Manga",
+      "Varzelândia",
+      "Pedras de Maria da Cruz",
+      "Bonito de Minas",
       "Minas Gerais",
       "Brasil",
     ],
@@ -167,13 +167,14 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "09:00",
+        opens: "08:00",
         closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/marianamunizcorsi/",
-      "https://wa.me/5538999308575",
+      "https://www.instagram.com/dr.yan.marlon/",
+      "https://wa.me/5538999280572",
+      "https://wa.me/message/CXIPL54ES4SJG1",
     ],
   };
 
@@ -183,20 +184,20 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth dark`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=mc2" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=mc2" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=mc2" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=mc2" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/icon-512x512.png?v=mc2" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=mc2" />
-        <link rel="shortcut icon" href="/favicon.ico?v=mc2" />
-        <meta name="theme-color" content="#060f1e" />
+        <link rel="icon" href="/favicon.ico?v=ym1" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=ym1" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=ym1" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=ym1" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon-512x512.png?v=ym1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=ym1" />
+        <link rel="shortcut icon" href="/favicon.ico?v=ym1" />
+        <meta name="theme-color" content="#050a14" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#c5a059] selection:text-[#060f1e]">
+      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#d4af37] selection:text-[#050a14]">
         {children}
       </body>
     </html>

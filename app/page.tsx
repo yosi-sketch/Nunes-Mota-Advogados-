@@ -22,49 +22,48 @@ import {
   ChevronDown,
   Users,
   Building2,
-  Compass,
   Briefcase,
   AlertCircle,
-  HelpCircle,
+  Gavel,
   Coins,
   BadgeCheck,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5538999308575";
-const PHONE_DISPLAY = "(38) 99930-8575";
-const EMAIL_CONTACT = "contato@marianacorsi.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/marianamunizcorsi/";
-const INSTAGRAM_HANDLE = "@marianamunizcorsi";
+const WHATSAPP_NUMBER = "5538999280572";
+const PHONE_DISPLAY = "(38) 99928-0572";
+const EMAIL_CONTACT = "contato@dryanmarlon.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/dr.yan.marlon/";
+const INSTAGRAM_HANDLE = "@dr.yan.marlon";
 
-const FIRM_NAME = "Mariana Corsi Advocacia Previdenciária";
-const FIRM_SHORT_NAME = "Mariana Corsi Advocacia";
+const FIRM_NAME = "Dr. Yan Marlon — Advocacia, Assessoria e Consultoria Jurídica";
+const FIRM_SHORT_NAME = "Dr. Yan Marlon Advocacia";
 const FIRM_SLOGAN =
-  "Direito Previdenciário sem complicação. Cuidado com as pessoas, rigor técnico e agilidade para garantir o seu melhor benefício do INSS.";
-const LAWYER_NAME = "Dra. Mariana Corsi";
-const LAWYER_TITLE = "Advogada Previdenciarista | Especialista em INSS";
+  "Advocacia de excelência, compromisso inegociável e defesa estratégica dos seus direitos civis, contratuais, empresariais e de família.";
+const LAWYER_NAME = "Dr. Yan Marlon";
+const LAWYER_TITLE = "Advogado & Consultor Jurídico | OAB/MG 195.229";
 
 const ADDRESS_TEXT =
-  "R. Martinho Campos, 162 - Centro, Pitangui - MG, 35650-000";
+  "R. Cel. Serrão, n.190 - Centro, Januária - MG, 39480-000";
 const REGION_TEXT =
-  "Pitangui · Centro-Oeste Mineiro · Minas Gerais & Atendimento Digital em Todo o Brasil";
+  "Januária · Norte de Minas & Atendimento Digital em Todo o Brasil";
 
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Mariana+Corsi+Advocacia+Previdenci%C3%A1ria%0APitangui+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Yan+Marlon+%E2%80%94+Advocacia%2C+Assessoria+e+Consultoria+Jur%C3%ADdica&sourceid=chrome&ie=UTF-8#";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/search?sca_esv=a225a88ab5a0d3cb&sxsrf=AKL5yDixCMldSO4C_0BYsPDK25s8neNwTg:1793304403889&q=mariana+corsi+advocacia+previdenci%C3%A1ria+pitangui+endere%C3%A7o&ludocid=8462263717528583590&sa=X&ved=2ahUKEwj7zN6_g-CXAxV3A7kGHcxALMUQ6BN6BAg1EAI";
+  "https://www.google.com/search?sca_esv=0499b66e11e21840&sxsrf=AKL5yDiG3JOFgdbViSXjaFCipRp93sSa8w:1793307179226&q=yan+marlon,+advocacia,+assessoria+e+consultoria+jur%C3%ADdica+janu%C3%A1ria+endere%C3%A7o&ludocid=5222744491454223185&sa=X&ved=2ahUKEwij6I_rjeCXAxViqZUCHe9xLFEQ6BN6BAggEAI";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/hero-advogada.jpg";
-const FOTO_SOBRE_SRC = "/sobre-advogada.jpg";
+const FOTO_HERO_SRC = "/hero-advogado.jpg";
+const FOTO_SOBRE_SRC = "/sobre-advogado.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Mariana! Gostaria de conversar sobre o meu caso previdenciário e solicitar uma análise do meu benefício do INSS.";
+    "Olá, Dr. Yan Marlon! Gostaria de agendar uma consulta jurídica e conversar sobre o meu caso.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -173,7 +172,7 @@ export default function Home() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalArea, setModalArea] = useState<string>("Planejamento Previdenciário");
+  const [modalArea, setModalArea] = useState<string>("Consulta Jurídica Especializada");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -183,353 +182,353 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const openConsultModal = (areaName = "Consulta Geral Previdenciária") => {
+  const openConsultModal = (areaName = "Consulta Jurídica Especializada") => {
     setModalArea(areaName);
     setModalOpen(true);
   };
 
   const closeMenu = () => setIsMenuOpen(false);
 
-  // Áreas Especializadas Previdenciárias (Pilares de Atuação)
+  // Áreas Especializadas de Atuação Jurídica (Pilares Oficiais)
   const areasAtuacao = [
     {
-      id: "planejamento",
-      icon: Compass,
-      title: "Planejamento Previdenciário Estratégico",
+      id: "civil-contratos",
+      icon: FileText,
+      title: "Direito Civil & Contratos Estratégicos",
       shortDesc:
-        "Cálculo rigoroso do tempo de contribuição e simulação da regra mais vantajosa para você se aposentar sem perder dinheiro nem tempo.",
+        "Elaboração, análise criteriosa e execução de contratos com máxima blindagem jurídica, cobranças e ações indenizatórias.",
       bullets: [
-        "Análise minuciosa de cada vínculo no CNIS e carteira de trabalho",
-        "Identificação e correção de pendências e indicadores que travam o benefício",
-        "Cálculo do Retorno sobre o Investimento (ROI) de contribuições futuras",
-        "Previsão da melhor data de requerimento para receber o teto possível",
+        "Elaboração e revisão minuciosa de contratos cíveis e comerciais",
+        "Ações indenizatórias por descumprimento contratual e danos morais",
+        "Cobrança judicial e extrajudicial de créditos e títulos executivos",
+        "Proteção patrimonial e resolução célere de litígios imobiliários",
       ],
-      tag: "Mais Solicitado",
-      badge: "Prevenção & Lucro",
+      tag: "Estratégico",
+      badge: "Segurança Jurídica",
       whatsappMsg:
-        "Olá, Dra. Mariana! Gostaria de agendar um Planejamento Previdenciário para calcular a melhor data e valor da minha aposentadoria.",
+        "Olá, Dr. Yan Marlon! Preciso de assessoria jurídica especializada em Direito Civil / Contratos.",
     },
     {
-      id: "aposentadorias",
-      icon: Scale,
-      title: "Aposentadorias do INSS",
+      id: "trabalhista-patronal",
+      icon: Briefcase,
+      title: "Direito do Trabalho Patronal & Gestão de Pessoal",
       shortDesc:
-        "Concessão célere e estratégica de todas as modalidades de aposentadoria pelas regras vigentes e regras de transição da Reforma.",
+        "Assessoria jurídica consultiva e contenciosa para empresas e empregadores, blindando negócios e solucionando questões com funcionários.",
       bullets: [
-        "Aposentadoria por Idade Urbana e Rural",
-        "Aposentadoria por Tempo de Contribuição e Transição",
-        "Aposentadoria Especial (Insalubridade, Químicos, Ruído e Periculosidade)",
-        "Aposentadoria da Pessoa com Deficiência (Idade e Tempo reduzidos)",
+        "Resolução de questões contratuais com colaboradores e equipe",
+        "Defesa combativa de empresas e empregadores em Reclamatórias Trabalhistas",
+        "Prevenção e redução consistente de passivo trabalhista",
+        "Acordos judiciais e extrajudiciais com segurança e homologação",
       ],
-      tag: "Especialidade",
+      tag: "Empresarial",
+      badge: "Prevenção & Defesa",
+      whatsappMsg:
+        "Olá, Dr. Yan Marlon! Gostaria de consultoria jurídica sobre questões contratuais com funcionários e defesa trabalhista.",
+    },
+    {
+      id: "familia-sucessoes",
+      icon: Users,
+      title: "Direito de Família & Sucessões",
+      shortDesc:
+        "Acolhimento humanizado e condução técnica firme em inventários, divórcios, guarda, pensão alimentícia e partilha de bens.",
+      bullets: [
+        "Inventários judiciais e extrajudiciais em cartório com rapidez",
+        "Divórcios consensuais e litigiosos com divisão justa de patrimônio",
+        "Fixação, revisão e execução de pensão alimentícia e guarda de filhos",
+        "Planejamento sucessório familiar para proteção de bens e herança",
+      ],
+      tag: "Familiar",
+      badge: "Acolhimento & Resolução",
+      whatsappMsg:
+        "Olá, Dr. Yan Marlon! Preciso de orientação jurídica em Direito de Família / Inventário / Partilha de bens.",
+    },
+    {
+      id: "assessoria-empresarial",
+      icon: Building2,
+      title: "Assessoria & Consultoria Jurídica Empresarial",
+      shortDesc:
+        "Acompanhamento jurídico contínuo para empresários, comerciantes e profissionais autônomos tomarem decisões seguras.",
+      bullets: [
+        "Consultoria preventiva mensal com atendimento prioritário e direto",
+        "Auditoria de rotinas contratuais, riscos operacionais e adequação legal",
+        "Pareceres jurídicos fundamentados e negociações comerciais estratégicas",
+        "Blindagem jurídica completa para você focar no crescimento da sua empresa",
+      ],
+      tag: "Contínuo",
+      badge: "Suporte Total",
+      whatsappMsg:
+        "Olá, Dr. Yan Marlon! Gostaria de conhecer os planos de assessoria e consultoria jurídica contínua para minha empresa.",
+    },
+    {
+      id: "previdenciario",
+      icon: Scale,
+      title: "Direito Previdenciário & Benefícios do INSS",
+      shortDesc:
+        "Defesa intransigente para concessão, planejamento e restabelecimento de aposentadorias, auxílios e BPC/LOAS no INSS.",
+      bullets: [
+        "Planejamento previdenciário para obter o maior valor de aposentadoria",
+        "Reversão rápida de negativas indevidas em perícias médicas do INSS",
+        "BPC/LOAS para idosos e pessoas com deficiência ou baixa renda",
+        "Cobrança integral de retroativos e atrasados devidos com juros e correção",
+      ],
+      tag: "Previdência",
       badge: "Direito Adquirido",
       whatsappMsg:
-        "Olá, Dra. Mariana! Preciso de auxílio jurídico para dar entrada na minha aposentadoria pelo INSS.",
+        "Olá, Dr. Yan Marlon! Preciso de auxílio jurídico com pedido de aposentadoria ou benefício negado no INSS.",
     },
     {
-      id: "bpc-loas",
-      icon: HeartHandshake,
-      title: "BPC / LOAS (Benefício Assistencial)",
-      shortDesc:
-        "Salário mínimo mensal garantido por lei para idosos (65+) ou pessoas com deficiência e doenças graves de baixa renda, mesmo sem nunca ter pago o INSS.",
-      bullets: [
-        "Orientação completa no CadÚnico e comprovação da vulnerabilidade familiar",
-        "Defesa para crianças, jovens e adultos com autismo (TEA), paralisia e deficiências",
-        "Amparo para portadores de doenças graves incapacitantes",
-        "Reversão rápida de negativas indevidas em perícias sociais e médicas",
-      ],
-      tag: "Proteção Social",
-      badge: "Sem Contribuir",
-      whatsappMsg:
-        "Olá, Dra. Mariana! Gostaria de saber como conseguir o BPC/LOAS para mim ou para um familiar de baixa renda.",
-    },
-    {
-      id: "incapacidade",
+      id: "consumidor-indenizacoes",
       icon: Shield,
-      title: "Benefícios por Incapacidade (Auxílio-Doença & Invalidez)",
+      title: "Direito do Consumidor & Defesa de Direitos",
       shortDesc:
-        "Liberação e restabelecimento imediato de benefícios cortados ou negados injustamente na perícia médica do INSS.",
+        "Atuação enérgica contra abusos de instituições bancárias, negativações indevidas, fraudes e negativas de planos de saúde.",
       bullets: [
-        "Auxílio por Incapacidade Temporária (antigo Auxílio-Doença)",
-        "Aposentadoria por Incapacidade Permanente (antiga Aposentadoria por Invalidez)",
-        "Adicional de 25% para aposentados por invalidez que necessitam de acompanhante",
-        "Auxílio-Acidente (indenização mensal para quem ficou com sequelas)",
+        "Ações contra juros abusivos, golpes financeiros e fraudes bancárias",
+        "Retirada de negativação indevida do SPC/Serasa com pedido de indenização",
+        "Liminares contra negativas injustas de tratamentos por planos de saúde",
+        "Reparação integral de prejuízos materiais e danos morais sofridos",
       ],
-      tag: "Urgência",
-      badge: "Perícia Médica",
+      tag: "Defesa Ativa",
+      badge: "Reparação Justa",
       whatsappMsg:
-        "Olá, Dra. Mariana! Tive meu benefício de auxílio-doença negado/cortado pelo INSS e preciso de ajuda jurídica urgente.",
-    },
-    {
-      id: "pensao-maternidade",
-      icon: Users,
-      title: "Pensão por Morte & Salário-Maternidade",
-      shortDesc:
-        "Garantia de amparo financeiro rápido e seguro para dependentes e segurados em momentos delicados da vida.",
-      bullets: [
-        "Comprovação de União Estável e Dependência Econômica para concessão rápida",
-        "Pensão por morte para cônjuges, companheiros, filhos e pais",
-        "Salário-Maternidade para trabalhadoras urbanas, rurais, desempregadas e MEI",
-        "Cobrança integral de retroativos devidos desde a data do falecimento ou parto",
-      ],
-      tag: "Família",
-      badge: "Amparo Imediato",
-      whatsappMsg:
-        "Olá, Dra. Mariana! Preciso de orientação e entrada em pedido de Pensão por Morte / Salário-Maternidade.",
-    },
-    {
-      id: "revisoes-destrave",
-      icon: Coins,
-      title: "Revisão de Benefícios & Destrave de Negativas",
-      shortDesc:
-        "Recursos administrativos e ações judiciais para reverter indeferimentos do INSS e receber todos os atrasados devidos com juros e correção.",
-      bullets: [
-        "Ação Judicial contra negativa indevida de benefícios no INSS",
-        "Revisão da Vida Toda e Revisão das Melhores Contribuições",
-        "Inclusão de períodos rurais, serviço militar e tempo especial não computados",
-        "Recebimento de parcelas retroativas acumuladas direto na conta corrente",
-      ],
-      tag: "Atrasados",
-      badge: "Recuperação",
-      whatsappMsg:
-        "Olá, Dra. Mariana! Meu pedido foi negado no INSS ou desconfio que o valor do meu benefício está errado e quero revisar.",
+        "Olá, Dr. Yan Marlon! Fui lesado como consumidor / tive meu nome negativado indevidamente e preciso de ação jurídica.",
     },
   ];
 
-  // Avaliações Reais do Google (5,0 ★ com 29 avaliações)
+  // Avaliações Reais do Google Meu Negócio (Nota 5,0 ★ em 28 avaliações)
   const depoimentosGoogle = [
     {
-      author: "Eliziany Gomes Silva",
-      detail: "1 avaliação no Google",
-      stars: 5,
-      date: "Avaliação verificada no Google",
-      quote:
-        "Além de ser uma excelente profissional, é uma pessoa muito atenciosa e prestativa. Tirou minha dúvida com clareza, paciência e me passou muita confiança. Dá para perceber o cuidado que ela tem com as pessoas. Recomendo de coração!",
-      highlight: "Cuidado genuíno com as pessoas e clareza impecável",
-    },
-    {
-      author: "Claudio Kanuto Gonçalves",
-      detail: "8 avaliações · 3 fotos no Google",
-      stars: 5,
-      date: "Avaliação verificada no Google",
-      quote:
-        "Excelente profissional. Não fica enrolando. Bom atendimento e preço justo.",
-      highlight: "Sem enrolação, atendimento direto e preço justo",
-    },
-    {
-      author: "Carol Moreira Chaves",
-      detail: "9 avaliações no Google",
-      stars: 5,
-      date: "Avaliação verificada no Google",
-      quote:
-        "Excelente profissional, muito atencioso e competente!",
-      highlight: "Extrema competência e dedicação",
-    },
-    {
-      author: "deniapit Morato",
-      detail: "1 avaliação no Google",
-      stars: 5,
-      date: "Avaliação verificada no Google",
-      quote:
-        "A Mariana é extremamente atenciosa e prestativa, resolveu tudo muito rápido!",
-      highlight: "Atendimento ágil e resolução rápida",
-    },
-    {
-      author: "Júlia Eduarda Vasconcelos Gontijo",
-      detail: "4 avaliações no Google",
-      stars: 5,
-      date: "Avaliação verificada no Google",
-      quote:
-        "A Dra. Mariana é uma excelente profissional, extremamente atenciosa, disposta, recomendo demais!!!",
-      highlight: "Disposição e atenção total em cada etapa",
-    },
-    {
-      author: "Paty Mendes",
-      detail: "1 avaliação no Google",
-      stars: 5,
-      date: "Avaliação verificada no Google",
-      quote:
-        "Está de parabéns excelente profissional super indico 👏🏼👏🏼👏🏼",
-      highlight: "Super indicada por quem conhece",
-    },
-    {
-      author: "Emylly Santana",
-      detail: "2 avaliações · 2 fotos no Google",
-      stars: 5,
-      date: "Avaliação verificada no Google",
-      quote:
-        "Atendeu todas as minhas expectativas, adorei!",
-      highlight: "Superou todas as expectativas",
-    },
-    {
-      author: "Romulo Morato",
-      detail: "1 avaliação no Google",
-      stars: 5,
-      date: "Avaliação verificada no Google",
-      quote:
-        "Dra Mariana consigo uma ótima advogada previdência . Indico ótima profissional.",
-      highlight: "Referência em advocacia previdenciária",
-    },
-    {
-      author: "Claudio Bessa Nascimento",
-      detail: "Local Guide · 65 avaliações no Google",
-      stars: 5,
-      date: "Avaliação verificada no Google",
-      quote:
-        "Recomendo com toda certeza. Trabalho impecável e muita seriedade.",
-      highlight: "Avaliação de Local Guide nível ouro",
-    },
-    {
-      author: "Cristiane Santos",
-      detail: "Local Guide · 8 avaliações no Google",
-      stars: 5,
-      date: "Avaliação verificada no Google",
-      quote:
-        "Excelente profissional. Muito esclarecedora e ética.",
-      highlight: "Ética e clareza no atendimento",
-    },
-    {
-      author: "Ricardo Amaral",
-      detail: "4 avaliações no Google",
-      stars: 5,
-      date: "Avaliação verificada no Google",
-      quote:
-        "Excelente e comprometida profissional!!!",
-      highlight: "Compromisso real com o cliente",
-    },
-    {
-      author: "Ana Cristina Corsi Pereira",
+      author: "Vinny Lisboa",
       detail: "2 avaliações no Google",
       stars: 5,
-      date: "Avaliação verificada no Google",
+      date: "3 anos atrás · Avaliação verificada no Google",
       quote:
-        "Excelente profissional, muito dedicada e atenciosa em tudo!",
-      highlight: "Dedicação e carinho com cada caso",
+        "Excelente profissional, demonstra total comprometimento e assistência ao cliente.",
+      highlight: "Comprometimento total e assistência dedicada ao cliente",
+    },
+    {
+      author: "Kellen Raiane",
+      detail: "5 avaliações no Google",
+      stars: 5,
+      date: "2 anos atrás · Avaliação verificada no Google",
+      quote:
+        "Advogado excelente um profissional notável, que não mede esforços para ajudar, foi o único que pegou a causa e fez a diferença, agradeço por tudo e indico de olhos fechado podem confiar !!",
+      highlight: "Profissional notável que fez a diferença onde outros não pegaram a causa",
+    },
+    {
+      author: "Helder Mota ENG",
+      detail: "7 avaliações · 5 fotos no Google",
+      stars: 5,
+      date: "5 anos atrás · Avaliação verificada no Google",
+      quote:
+        "Advogado resolveu minhas questões contratuais com meus funcionários e pessoais de família, indico.",
+      highlight: "Solucionou com excelência questões contratuais com funcionários e família",
+    },
+    {
+      author: "Luiz Felipe Caldeira",
+      detail: "Local Guide · 31 avaliações · 15 fotos no Google",
+      stars: 5,
+      date: "5 anos atrás · Avaliação verificada no Google",
+      quote:
+        "Empresa séria e com profissionais altamente qualificados. Recomendo.",
+      highlight: "Empresa séria com profissionais de alta qualificação",
+    },
+    {
+      author: "Elizane Couto Santos",
+      detail: "2 avaliações no Google",
+      stars: 5,
+      date: "5 anos atrás · Avaliação verificada no Google",
+      quote:
+        "Excelente advogado, comprometido e competente, atendimento ímpar. Indico muito.",
+      highlight: "Atendimento ímpar, comprometido e competente",
+    },
+    {
+      author: "Ágatha Couto",
+      detail: "3 avaliações no Google",
+      stars: 5,
+      date: "5 anos atrás · Avaliação verificada no Google",
+      quote:
+        "Excelente profissional, super indico! Aspectos positivos: Receptividade, Qualidade, Profissionalismo.",
+      highlight: "Receptividade, qualidade impecável e profissionalismo",
+    },
+    {
+      author: "Karine Alencar",
+      detail: "4 avaliações no Google",
+      stars: 5,
+      date: "5 anos atrás · Avaliação verificada no Google",
+      quote:
+        "Um ótimo profissional, indico👏👏",
+      highlight: "Super recomendado com máxima satisfação",
+    },
+    {
+      author: "Lucas Alencar Lacerda",
+      detail: "3 avaliações no Google",
+      stars: 5,
+      date: "3 anos atrás · Avaliação verificada no Google",
+      quote:
+        "Excelente profissional!",
+      highlight: "Presteza, seriedade e dedicação em cada detalhe",
+    },
+    {
+      author: "ISAAC REIS",
+      detail: "1 avaliação no Google",
+      stars: 5,
+      date: "3 anos atrás · Avaliação verificada no Google",
+      quote:
+        "Profissional qualificado, excelente atendimento!",
+      highlight: "Qualificação técnica e atendimento de primeiro nível",
+    },
+    {
+      author: "Polyana couto Couto",
+      detail: "4 avaliações · 1 foto no Google",
+      stars: 5,
+      date: "5 anos atrás · Avaliação verificada no Google",
+      quote:
+        "Ótimo profissional. Aspectos positivos: Profissionalismo.",
+      highlight: "Rigor ético e conduta profissional exemplar",
+    },
+    {
+      author: "nayara Silveira",
+      detail: "9 avaliações · 2 fotos no Google",
+      stars: 5,
+      date: "5 anos atrás · Avaliação verificada no Google",
+      quote:
+        "Excelente profissional. Aspectos positivos: Qualidade, Profissionalismo, Valor.",
+      highlight: "Qualidade, profissionalismo e alto valor gerado",
+    },
+    {
+      author: "Filipe Alkmim",
+      detail: "3 avaliações no Google",
+      stars: 5,
+      date: "5 anos atrás · Avaliação verificada no Google",
+      quote:
+        "Profissional excelente! Aspectos positivos: Profissionalismo.",
+      highlight: "Profissionalismo e segurança jurídica comprovada",
     },
   ];
 
   // Diferenciais Competitivos
   const diferenciais = [
     {
-      icon: Sparkles,
-      title: "Direito Previdenciário Sem Complicação",
+      icon: Shield,
+      title: "Comprometimento Total com o Cliente",
       description:
-        "Traduzimos as leis complexas e as regras confusas do INSS em linguagem simples, humana e acessível, para você entender cada detalhe do seu benefício.",
+        "Como atestam os clientes no Google: dedicação sem limites à sua causa, com assistência contínua e acompanhamento pessoal em cada fase do processo.",
     },
     {
-      icon: Clock,
-      title: "Sem Enrolação e com Resolução Ágil",
+      icon: Gavel,
+      title: "Rigor Técnico & Soluções Contratuais",
       description:
-        "Como nossos próprios clientes afirmam no Google: nosso trabalho é ágil, focado em resultados rápidos e sem perda desnecessária de tempo.",
+        "Atuação especializada na resolução de questões contratuais com funcionários, empresas e demandas civis complexas, com estratégias sólidas e fundamentadas.",
     },
     {
       icon: HeartHandshake,
-      title: "Atendimento Humanizado & Cuidado com as Pessoas",
+      title: "Atendimento Ímpar & Humanizado",
       description:
-        "Você não é apenas um número de processo. Aqui cada história é acolhida com paciência, carinho, empatia e compromisso ético inegociável.",
+        "Você é acolhido com atenção, empatia e clareza. Traduzimos termos jurídicos para uma linguagem transparente, sem complicação ou rodeios.",
     },
     {
       icon: BadgeCheck,
-      title: "Transparência Total & Preço Justo",
+      title: "Transparência & Conduta Ética",
       description:
-        "Honorários claros, justos e condizentes com a tabela da OAB. Sem cobranças surpresas e com diagnóstico honesto sobre a viabilidade real do seu caso.",
+        "Honorários claros e justos de acordo com as normas da OAB. Diagnóstico honesto e realista sobre as chances e os caminhos mais viáveis para o seu caso.",
     },
     {
       icon: MapPin,
-      title: "Sede no Centro de Pitangui & Online para Todo o Brasil",
+      title: "Sede no Centro de Januária & Online",
       description:
-        "Atendimento com hora marcada em nossa sede na R. Martinho Campos, 162 - Centro de Pitangui - MG, ou 100% digital com a mesma proximidade e segurança.",
+        "Escritório de fácil acesso na R. Cel. Serrão, 190, no Centro de Januária - MG, e estrutura digital de ponta para atender clientes em todo o Brasil.",
     },
     {
       icon: Star,
       title: "Nota Máxima 5,0 ★ no Google",
       description:
-        "100% de avaliações 5 estrelas concedidas por clientes reais que tiveram seus benefícios conquistados e dúvidas esclarecidas com excelência.",
+        "Avaliações 100% 5 estrelas concedidas por clientes reais que tiveram seus problemas solucionados com rapidez, competência e seriedade.",
     },
   ];
 
   // Situações comuns (Diagnóstico Rápido)
   const situacoesDiagnostico = [
     {
-      pergunta: "Teve seu benefício negado ou suspenso pelo INSS?",
+      pergunta: "Precisa resolver questões contratuais com funcionários ou empresas?",
       orientacao:
-        "Não desista! Mais de 60% das negativas do INSS ocorrem por falhas de documentação ou erros de análise pericial que revertemos na Justiça com direito a todos os retroativos.",
-      cta: "Quero Destravar Meu Benefício",
-      area: "Destrave de Benefício Negado",
+        "Contratos mal elaborados geram prejuízos evitáveis. O Dr. Yan Marlon atua na revisão, elaboração de instrumentos seguros e na prevenção e defesa contra passivos trabalhistas.",
+      cta: "Quero Blindar Meus Contratos",
+      area: "Contratos & Direito do Trabalho Patronal",
     },
     {
-      pergunta: "Está perto de se aposentar e não sabe a melhor regra?",
+      pergunta: "Está passando por inventário, partilha de bens ou divórcio?",
       orientacao:
-        "A Reforma da Previdência criou 5 regras de transição diferentes. Escolher a errada pode fazer você perder até 40% do valor mensal para o resto da vida.",
-      cta: "Quero um Planejamento Seguro",
-      area: "Planejamento Previdenciário",
+        "Questões familiares exigem acolhimento, discrição e firmeza técnica para evitar litígios desgastantes e assegurar uma partilha justa e desimpedida do patrimônio.",
+      cta: "Orientação em Direito de Família",
+      area: "Direito de Família & Sucessões",
     },
     {
-      pergunta: "Trabalhou na roça ou em atividades com insalubridade?",
+      pergunta: "Sofreu prejuízos materiais, cobranças indevidas ou danos morais?",
       orientacao:
-        "Períodos rurais a partir dos 12 anos de idade e tempos de trabalho insalubre (ruído, graxa, calor, saúde) podem antecipar sua aposentadoria em vários anos.",
-      cta: "Comprovar Meu Tempo Especial / Rural",
-      area: "Aposentadorias do INSS",
+        "Ações indenizatórias exigem provas robustas e teses jurídicas assertivas para garantir que você seja integralmente ressarcido pelos prejuízos causados por terceiros.",
+      cta: "Buscar Reparação de Danos",
+      area: "Direito Civil & Indenizações",
     },
     {
-      pergunta: "Tem familiar idoso ou com deficiência sem renda?",
+      pergunta: "Teve benefício previdenciário negado ou precisa se aposentar?",
       orientacao:
-        "O BPC/LOAS garante 1 salário mínimo mensal mesmo para quem nunca pagou o INSS, desde que comprovada a condição socioeconômica da família.",
-      cta: "Saber Como Pedir o BPC/LOAS",
-      area: "BPC / LOAS",
+        "Muitas decisões do INSS são injustas ou calculadas com valor inferior ao devido. Atuamos com rigor para conceder, planejar e revisar o seu melhor benefício com retroativos.",
+      cta: "Analisar Meu Benefício do INSS",
+      area: "Direito Previdenciário",
     },
   ];
 
   // FAQ
   const faqs = [
     {
-      question: "O que fazer se o INSS negou o meu pedido de aposentadoria ou auxílio?",
+      question: "Como funciona a consulta jurídica inicial com o Dr. Yan Marlon?",
       answer:
-        "O primeiro passo é não aceitar a negativa como definitiva. O INSS erra frequentemente na análise de documentos e laudos médicos. Temos um prazo legal para entrar com recurso administrativo ou ingressar com uma Ação Judicial na Justiça Federal, onde um perito judicial neutro avaliará seu caso. Além de buscar a concessão, você tem direito a receber todos os valores atrasados desde o dia do primeiro pedido.",
+        "A consulta inicial é o momento em que ouvimos com calma a sua história, analisamos os documentos disponíveis e realizamos um diagnóstico jurídico claro sobre as possibilidades, prazos e a estratégia mais adequada para o seu caso. O atendimento pode ser presencial no escritório em Januária/MG ou online por WhatsApp e videochamada.",
     },
     {
-      question: "O que é o Planejamento Previdenciário e por que ele é fundamental?",
+      question: "Como o Dr. Yan Marlon pode ajudar minha empresa com funcionários e contratos?",
       answer:
-        "O Planejamento Previdenciário é um estudo técnico completo do seu histórico profissional (CNIS, carteiras de trabalho e carnês). Ele calcula com precisão matemática em qual das regras de transição você terá a melhor aposentadoria, quanto você deve recolher daqui para frente para aumentar o valor e qual é a data exata para requerer o benefício sem perder dinheiro.",
+        "Auxiliamos empresários e empregadores tanto na fase preventiva (elaboração e revisão de contratos de trabalho e prestação de serviços, adequação a normas e rotinas) quanto na defesa contenciosa contra reclamações trabalhistas indevidas, sempre buscando a redução de custos, acordos vantajosos e segurança jurídica.",
     },
     {
-      question: "Quem nunca pagou o INSS pode receber algum benefício mensal?",
+      question: "Posso ser atendido mesmo morando fora de Januária ou em outro estado?",
       answer:
-        "Sim! O BPC/LOAS (Benefício de Prestação Continuada da Lei Orgânica da Assistência Social) garante um salário mínimo mensal para idosos com 65 anos ou mais e para pessoas com deficiência física, mental ou enfermidades graves de qualquer idade que vivam em situação de vulnerabilidade familiar. Não exige contribuição prévia ao INSS.",
+        "Sim, perfeitamente! Hoje o Poder Judiciário funciona de forma 100% eletrônica em todo o Brasil. Nosso escritório conta com infraestrutura digital segura para envio de documentos, reuniões por chamada de vídeo e acompanhamento passo a passo via WhatsApp, garantindo a mesma proximidade e excelência de um atendimento presencial.",
     },
     {
-      question: "Como funciona o atendimento se eu morar fora de Pitangui?",
+      question: "Quanto tempo demora um processo de inventário ou divórcio?",
       answer:
-        "Nosso atendimento online é completo, humanizado e extremamente seguro. Atendemos clientes de todo o estado de Minas Gerais e de qualquer lugar do Brasil por WhatsApp, ligação ou videochamada. O envio de documentos é feito de forma simples pelo celular e você acompanha cada andamento com total transparência.",
+        "Quando há consenso entre os herdeiros ou o casal e não há menores envolvidos, o procedimento pode ser realizado em cartório (extrajudicial) em questão de semanas. Caso seja necessário o processo judicial, o tempo varia conforme a complexidade do patrimônio, mas conduzimos com máxima diligência para destravar cada etapa.",
     },
     {
-      question: "Quais documentos preciso para que a Dra. Mariana analise o meu caso?",
+      question: "Quais documentos preciso apresentar na primeira conversa?",
       answer:
-        "Para a consulta inicial, os principais documentos são: documento de identificação com foto (RG ou CNH), CPF, comprovante de endereço atualizado, Carteiras de Trabalho (todas que tiver) e o extrato CNIS (que pode ser baixado facilmente pelo aplicativo Meu INSS). Em casos de auxílio-doença ou BPC, laudos e receitas médicas também são essenciais.",
+        "Geralmente recomendamos ter em mãos: documento de identidade com foto (RG ou CNH), CPF, comprovante de residência atualizado e os documentos específicos da sua dúvida (por exemplo: contratos, extratos, certidões de casamento/nascimento, CTPS, laudos médicos ou notificações recebidas).",
     },
     {
-      question: "Quanto tempo demora para sair a resposta de um processo previdenciário?",
+      question: "Como são definidos os honorários advocatícios?",
       answer:
-        "Na via administrativa (direto no INSS), o prazo costuma variar de 30 a 90 dias após a instrução completa. Quando é necessário recorrer à Justiça Federal, o tempo médio varia de acordo com a vara, mas a grande vantagem é que todo o período de espera é pago retroativamente com juros e correção monetária na hora da vitória.",
+        "Nossos honorários são estabelecidos de forma transparente, ética e de acordo com a tabela da OAB/MG. O valor é detalhado no contrato de prestação de serviços jurídicos após a avaliação da complexidade da demanda, sem nenhuma cobrança oculta ou surpresa para o cliente.",
     },
   ];
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="relative min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-[#c5a059] selection:text-[#060f1e]">
+      <div className="relative min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-[#d4af37] selection:text-[#050a14]">
         {/* ========================================================================= */}
         {/* 1. TOP NOTICE / PRE-HEADER                                               */}
         {/* ========================================================================= */}
-        <div className="border-b border-[#1c3a63] bg-gradient-to-r from-[#060f1e] via-[#0a1628] to-[#0e1f38] px-4 py-2 text-white">
+        <div className="border-b border-[#1b3964] bg-gradient-to-r from-[#050a14] via-[#081020] to-[#0e182e] px-4 py-2 text-white">
           <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 text-xs">
             <div className="flex items-center gap-2 font-medium">
-              <span className="flex size-2 rounded-full bg-[#dfb967] animate-pulse" />
-              <span className="text-[#f3dfa7]">
-                Atendimento Especializado em Direito Previdenciário &bull; INSS
+              <span className="flex size-2 rounded-full bg-[#eed68b] animate-pulse" />
+              <span className="text-[#eed68b]">
+                Advocacia, Assessoria &amp; Consultoria Jurídica &bull; OAB/MG 195.229
               </span>
               <span className="hidden sm:inline text-slate-400">|</span>
               <span className="hidden sm:inline text-slate-300">
-                Pitangui - MG e Online para Todo o Brasil
+                Januária - MG &amp; Atendimento Digital em Todo o Brasil
               </span>
             </div>
 
@@ -550,14 +549,14 @@ export default function Home() {
                   ))}
                 </div>
                 <span className="font-bold text-white">5,0 ★</span>
-                <span className="text-slate-300">(29 avaliações no Google)</span>
+                <span className="text-slate-300">(28 avaliações no Google)</span>
               </a>
 
               <a
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:flex items-center gap-1 font-semibold text-[#dfb967] hover:underline"
+                className="hidden md:flex items-center gap-1 font-semibold text-[#eed68b] hover:underline"
               >
                 <WhatsAppIcon size={13} className="text-[#25D366]" />
                 <span>{PHONE_DISPLAY}</span>
@@ -580,14 +579,14 @@ export default function Home() {
             {/* Logo Left */}
             <a
               href="#inicio"
-              aria-label="Mariana Corsi Advocacia Previdenciária - Início"
+              aria-label="Dr. Yan Marlon — Advocacia e Consultoria Jurídica - Início"
               onClick={closeMenu}
               className="flex shrink-0 items-center gap-3 sm:gap-3.5 transition-opacity hover:opacity-95 mr-4"
             >
               <div className="relative size-12 sm:size-13 lg:size-14 shrink-0">
                 <Image
                   src={LOGO_SYMBOL_SRC}
-                  alt="Monograma MC - Mariana Corsi Advocacia Previdenciária"
+                  alt="Dr. Yan Marlon — Advocacia, Assessoria e Consultoria Jurídica"
                   fill
                   priority
                   unoptimized
@@ -595,11 +594,11 @@ export default function Home() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-cinzel text-base sm:text-lg lg:text-xl font-extrabold tracking-[0.14em] text-[#0a1628] leading-tight">
-                  MARIANA CORSI
+                <span className="font-cinzel text-base sm:text-lg lg:text-xl font-extrabold tracking-[0.14em] text-[#081020] leading-tight">
+                  Dr. YAN MARLON
                 </span>
-                <span className="text-[9.5px] sm:text-[10.5px] lg:text-[11.5px] font-bold tracking-[0.2em] text-[#83591c] uppercase mt-0.5">
-                  ADVOCACIA PREVIDENCIÁRIA
+                <span className="text-[9px] sm:text-[10px] lg:text-[11px] font-bold tracking-[0.18em] text-[#7a520e] uppercase mt-0.5">
+                  ADVOCACIA &amp; CONSULTORIA JURÍDICA
                 </span>
               </div>
             </a>
@@ -609,11 +608,11 @@ export default function Home() {
               aria-label="Navegação principal"
               className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8 whitespace-nowrap text-[11px] xl:text-xs font-semibold tracking-[0.08em] xl:tracking-[0.1em] ml-auto mr-6 xl:mr-10"
             >
-              <a className="nav-link" href="#especialidades">
-                Especialidades
+              <a className="nav-link" href="#atuacao">
+                Áreas de Atuação
               </a>
               <a className="nav-link" href="#sobre">
-                A Advogada
+                O Advogado
               </a>
               <a className="nav-link hidden xl:inline-block" href="#diferenciais">
                 Diferenciais
@@ -625,7 +624,7 @@ export default function Home() {
                 Dúvidas
               </a>
               <a className="nav-link" href="#contato">
-                Contato & Sede
+                Contato &amp; Sede
               </a>
             </nav>
 
@@ -638,8 +637,8 @@ export default function Home() {
                 target="_blank"
                 className="shadow-sm whitespace-nowrap"
               >
-                <WhatsAppIcon size={14} className="text-[#060f1e]" />
-                <span>Consulta WhatsApp</span>
+                <WhatsAppIcon size={14} className="text-[#050a14]" />
+                <span>Consulta no WhatsApp</span>
               </GlowingButton>
             </div>
 
@@ -666,53 +665,53 @@ export default function Home() {
               >
                 <div className="flex flex-col gap-3.5 text-sm font-semibold tracking-wide">
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#83591c]"
+                    className="py-1.5 text-slate-800 hover:text-[#7a520e]"
                     href="#inicio"
                     onClick={closeMenu}
                   >
                     Início
                   </a>
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#83591c]"
-                    href="#especialidades"
+                    className="py-1.5 text-slate-800 hover:text-[#7a520e]"
+                    href="#atuacao"
                     onClick={closeMenu}
                   >
-                    Especialidades do INSS
+                    Áreas de Atuação
                   </a>
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#83591c]"
+                    className="py-1.5 text-slate-800 hover:text-[#7a520e]"
                     href="#sobre"
                     onClick={closeMenu}
                   >
-                    Sobre a Dra. Mariana Corsi
+                    Sobre o Dr. Yan Marlon
                   </a>
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#83591c]"
+                    className="py-1.5 text-slate-800 hover:text-[#7a520e]"
                     href="#diferenciais"
                     onClick={closeMenu}
                   >
                     Nossos Diferenciais
                   </a>
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#83591c]"
+                    className="py-1.5 text-slate-800 hover:text-[#7a520e]"
                     href="#avaliacoes"
                     onClick={closeMenu}
                   >
                     Avaliações no Google (5.0 ★)
                   </a>
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#83591c]"
+                    className="py-1.5 text-slate-800 hover:text-[#7a520e]"
                     href="#faq"
                     onClick={closeMenu}
                   >
                     Perguntas Frequentes
                   </a>
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#83591c]"
+                    className="py-1.5 text-slate-800 hover:text-[#7a520e]"
                     href="#contato"
                     onClick={closeMenu}
                   >
-                    Sede em Pitangui & Contato
+                    Sede em Januária &amp; Contato
                   </a>
 
                   <div className="pt-3 border-t border-slate-100 flex flex-col gap-2.5">
@@ -723,14 +722,14 @@ export default function Home() {
                       target="_blank"
                       className="w-full justify-center"
                     >
-                      <WhatsAppIcon size={16} className="text-[#060f1e]" />
+                      <WhatsAppIcon size={16} className="text-[#050a14]" />
                       <span>Falar no WhatsApp</span>
                     </GlowingButton>
                     <a
                       href={`tel:${WHATSAPP_NUMBER}`}
                       className="flex items-center justify-center gap-2 rounded-lg border border-slate-200 py-3 text-xs font-bold text-slate-700 hover:bg-slate-50"
                     >
-                      <Phone size={14} className="text-[#83591c]" />
+                      <Phone size={14} className="text-[#7a520e]" />
                       <span>Ligar: {PHONE_DISPLAY}</span>
                     </a>
                   </div>
@@ -745,12 +744,12 @@ export default function Home() {
         {/* ========================================================================= */}
         <section
           id="inicio"
-          className="relative overflow-hidden bg-gradient-to-b from-[#060f1e] via-[#0a1628] to-[#0e1f38] text-white py-14 sm:py-20 lg:py-24"
+          className="relative overflow-hidden bg-gradient-to-b from-[#050a14] via-[#081020] to-[#0e182e] text-white py-14 sm:py-20 lg:py-24"
         >
           {/* Subtle Ambient Decorative Lights */}
-          <div className="pointer-events-none absolute -top-40 -left-40 size-96 rounded-full bg-[#c5a059]/15 blur-3xl" />
-          <div className="pointer-events-none absolute top-1/2 -right-40 size-96 rounded-full bg-[#1c3a63]/40 blur-3xl" />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#dfb967_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
+          <div className="pointer-events-none absolute -top-40 -left-40 size-96 rounded-full bg-[#d4af37]/15 blur-3xl" />
+          <div className="pointer-events-none absolute top-1/2 -right-40 size-96 rounded-full bg-[#1b3964]/40 blur-3xl" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#eed68b_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
 
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
@@ -763,9 +762,9 @@ export default function Home() {
               >
                 {/* Eyebrow Badge */}
                 <motion.div variants={fadeInUp} className="mb-4">
-                  <div className="inline-flex items-center gap-2.5 rounded-full border border-[#c5a059]/40 bg-[#060f1e]/80 px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#dfb967] shadow-sm backdrop-blur-md">
-                    <Scale size={14} className="text-[#dfb967]" />
-                    <span>Advocacia Previdenciária Especializada &bull; INSS</span>
+                  <div className="inline-flex items-center gap-2.5 rounded-full border border-[#d4af37]/40 bg-[#050a14]/80 px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#eed68b] shadow-sm backdrop-blur-md">
+                    <Scale size={14} className="text-[#eed68b]" />
+                    <span>Advocacia, Assessoria &amp; Consultoria Jurídica</span>
                   </div>
                 </motion.div>
 
@@ -774,9 +773,8 @@ export default function Home() {
                   variants={fadeInUp}
                   className="font-cinzel text-3xl font-extrabold leading-[1.18] tracking-tight sm:text-4xl md:text-5xl text-white"
                 >
-                  Garantimos o seu{" "}
-                  <span className="text-gradient-gold">melhor benefício</span> do INSS,
-                  sem complicação e sem enrolação.
+                  Defesa jurídica estratégica, rigor técnico e{" "}
+                  <span className="text-gradient-gold">compromisso real</span> com o seu caso.
                 </motion.h1>
 
                 {/* Subtitle */}
@@ -784,13 +782,13 @@ export default function Home() {
                   variants={fadeInUp}
                   className="mt-6 text-base text-slate-300 sm:text-lg sm:leading-relaxed"
                 >
-                  Planejamento previdenciário estratégico, concessão de aposentadorias,
-                  BPC/LOAS e liberação de auxílios negados. Atendimento humanizado,
-                  acolhedor e transparente pela{" "}
+                  Soluções jurídicas preventivas e combativas em Direito Civil,
+                  Contratos, Direito de Família, Sucessões, Trabalhista Patronal e
+                  Previdenciário. Atendimento humanizado, dedicado e transparente pelo{" "}
                   <strong className="text-white font-semibold">
-                    Dra. Mariana Corsi
+                    Dr. Yan Marlon (OAB/MG 195.229)
                   </strong>
-                  , presencial em Pitangui - MG e online para todo o Brasil.
+                  , com sede física em Januária - MG e atendimento digital em todo o Brasil.
                 </motion.p>
 
                 {/* Authority Badges Checklist */}
@@ -799,20 +797,20 @@ export default function Home() {
                   className="mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2 text-xs sm:text-sm text-slate-200"
                 >
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[#dfb967] shrink-0" />
-                    <span>Nota máxima 5,0 ★ no Google (29 avaliações)</span>
+                    <CheckCircle2 size={16} className="text-[#eed68b] shrink-0" />
+                    <span>Nota máxima 5,0 ★ no Google (28 avaliações)</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[#dfb967] shrink-0" />
-                    <span>100% Especialista em Direito Previdenciário</span>
+                    <CheckCircle2 size={16} className="text-[#eed68b] shrink-0" />
+                    <span>Total comprometimento e assistência dedicada</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[#dfb967] shrink-0" />
-                    <span>Atendimento direto, acolhedor e com preço justo</span>
+                    <CheckCircle2 size={16} className="text-[#eed68b] shrink-0" />
+                    <span>Soluções contratuais com funcionários e empresas</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[#dfb967] shrink-0" />
-                    <span>Sede física em Pitangui - MG + Atendimento Online</span>
+                    <CheckCircle2 size={16} className="text-[#eed68b] shrink-0" />
+                    <span>Sede no Centro de Januária - MG + Atuação Nacional</span>
                   </div>
                 </motion.div>
 
@@ -828,15 +826,15 @@ export default function Home() {
                     target="_blank"
                     className="shadow-xl"
                   >
-                    <WhatsAppIcon size={18} className="text-[#060f1e]" />
-                    <span>Analisar Meu Benefício no WhatsApp</span>
+                    <WhatsAppIcon size={18} className="text-[#050a14]" />
+                    <span>Falar no WhatsApp com Dr. Yan Marlon</span>
                   </GlowingButton>
 
                   <a
-                    href="#especialidades"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-white/5 px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white backdrop-blur-sm transition-all hover:border-[#dfb967] hover:bg-white/10"
+                    href="#atuacao"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-white/5 px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white backdrop-blur-sm transition-all hover:border-[#eed68b] hover:bg-white/10"
                   >
-                    <span>Conhecer Especialidades</span>
+                    <span>Conhecer Áreas de Atuação</span>
                     <ArrowRight size={14} />
                   </a>
                 </motion.div>
@@ -865,7 +863,7 @@ export default function Home() {
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#dfb967] hover:underline flex items-center gap-1"
+                    className="text-[#eed68b] hover:underline flex items-center gap-1"
                   >
                     <span>Ver no Google</span>
                     <ArrowUpRight size={12} />
@@ -882,31 +880,31 @@ export default function Home() {
               >
                 <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
                   {/* Decorative Glowing Frame */}
-                  <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-[#c5a059]/40 via-[#dfb967]/10 to-transparent blur-md" />
+                  <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-[#d4af37]/40 via-[#eed68b]/15 to-transparent blur-md" />
 
                   {/* Main Portrait Card */}
-                  <div className="relative overflow-hidden rounded-2xl border-2 border-[#c5a059]/50 bg-[#0a1628] shadow-2xl">
+                  <div className="relative overflow-hidden rounded-2xl border-2 border-[#d4af37]/50 bg-[#081020] shadow-2xl">
                     <div className="relative aspect-[4/5] w-full overflow-hidden">
                       <Image
                         src={FOTO_HERO_SRC}
-                        alt="Dra. Mariana Corsi - Advogada Previdenciária em Pitangui - MG"
+                        alt="Dr. Yan Marlon - Advogado e Consultor Jurídico em Januária - MG"
                         fill
                         priority
                         className="object-cover object-top filter contrast-[1.03]"
                       />
 
                       {/* Gradient Overlay for bottom text legibility */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#060f1e] via-[#060f1e]/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#050a14] via-[#050a14]/20 to-transparent" />
 
                       {/* Card Lower Badge */}
-                      <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-[#c5a059]/40 bg-[#060f1e]/90 p-3.5 backdrop-blur-md">
+                      <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-[#d4af37]/40 bg-[#050a14]/90 p-3.5 backdrop-blur-md">
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="font-cinzel text-sm sm:text-base font-bold text-white tracking-wide">
-                              Dra. Mariana Corsi
+                              Dr. Yan Marlon
                             </p>
-                            <p className="text-[10px] sm:text-xs font-semibold text-[#dfb967] uppercase tracking-wider mt-0.5">
-                              Advocacia Previdenciária &bull; INSS
+                            <p className="text-[10px] sm:text-xs font-semibold text-[#eed68b] uppercase tracking-wider mt-0.5">
+                              Advogado &bull; OAB/MG 195.229
                             </p>
                           </div>
                           <div className="flex flex-col items-end">
@@ -929,22 +927,22 @@ export default function Home() {
                   </div>
 
                   {/* Floating Trust Card Top-Right */}
-                  <div className="hidden sm:flex absolute -top-5 -right-5 items-center gap-2.5 rounded-xl border border-[#c5a059]/60 bg-[#060f1e]/95 px-4 py-2.5 shadow-xl backdrop-blur-md">
-                    <div className="flex size-9 items-center justify-center rounded-lg bg-[#c5a059]/20 text-[#dfb967]">
+                  <div className="hidden sm:flex absolute -top-5 -right-5 items-center gap-2.5 rounded-xl border border-[#d4af37]/60 bg-[#050a14]/95 px-4 py-2.5 shadow-xl backdrop-blur-md">
+                    <div className="flex size-9 items-center justify-center rounded-lg bg-[#d4af37]/20 text-[#eed68b]">
                       <Scale size={18} />
                     </div>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-[#dfb967]">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-[#eed68b]">
                         Compromisso
                       </p>
                       <p className="text-xs font-bold text-white">
-                        Sem Enrolação
+                        Assistência Total
                       </p>
                     </div>
                   </div>
 
                   {/* Floating Trust Card Bottom-Left */}
-                  <div className="hidden sm:flex absolute -bottom-5 -left-5 items-center gap-2.5 rounded-xl border border-slate-700 bg-[#0a1628]/95 px-4 py-2.5 shadow-xl backdrop-blur-md">
+                  <div className="hidden sm:flex absolute -bottom-5 -left-5 items-center gap-2.5 rounded-xl border border-slate-700 bg-[#081020]/95 px-4 py-2.5 shadow-xl backdrop-blur-md">
                     <div className="flex size-9 items-center justify-center rounded-lg bg-[#25D366]/20 text-[#25D366]">
                       <WhatsAppIcon size={18} />
                     </div>
@@ -953,7 +951,7 @@ export default function Home() {
                         Atendimento Rápido
                       </p>
                       <p className="text-xs font-bold text-white">
-                        Online & Presencial
+                        Online &amp; Presencial
                       </p>
                     </div>
                   </div>
@@ -966,54 +964,54 @@ export default function Home() {
         {/* ========================================================================= */}
         {/* 4. TRUST & AUTHORITY NUMBERS BAR                                         */}
         {/* ========================================================================= */}
-        <section className="border-y border-slate-200 bg-[#faf9f6] py-8 sm:py-10">
+        <section className="border-y border-slate-200 bg-[#fbfaf6] py-8 sm:py-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:gap-8 text-center">
               <div className="flex flex-col items-center">
-                <div className="flex items-center gap-1 text-2xl sm:text-3xl font-extrabold text-[#0a1628]">
+                <div className="flex items-center gap-1 text-2xl sm:text-3xl font-extrabold text-[#081020]">
                   <span>5,0</span>
                   <div className="flex text-amber-500">
                     <Star size={18} className="fill-amber-400 text-amber-400" />
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#83591c] mt-1">
+                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#7a520e] mt-1">
                   Nota Máxima Google
                 </p>
                 <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
-                  29 avaliações 100% 5 estrelas
+                  28 avaliações 100% 5 estrelas
                 </p>
               </div>
 
               <div className="flex flex-col items-center">
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#0a1628]">
-                  100%
+                <div className="text-2xl sm:text-3xl font-extrabold text-[#081020]">
+                  195.229
                 </div>
-                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#83591c] mt-1">
-                  Foco Previdenciário
+                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#7a520e] mt-1">
+                  OAB/MG Titular
                 </p>
                 <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
-                  Especialista exclusiva em INSS
+                  Atuação sólida e regular
                 </p>
               </div>
 
               <div className="flex flex-col items-center">
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#0a1628]">
-                  Agilidade
+                <div className="text-2xl sm:text-3xl font-extrabold text-[#081020]">
+                  Dedicado
                 </div>
-                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#83591c] mt-1">
-                  Sem Enrolação
+                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#7a520e] mt-1">
+                  Comprometimento
                 </p>
                 <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
-                  Preço justo e clareza total
+                  Assistência próxima ao cliente
                 </p>
               </div>
 
               <div className="flex flex-col items-center">
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#0a1628]">
+                <div className="text-2xl sm:text-3xl font-extrabold text-[#081020]">
                   Nacional
                 </div>
-                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#83591c] mt-1">
-                  Sede MG & Online
+                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#7a520e] mt-1">
+                  Sede Januária &amp; Online
                 </p>
                 <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
                   Atendimento em todo o Brasil
@@ -1024,20 +1022,20 @@ export default function Home() {
         </section>
 
         {/* ========================================================================= */}
-        {/* 5. DIAGNOSTIC INTERACTIVE SECTION ("VOCÊ SE IDENTIFICA?")                */}
+        {/* 5. DIAGNÓSTICO JURÍDICO RÁPIDO ("VOCÊ SE IDENTIFICA?")                    */}
         {/* ========================================================================= */}
         <section className="py-14 sm:py-20 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
               <div className="eyebrow-gold justify-center mb-3">
-                Diagnóstico Previdenciário Rápido
+                Diagnóstico Jurídico Estratégico
               </div>
-              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-bold text-[#0a1628]">
-                Você se identifica com alguma dessas situações com o INSS?
+              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-bold text-[#081020]">
+                Você se identifica com alguma dessas situações jurídicas?
               </h2>
               <p className="mt-4 text-sm sm:text-base text-slate-600">
-                Não enfrente o INSS sozinho nem abra mão dos seus direitos conquistados
-                com anos de trabalho. Veja como podemos te ajudar:
+                Não deixe seus direitos desprotegidos nem adie a solução de pendências
+                que podem comprometer seu patrimônio, sua família ou sua empresa:
               </p>
             </div>
 
@@ -1045,14 +1043,14 @@ export default function Home() {
               {situacoesDiagnostico.map((sit, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-slate-200 bg-[#faf9f6] p-6 sm:p-8 transition-all hover:border-[#c5a059] hover:shadow-lg flex flex-col justify-between"
+                  className="rounded-2xl border border-slate-200 bg-[#fbfaf6] p-6 sm:p-8 transition-all hover:border-[#d4af37] hover:shadow-lg flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-start gap-3.5 mb-3">
-                      <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#c5a059]/20 text-[#83591c]">
+                      <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#d4af37]/20 text-[#7a520e]">
                         <AlertCircle size={20} />
                       </div>
-                      <h3 className="font-cinzel text-lg sm:text-xl font-bold text-[#0a1628] leading-snug">
+                      <h3 className="font-cinzel text-lg sm:text-xl font-bold text-[#081020] leading-snug">
                         {sit.pergunta}
                       </h3>
                     </div>
@@ -1065,18 +1063,18 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => openConsultModal(sit.area)}
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#83591c] hover:text-[#0a1628] transition-colors cursor-pointer"
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#7a520e] hover:text-[#081020] transition-colors cursor-pointer"
                     >
                       <span>{sit.cta}</span>
                       <ArrowRight size={14} />
                     </button>
 
                     <a
-                      href={getWhatsAppUrl(`Olá, Dra. Mariana! ${sit.pergunta}`)}
+                      href={getWhatsAppUrl(`Olá, Dr. Yan Marlon! ${sit.pergunta}`)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex size-9 items-center justify-center rounded-lg bg-[#25D366] text-white hover:brightness-110 transition-all shadow-xs"
-                      aria-label="Falar no WhatsApp sobre esta dúvida"
+                      aria-label="Falar no WhatsApp sobre esta dúvida jurídica"
                     >
                       <WhatsAppIcon size={16} />
                     </a>
@@ -1088,24 +1086,24 @@ export default function Home() {
         </section>
 
         {/* ========================================================================= */}
-        {/* 6. PILARES DE ATUAÇÃO / ESPECIALIDADES PREVIDENCIÁRIAS                    */}
+        {/* 6. PILARES DE ATUAÇÃO / ÁREAS ESPECIALIZADAS                             */}
         {/* ========================================================================= */}
         <section
-          id="especialidades"
-          className="relative bg-gradient-to-b from-[#060f1e] via-[#0a1628] to-[#0e1f38] text-white py-16 sm:py-24"
+          id="atuacao"
+          className="relative bg-gradient-to-b from-[#050a14] via-[#081020] to-[#0e182e] text-white py-16 sm:py-24"
         >
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
               <div className="eyebrow-light justify-center mb-3">
-                Especialidades Previdenciárias &bull; INSS
+                Pilares de Atuação &bull; Advocacia &amp; Consultoria
               </div>
               <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white">
-                Como defendemos os seus direitos junto à Previdência
+                Como atuamos na defesa dos seus direitos
               </h2>
               <p className="mt-4 text-sm sm:text-base text-slate-300">
-                Atuação artesanal e combativa em todas as fases: requerimento
-                administrativo no INSS, planejamento prévio e ações judiciais
-                com pedido de liminar e retroativos.
+                Atuação consultiva preventiva e contenciosa combativa em instâncias
+                judiciais e extrajudiciais, com técnica refinada e foco intransigente
+                em resultados.
               </p>
             </div>
 
@@ -1115,21 +1113,21 @@ export default function Home() {
                 return (
                   <div
                     key={area.id}
-                    className="group relative flex flex-col justify-between rounded-2xl border border-slate-700/80 bg-[#0e1f38]/90 p-6 sm:p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#c5a059] hover:shadow-2xl hover:shadow-[#c5a059]/10"
+                    className="group relative flex flex-col justify-between rounded-2xl border border-slate-700/80 bg-[#0e182e]/90 p-6 sm:p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af37] hover:shadow-2xl hover:shadow-[#d4af37]/10"
                   >
                     <div>
                       {/* Top Badges */}
                       <div className="flex items-center justify-between mb-5">
-                        <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#c5a059]/20 to-[#dfb967]/10 border border-[#c5a059]/30 text-[#dfb967] group-hover:scale-105 transition-transform">
+                        <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#d4af37]/20 to-[#eed68b]/10 border border-[#d4af37]/30 text-[#eed68b] group-hover:scale-105 transition-transform">
                           <IconComponent size={22} />
                         </div>
-                        <span className="rounded-full border border-[#c5a059]/40 bg-[#c5a059]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#dfb967]">
+                        <span className="rounded-full border border-[#d4af37]/40 bg-[#d4af37]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#eed68b]">
                           {area.badge}
                         </span>
                       </div>
 
                       {/* Card Title */}
-                      <h3 className="font-cinzel text-lg sm:text-xl font-bold text-white leading-snug group-hover:text-[#dfb967] transition-colors">
+                      <h3 className="font-cinzel text-lg sm:text-xl font-bold text-white leading-snug group-hover:text-[#eed68b] transition-colors">
                         {area.title}
                       </h3>
 
@@ -1147,7 +1145,7 @@ export default function Home() {
                           >
                             <CheckCircle2
                               size={14}
-                              className="text-[#dfb967] shrink-0 mt-0.5"
+                              className="text-[#eed68b] shrink-0 mt-0.5"
                             />
                             <span>{bullet}</span>
                           </div>
@@ -1161,7 +1159,7 @@ export default function Home() {
                         href={getWhatsAppUrl(area.whatsappMsg)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-[#c5a059]/50 bg-white/5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[#dfb967] transition-all hover:bg-[#c5a059] hover:text-[#060f1e] hover:border-[#c5a059]"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-[#d4af37]/50 bg-white/5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[#eed68b] transition-all hover:bg-[#d4af37] hover:text-[#050a14] hover:border-[#d4af37]"
                       >
                         <WhatsAppIcon size={14} />
                         <span>Consultar no WhatsApp</span>
@@ -1173,18 +1171,18 @@ export default function Home() {
             </div>
 
             {/* Central Consultation Banner */}
-            <div className="mt-14 rounded-2xl border-2 border-[#c5a059]/60 bg-gradient-to-r from-[#060f1e] via-[#0a1628] to-[#0e1f38] p-8 sm:p-10 shadow-2xl">
+            <div className="mt-14 rounded-2xl border-2 border-[#d4af37]/60 bg-gradient-to-r from-[#050a14] via-[#081020] to-[#0e182e] p-8 sm:p-10 shadow-2xl">
               <div className="flex flex-col items-center justify-between gap-6 text-center lg:flex-row lg:text-left">
                 <div>
                   <div className="eyebrow-light mb-2">
-                    Não Sabe Qual o Seu Caso?
+                    Precisa de Orientação Imediata?
                   </div>
                   <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white">
-                    Fale diretamente com a Dra. Mariana Corsi
+                    Fale diretamente com o Dr. Yan Marlon
                   </h3>
                   <p className="mt-1.5 text-xs sm:text-sm text-slate-300 max-w-2xl">
-                    Envie uma mensagem contando brevemente a sua situação. Faremos uma
-                    triagem rápida e gratuita para indicar o caminho mais vantajoso.
+                    Envie uma mensagem resumindo sua questão. Realizaremos uma triagem rápida
+                    para indicar a conduta mais segura e eficaz para o seu caso.
                   </p>
                 </div>
 
@@ -1192,12 +1190,12 @@ export default function Home() {
                   variant="gold"
                   size="lg"
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Mariana! Gostaria de uma avaliação para saber qual é o benefício previdenciário correto para o meu caso."
+                    "Olá, Dr. Yan Marlon! Gostaria de uma avaliação jurídica para entender o caminho adequado para o meu caso."
                   )}
                   target="_blank"
                   className="shrink-0"
                 >
-                  <WhatsAppIcon size={17} className="text-[#060f1e]" />
+                  <WhatsAppIcon size={17} className="text-[#050a14]" />
                   <span>Tirar Dúvida Agora</span>
                 </GlowingButton>
               </div>
@@ -1206,7 +1204,7 @@ export default function Home() {
         </section>
 
         {/* ========================================================================= */}
-        {/* 7. SOBRE A ADVOGADA (DRA. MARIANA CORSI)                                  */}
+        {/* 7. SOBRE O ADVOGADO (DR. YAN MARLON)                                      */}
         {/* ========================================================================= */}
         <section id="sobre" className="py-16 sm:py-24 bg-white overflow-hidden">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -1215,24 +1213,24 @@ export default function Home() {
               <div className="relative lg:col-span-5">
                 <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
                   {/* Subtle Accent Glow */}
-                  <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-[#c5a059]/30 to-transparent blur-lg" />
+                  <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-[#d4af37]/30 to-transparent blur-lg" />
 
-                  <div className="relative overflow-hidden rounded-2xl border-2 border-[#c5a059]/60 bg-[#0a1628] shadow-2xl">
+                  <div className="relative overflow-hidden rounded-2xl border-2 border-[#d4af37]/60 bg-[#081020] shadow-2xl">
                     <div className="relative aspect-[4/5] w-full">
                       <Image
                         src={FOTO_SOBRE_SRC}
-                        alt="Dra. Mariana Corsi - Advogada Previdenciária"
+                        alt="Dr. Yan Marlon - Advogado e Consultor Jurídico"
                         fill
                         className="object-cover object-top"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#060f1e]/80 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#050a14]/80 via-transparent to-transparent" />
 
                       <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/20 bg-black/60 p-3.5 backdrop-blur-md text-white text-center">
-                        <p className="font-cinzel text-base font-bold text-[#dfb967]">
-                          Dra. Mariana Corsi
+                        <p className="font-cinzel text-base font-bold text-[#eed68b]">
+                          Dr. Yan Marlon
                         </p>
                         <p className="text-[11px] text-slate-200 mt-0.5">
-                          Advogada Previdenciarista &bull; OAB/MG
+                          Advogado &bull; OAB/MG 195.229
                         </p>
                       </div>
                     </div>
@@ -1242,42 +1240,42 @@ export default function Home() {
 
               {/* Bio & Details on Right */}
               <div className="lg:col-span-7">
-                <div className="eyebrow-gold mb-3">Sobre a Titular</div>
+                <div className="eyebrow-gold mb-3">Sobre o Profissional</div>
 
-                <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0a1628] leading-tight">
-                  Direito Previdenciário sem complicação, com cuidado e sem enrolação.
+                <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#081020] leading-tight">
+                  Advocacia de excelência, total assistência e foco em soluções reais.
                 </h2>
 
                 <div className="mt-6 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
                   <p>
-                    A <strong className="text-[#0a1628]">Dra. Mariana Corsi</strong> é
-                    advogada especialista em Direito Previdenciário, dedicada
-                    exclusivamente à defesa dos direitos dos trabalhadores, segurados do
-                    INSS, idosos e pessoas com deficiência.
+                    O <strong className="text-[#081020]">Dr. Yan Marlon (OAB/MG 195.229)</strong> é
+                    advogado e consultor jurídico dedicado a prestar uma advocacia estratégica,
+                    combativa e atenta às particularidades de cada cliente, seja ele pessoa
+                    física ou empresário.
                   </p>
                   <p>
-                    Com atuação sólida e reconhecida em Pitangui - MG e atendimento
-                    digital em todo o Brasil, sua advocacia é pautada em quatro pilares
-                    fundamentais destacados pelos próprios clientes:{" "}
-                    <strong>rigor técnico, acolhimento humano, transparência total e ausência de enrolação</strong>.
+                    Com escritório sediado no Centro de Januária - MG e atendimento digital
+                    de alto padrão que abrange clientes em diversas cidades e estados, sua atuação
+                    é pautada nos valores que os próprios clientes reiteram publicamente:{" "}
+                    <strong>total comprometimento, assistência contínua, rigor técnico e capacidade notável de resolução</strong>.
                   </p>
                   <p>
-                    No escritório Mariana Corsi Advocacia Previdenciária, você não é
-                    atendido por robôs ou repassado para intermediários: seu caso é
-                    estudado com profundidade para garantir a máxima rentabilidade e
-                    segurança na sua aposentadoria ou benefício do INSS.
+                    No escritório Dr. Yan Marlon — Advocacia, Assessoria e Consultoria Jurídica,
+                    cada causa recebe atenção individualizada e artesanal, buscando não apenas defender
+                    direitos em juízo, mas também prevenir litígios e preservar o patrimônio
+                    e a tranquilidade de quem confia em nosso trabalho.
                   </p>
                 </div>
 
                 {/* Quote Box */}
-                <div className="mt-6 rounded-xl border-l-4 border-[#c5a059] bg-[#faf9f6] p-4 sm:p-5">
+                <div className="mt-6 rounded-xl border-l-4 border-[#d4af37] bg-[#fbfaf6] p-4 sm:p-5">
                   <p className="italic text-sm text-slate-800">
-                    &ldquo;Dá para perceber o cuidado que ela tem com as pessoas.
-                    Excelente profissional, não fica enrolando, bom atendimento e preço
-                    justo.&rdquo;
+                    &ldquo;Advogado excelente, um profissional notável que não mede esforços
+                    para ajudar, demonstra total comprometimento e assistência ao cliente.
+                    Resolveu minhas questões contratuais com funcionários e família.&rdquo;
                   </p>
-                  <p className="mt-2 text-xs font-bold text-[#83591c] uppercase tracking-wider">
-                    — Síntese das avaliações públicas dos clientes no Google (Nota 5,0 ★)
+                  <p className="mt-2 text-xs font-bold text-[#7a520e] uppercase tracking-wider">
+                    — Síntese das avaliações públicas dos clientes no Google (Nota 5,0 ★ em 28 avaliações)
                   </p>
                 </div>
 
@@ -1289,15 +1287,15 @@ export default function Home() {
                     href={getWhatsAppUrl()}
                     target="_blank"
                   >
-                    <WhatsAppIcon size={16} className="text-[#060f1e]" />
-                    <span>Falar Diretamente com a Dra. Mariana</span>
+                    <WhatsAppIcon size={16} className="text-[#050a14]" />
+                    <span>Falar Diretamente com Dr. Yan Marlon</span>
                   </GlowingButton>
 
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-xs font-bold uppercase tracking-wider text-slate-800 transition-colors hover:border-[#c5a059] hover:text-[#83591c]"
+                    className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-xs font-bold uppercase tracking-wider text-slate-800 transition-colors hover:border-[#d4af37] hover:text-[#7a520e]"
                   >
                     <InstagramIcon size={16} className="text-[#E1306C]" />
                     <span>Instagram {INSTAGRAM_HANDLE}</span>
@@ -1311,18 +1309,18 @@ export default function Home() {
         {/* ========================================================================= */}
         {/* 8. DIFERENCIAIS                                                           */}
         {/* ========================================================================= */}
-        <section id="diferenciais" className="py-16 sm:py-24 bg-[#faf9f6] border-t border-slate-200">
+        <section id="diferenciais" className="py-16 sm:py-24 bg-[#fbfaf6] border-t border-slate-200">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
               <div className="eyebrow-gold justify-center mb-3">
                 Por Que Escolher Nosso Escritório
               </div>
-              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0a1628]">
-                Diferenciais que garantem a segurança do seu benefício
+              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#081020]">
+                Diferenciais que asseguram a confiança dos nossos clientes
               </h2>
               <p className="mt-4 text-sm sm:text-base text-slate-600">
-                Uma experiência jurídica acolhedora, transparente e sem burocracias
-                desnecessárias.
+                Uma experiência jurídica com seriedade, comunicação transparente e
+                acompanhamento próximo de verdade.
               </p>
             </div>
 
@@ -1332,12 +1330,12 @@ export default function Home() {
                 return (
                   <div
                     key={idx}
-                    className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs transition-all hover:border-[#c5a059] hover:shadow-md"
+                    className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs transition-all hover:border-[#d4af37] hover:shadow-md"
                   >
-                    <div className="flex size-12 items-center justify-center rounded-xl bg-[#c5a059]/15 text-[#83591c] mb-5">
+                    <div className="flex size-12 items-center justify-center rounded-xl bg-[#d4af37]/15 text-[#7a520e] mb-5">
                       <IconComp size={22} />
                     </div>
-                    <h3 className="font-cinzel text-lg font-bold text-[#0a1628]">
+                    <h3 className="font-cinzel text-lg font-bold text-[#081020]">
                       {dif.title}
                     </h3>
                     <p className="mt-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -1357,67 +1355,66 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
               <div className="eyebrow-gold justify-center mb-3">
-                Simples, Transparente e Seguro
+                Processo Transparente e Seguro
               </div>
-              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0a1628]">
-                Como funciona o seu atendimento previdenciário
+              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#081020]">
+                Como funciona o seu atendimento jurídico
               </h2>
               <p className="mt-4 text-sm sm:text-base text-slate-600">
-                Do primeiro contato ao recebimento do benefício com retroativos na sua
-                conta corrente:
+                Do primeiro contato até a conclusão exitosa da sua causa:
               </p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-4">
-              <div className="relative rounded-2xl border border-slate-200 bg-[#faf9f6] p-6 text-center">
-                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#0a1628] text-[#dfb967] font-bold text-lg mb-4">
+              <div className="relative rounded-2xl border border-slate-200 bg-[#fbfaf6] p-6 text-center">
+                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#081020] text-[#eed68b] font-bold text-lg mb-4">
                   1
                 </div>
-                <h3 className="font-cinzel text-base font-bold text-[#0a1628]">
-                  Contato Inicial
+                <h3 className="font-cinzel text-base font-bold text-[#081020]">
+                  Primeiro Contato
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  Você clica no botão de WhatsApp, relata sua situação e envia seus
-                  documentos básicos pelo celular ou agenda na sede.
+                  Você clica no botão de WhatsApp ou nos liga, relata o seu caso e
+                  agendamos um horário presencial na sede ou digital.
                 </p>
               </div>
 
-              <div className="relative rounded-2xl border border-slate-200 bg-[#faf9f6] p-6 text-center">
-                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#0a1628] text-[#dfb967] font-bold text-lg mb-4">
+              <div className="relative rounded-2xl border border-slate-200 bg-[#fbfaf6] p-6 text-center">
+                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#081020] text-[#eed68b] font-bold text-lg mb-4">
                   2
                 </div>
-                <h3 className="font-cinzel text-base font-bold text-[#0a1628]">
+                <h3 className="font-cinzel text-base font-bold text-[#081020]">
                   Análise Técnica
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  A Dra. Mariana analisa seu extrato CNIS, carteiras de trabalho e laudos
-                  para diagnosticar seu direito com precisão.
+                  O Dr. Yan Marlon examina detalhadamente seus documentos, contratos
+                  e histórico para traçar a melhor tese jurídica.
                 </p>
               </div>
 
-              <div className="relative rounded-2xl border border-slate-200 bg-[#faf9f6] p-6 text-center">
-                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#0a1628] text-[#dfb967] font-bold text-lg mb-4">
+              <div className="relative rounded-2xl border border-slate-200 bg-[#fbfaf6] p-6 text-center">
+                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#081020] text-[#eed68b] font-bold text-lg mb-4">
                   3
                 </div>
-                <h3 className="font-cinzel text-base font-bold text-[#0a1628]">
+                <h3 className="font-cinzel text-base font-bold text-[#081020]">
                   Estratégia Sob Medida
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  Apresentamos a via mais vantajosa (requerimento no INSS ou ação judicial)
-                  sempre com clareza sobre valores e prazos.
+                  Definimos o plano de ação (preventivo, negocial ou contencioso judicial)
+                  com transparência sobre prazos e custos.
                 </p>
               </div>
 
-              <div className="relative rounded-2xl border border-slate-200 bg-[#faf9f6] p-6 text-center">
-                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#0a1628] text-[#dfb967] font-bold text-lg mb-4">
+              <div className="relative rounded-2xl border border-slate-200 bg-[#fbfaf6] p-6 text-center">
+                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#081020] text-[#eed68b] font-bold text-lg mb-4">
                   4
                 </div>
-                <h3 className="font-cinzel text-base font-bold text-[#0a1628]">
-                  Benefício Conquistado
+                <h3 className="font-cinzel text-base font-bold text-[#081020]">
+                  Atuação &amp; Suporte
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  Acompanhamento rigoroso até a concessão da aposentadoria/benefício e o
-                  pagamento dos retroativos na sua conta.
+                  Condução combativa do processo, com atualizações periódicas até a
+                  efetiva defesa e consagração do seu direito.
                 </p>
               </div>
             </div>
@@ -1429,8 +1426,8 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
               >
-                <WhatsAppIcon size={17} className="text-[#060f1e]" />
-                <span>Iniciar Minha Análise no WhatsApp</span>
+                <WhatsAppIcon size={17} className="text-[#050a14]" />
+                <span>Iniciar Minha Consulta no WhatsApp</span>
               </GlowingButton>
             </div>
           </div>
@@ -1441,7 +1438,7 @@ export default function Home() {
         {/* ========================================================================= */}
         <section
           id="avaliacoes"
-          className="py-16 sm:py-24 bg-gradient-to-b from-[#060f1e] via-[#0a1628] to-[#0e1f38] text-white"
+          className="py-16 sm:py-24 bg-gradient-to-b from-[#050a14] via-[#081020] to-[#0e182e] text-white"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
@@ -1463,7 +1460,7 @@ export default function Home() {
                 </div>
                 <span className="text-xl font-bold text-white">5,0 de 5,0 estrelas</span>
                 <span className="text-sm text-slate-300">
-                  (29 avaliações verificadas)
+                  (28 avaliações verificadas no Google)
                 </span>
               </div>
             </div>
@@ -1473,7 +1470,7 @@ export default function Home() {
               {depoimentosGoogle.map((dep, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-slate-700/80 bg-[#0e1f38]/80 p-6 backdrop-blur-sm flex flex-col justify-between hover:border-[#c5a059] transition-all"
+                  className="rounded-2xl border border-slate-700/80 bg-[#0e182e]/80 p-6 backdrop-blur-sm flex flex-col justify-between hover:border-[#d4af37] transition-all"
                 >
                   <div>
                     {/* Stars and Google Icon */}
@@ -1494,7 +1491,7 @@ export default function Home() {
                     </div>
 
                     {/* Highlight */}
-                    <p className="text-xs font-bold text-[#dfb967] mb-2 uppercase tracking-wider">
+                    <p className="text-xs font-bold text-[#eed68b] mb-2 uppercase tracking-wider">
                       {dep.highlight}
                     </p>
 
@@ -1506,7 +1503,7 @@ export default function Home() {
 
                   {/* Author */}
                   <div className="mt-6 pt-4 border-t border-slate-700/60 flex items-center gap-3">
-                    <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#c5a059]/20 text-xs font-bold text-[#dfb967]">
+                    <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#d4af37]/20 text-xs font-bold text-[#eed68b]">
                       {dep.author.charAt(0)}
                     </div>
                     <div>
@@ -1528,10 +1525,10 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-600 bg-white/5 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:border-[#dfb967] hover:bg-white/10 transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-600 bg-white/5 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:border-[#eed68b] hover:bg-white/10 transition-colors"
               >
                 <GoogleIcon size={16} />
-                <span>Ver Todas as 29 Avaliações no Google Meu Negócio</span>
+                <span>Ver Todas as 28 Avaliações no Google Meu Negócio</span>
                 <ArrowUpRight size={14} />
               </a>
             </div>
@@ -1547,8 +1544,8 @@ export default function Home() {
               <div className="eyebrow-gold justify-center mb-3">
                 Dúvidas Frequentes
               </div>
-              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0a1628]">
-                Perguntas Frequentes sobre o INSS e Benefícios
+              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#081020]">
+                Perguntas Frequentes sobre Atuação &amp; Consultoria
               </h2>
               <p className="mt-3 text-sm sm:text-base text-slate-600">
                 Respostas diretas e esclarecedoras para as dúvidas mais comuns de nossos
@@ -1562,18 +1559,18 @@ export default function Home() {
                 return (
                   <div
                     key={idx}
-                    className="overflow-hidden rounded-2xl border border-slate-200 bg-[#faf9f6] transition-colors"
+                    className="overflow-hidden rounded-2xl border border-slate-200 bg-[#fbfaf6] transition-colors"
                   >
                     <button
                       type="button"
                       onClick={() => setActiveFaq(isOpen ? null : idx)}
-                      className="flex w-full items-center justify-between p-5 text-left text-sm sm:text-base font-bold text-[#0a1628] hover:text-[#83591c] transition-colors cursor-pointer"
+                      className="flex w-full items-center justify-between p-5 text-left text-sm sm:text-base font-bold text-[#081020] hover:text-[#7a520e] transition-colors cursor-pointer"
                       aria-expanded={isOpen}
                     >
                       <span className="pr-4">{faq.question}</span>
                       <ChevronDown
                         size={18}
-                        className={`shrink-0 text-[#83591c] transition-transform duration-200 ${
+                        className={`shrink-0 text-[#7a520e] transition-transform duration-200 ${
                           isOpen ? "rotate-180" : ""
                         }`}
                       />
@@ -1598,21 +1595,21 @@ export default function Home() {
               })}
             </div>
 
-            <div className="mt-12 rounded-2xl border border-[#c5a059]/40 bg-[#faf9f6] p-6 text-center">
-              <p className="font-cinzel text-base font-bold text-[#0a1628]">
+            <div className="mt-12 rounded-2xl border border-[#d4af37]/40 bg-[#fbfaf6] p-6 text-center">
+              <p className="font-cinzel text-base font-bold text-[#081020]">
                 Ainda tem alguma dúvida sobre o seu caso específico?
               </p>
               <p className="mt-1 text-xs sm:text-sm text-slate-600">
-                A Dra. Mariana Corsi está à disposição para analisar sua situação.
+                O Dr. Yan Marlon está à disposição para analisar sua situação com sigilo e atenção.
               </p>
               <div className="mt-4">
                 <GlowingButton
                   variant="gold"
                   size="md"
-                  href={getWhatsAppUrl("Olá, Dra. Mariana! Tenho uma dúvida sobre meu benefício do INSS e gostaria de orientação.")}
+                  href={getWhatsAppUrl("Olá, Dr. Yan Marlon! Tenho uma dúvida sobre o meu caso e gostaria de orientação jurídica.")}
                   target="_blank"
                 >
-                  <WhatsAppIcon size={15} className="text-[#060f1e]" />
+                  <WhatsAppIcon size={15} className="text-[#050a14]" />
                   <span>Tirar Dúvida no WhatsApp</span>
                 </GlowingButton>
               </div>
@@ -1621,31 +1618,31 @@ export default function Home() {
         </section>
 
         {/* ========================================================================= */}
-        {/* 12. CONTATO & SEDE EM PITANGUI - MG                                       */}
+        {/* 12. CONTATO & SEDE EM JANUÁRIA - MG                                       */}
         {/* ========================================================================= */}
-        <section id="contato" className="py-16 sm:py-24 bg-[#faf9f6] border-t border-slate-200">
+        <section id="contato" className="py-16 sm:py-24 bg-[#fbfaf6] border-t border-slate-200">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Contact Info Column */}
               <div className="lg:col-span-6 flex flex-col justify-between">
                 <div>
-                  <div className="eyebrow-gold mb-3">Atendimento & Sede</div>
-                  <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0a1628]">
+                  <div className="eyebrow-gold mb-3">Atendimento &amp; Sede</div>
+                  <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#081020]">
                     Entre em contato e agende sua consulta
                   </h2>
                   <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-                    Atendimento presencial no Centro de Pitangui - MG ou 100% digital
-                    com atendimento em todo o Brasil. Escolha a forma mais conveniente
+                    Atendimento presencial no Centro de Januária - MG ou 100% digital
+                    com atendimento para todo o Brasil. Escolha o canal mais conveniente
                     para você.
                   </p>
 
                   <div className="mt-8 space-y-4">
                     <div className="flex items-start gap-3.5">
-                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#c5a059]/20 text-[#83591c]">
+                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#d4af37]/20 text-[#7a520e]">
                         <MapPin size={20} />
                       </div>
                       <div>
-                        <p className="text-xs font-bold text-[#0a1628] uppercase tracking-wider">
+                        <p className="text-xs font-bold text-[#081020] uppercase tracking-wider">
                           Endereço da Sede
                         </p>
                         <p className="text-sm text-slate-700 mt-0.5">
@@ -1655,7 +1652,7 @@ export default function Home() {
                           href={GOOGLE_MAPS_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-[#83591c] hover:underline"
+                          className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-[#7a520e] hover:underline"
                         >
                           <span>Como chegar no Google Maps</span>
                           <ArrowUpRight size={12} />
@@ -1664,18 +1661,18 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#c5a059]/20 text-[#83591c]">
+                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#d4af37]/20 text-[#7a520e]">
                         <Phone size={20} />
                       </div>
                       <div>
-                        <p className="text-xs font-bold text-[#0a1628] uppercase tracking-wider">
-                          Telefone & WhatsApp
+                        <p className="text-xs font-bold text-[#081020] uppercase tracking-wider">
+                          Telefone &amp; WhatsApp
                         </p>
                         <a
                           href={getWhatsAppUrl()}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm font-semibold text-slate-800 hover:text-[#83591c] mt-0.5 block"
+                          className="text-sm font-semibold text-slate-800 hover:text-[#7a520e] mt-0.5 block"
                         >
                           {PHONE_DISPLAY}
                         </a>
@@ -1683,37 +1680,37 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#c5a059]/20 text-[#83591c]">
+                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#d4af37]/20 text-[#7a520e]">
                         <InstagramIcon size={20} />
                       </div>
                       <div>
-                        <p className="text-xs font-bold text-[#0a1628] uppercase tracking-wider">
+                        <p className="text-xs font-bold text-[#081020] uppercase tracking-wider">
                           Instagram Oficial
                         </p>
                         <a
                           href={INSTAGRAM_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm font-semibold text-slate-800 hover:text-[#83591c] mt-0.5 block"
+                          className="text-sm font-semibold text-slate-800 hover:text-[#7a520e] mt-0.5 block"
                         >
-                          {INSTAGRAM_HANDLE} (+3.170 seguidores)
+                          {INSTAGRAM_HANDLE} (1.272 seguidores)
                         </a>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#c5a059]/20 text-[#83591c]">
+                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#d4af37]/20 text-[#7a520e]">
                         <Clock size={20} />
                       </div>
                       <div>
-                        <p className="text-xs font-bold text-[#0a1628] uppercase tracking-wider">
+                        <p className="text-xs font-bold text-[#081020] uppercase tracking-wider">
                           Horário de Funcionamento
                         </p>
                         <p className="text-sm text-slate-700 mt-0.5">
-                          Segunda a Sexta: 09:00 às 18:00
+                          Segunda a Sexta: 08:00 às 18:00
                         </p>
                         <p className="text-xs text-slate-500">
-                          Atendimento com horário previamente agendado
+                          Atendimento com agendamento prévio
                         </p>
                       </div>
                     </div>
@@ -1728,7 +1725,7 @@ export default function Home() {
                     target="_blank"
                     className="w-full justify-center"
                   >
-                    <WhatsAppIcon size={18} className="text-[#060f1e]" />
+                    <WhatsAppIcon size={18} className="text-[#050a14]" />
                     <span>Falar no WhatsApp Agora</span>
                   </GlowingButton>
                 </div>
@@ -1742,32 +1739,32 @@ export default function Home() {
                       <div className="relative size-8 shrink-0">
                         <Image
                           src={LOGO_SYMBOL_SRC}
-                          alt="Mariana Corsi"
+                          alt="Dr. Yan Marlon"
                           fill
                           className="object-contain"
                         />
                       </div>
                       <div>
-                        <p className="font-cinzel text-sm font-bold text-[#0a1628]">
-                          Mariana Corsi Advocacia Previdenciária
+                        <p className="font-cinzel text-sm font-bold text-[#081020]">
+                          Dr. Yan Marlon — Advocacia
                         </p>
                         <p className="text-[10px] text-slate-500">
-                          Pitangui - MG
+                          Januária - MG
                         </p>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-1 rounded-md bg-amber-50 px-2 py-1 text-xs font-bold text-amber-700 border border-amber-200">
                       <Star size={12} className="fill-amber-400 text-amber-500" />
-                      <span>5,0 ★ Google</span>
+                      <span>5,0 ★ Google (28)</span>
                     </div>
                   </div>
 
                   {/* Interactive Map Container */}
                   <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
                     <iframe
-                      title="Localização do Escritório Mariana Corsi Advocacia Previdenciária em Pitangui - MG"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.864985923956!2d-45.2130!3d-19.6800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa77f5255018671%3A0x75653b62ff919246!2sR.%20Martinho%20Campos%2C%20162%20-%20Centro%2C%20Pitangui%20-%20MG%2C%2035650-000!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+                      title="Localização do Escritório Dr. Yan Marlon — Advocacia, Assessoria e Consultoria Jurídica em Januária - MG"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.541285227845!2d-44.3685!3d-15.4833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7520e54148bcfeb%3A0x4879c98bc05fe431!2sR.%20Cel.%20Serr%C3%A3o%2C%20190%20-%20Centro%2C%20Janu%C3%A1ria%20-%20MG%2C%2039480-000!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
                       className="size-full border-0"
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
@@ -1775,12 +1772,12 @@ export default function Home() {
                   </div>
 
                   <div className="mt-4 flex items-center justify-between text-xs text-slate-600">
-                    <span>Rua Martinho Campos, 162 - Centro</span>
+                    <span>R. Cel. Serrão, n.190 - Centro</span>
                     <a
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-bold text-[#83591c] hover:underline flex items-center gap-1"
+                      className="font-bold text-[#7a520e] hover:underline flex items-center gap-1"
                     >
                       <span>Abrir Rotas no GPS</span>
                       <ArrowUpRight size={12} />
@@ -1795,7 +1792,7 @@ export default function Home() {
         {/* ========================================================================= */}
         {/* 13. FOOTER                                                                */}
         {/* ========================================================================= */}
-        <footer className="border-t border-[#1c3a63] bg-gradient-to-b from-[#060f1e] to-[#040913] text-white py-12 sm:py-16">
+        <footer className="border-t border-[#1b3964] bg-gradient-to-b from-[#050a14] to-[#03060d] text-white py-12 sm:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-12 pb-12 border-b border-slate-800">
               {/* Brand Column */}
@@ -1807,17 +1804,17 @@ export default function Home() {
                   <div className="relative size-13 sm:size-14 shrink-0">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Mariana Corsi Advocacia Previdenciária"
+                      alt="Dr. Yan Marlon — Advocacia, Assessoria e Consultoria Jurídica"
                       fill
                       className="object-contain"
                     />
                   </div>
                   <div className="flex flex-col">
                     <span className="font-cinzel text-lg sm:text-xl font-extrabold tracking-[0.14em] text-white leading-tight">
-                      MARIANA CORSI
+                      Dr. YAN MARLON
                     </span>
-                    <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.2em] text-[#dfb967] uppercase mt-0.5">
-                      ADVOCACIA PREVIDENCIÁRIA
+                    <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.18em] text-[#eed68b] uppercase mt-0.5">
+                      ADVOCACIA &amp; CONSULTORIA JURÍDICA
                     </span>
                   </div>
                 </a>
@@ -1831,8 +1828,8 @@ export default function Home() {
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-white/5 text-slate-300 transition-colors hover:border-[#dfb967] hover:text-[#dfb967]"
-                    aria-label="Instagram da Dra. Mariana Corsi"
+                    className="flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-white/5 text-slate-300 transition-colors hover:border-[#eed68b] hover:text-[#eed68b]"
+                    aria-label="Instagram do Dr. Yan Marlon"
                   >
                     <InstagramIcon size={16} />
                   </a>
@@ -1841,7 +1838,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-white/5 text-slate-300 transition-colors hover:border-[#25D366] hover:text-[#25D366]"
-                    aria-label="WhatsApp da Dra. Mariana Corsi"
+                    aria-label="WhatsApp do Dr. Yan Marlon"
                   >
                     <WhatsAppIcon size={16} />
                   </a>
@@ -1859,38 +1856,38 @@ export default function Home() {
 
               {/* Navigation Links */}
               <div className="lg:col-span-3">
-                <p className="font-cinzel text-xs font-bold uppercase tracking-[0.16em] text-[#dfb967] mb-4">
-                  Especialidades
+                <p className="font-cinzel text-xs font-bold uppercase tracking-[0.16em] text-[#eed68b] mb-4">
+                  Áreas de Atuação
                 </p>
                 <ul className="space-y-2.5 text-xs text-slate-300">
                   <li>
-                    <a className="footer-link" href="#especialidades">
-                      Planejamento Previdenciário
+                    <a className="footer-link" href="#atuacao">
+                      Direito Civil &amp; Contratos
                     </a>
                   </li>
                   <li>
-                    <a className="footer-link" href="#especialidades">
-                      Aposentadorias do INSS
+                    <a className="footer-link" href="#atuacao">
+                      Direito do Trabalho Patronal
                     </a>
                   </li>
                   <li>
-                    <a className="footer-link" href="#especialidades">
-                      BPC / LOAS (Idosos & PCD)
+                    <a className="footer-link" href="#atuacao">
+                      Direito de Família &amp; Sucessões
                     </a>
                   </li>
                   <li>
-                    <a className="footer-link" href="#especialidades">
-                      Auxílio-Doença & Invalidez
+                    <a className="footer-link" href="#atuacao">
+                      Assessoria Jurídica Empresarial
                     </a>
                   </li>
                   <li>
-                    <a className="footer-link" href="#especialidades">
-                      Pensão por Morte & Maternidade
+                    <a className="footer-link" href="#atuacao">
+                      Direito Previdenciário (INSS)
                     </a>
                   </li>
                   <li>
-                    <a className="footer-link" href="#especialidades">
-                      Revisão de Benefícios & Atrasados
+                    <a className="footer-link" href="#atuacao">
+                      Direito do Consumidor &amp; Danos
                     </a>
                   </li>
                 </ul>
@@ -1898,12 +1895,12 @@ export default function Home() {
 
               {/* Legal & Office */}
               <div className="lg:col-span-4">
-                <p className="font-cinzel text-xs font-bold uppercase tracking-[0.16em] text-[#dfb967] mb-4">
-                  Sede & Contato
+                <p className="font-cinzel text-xs font-bold uppercase tracking-[0.16em] text-[#eed68b] mb-4">
+                  Sede &amp; Contato
                 </p>
                 <div className="space-y-2.5 text-xs text-slate-300">
                   <p className="flex items-start gap-2">
-                    <MapPin size={14} className="text-[#dfb967] shrink-0 mt-0.5" />
+                    <MapPin size={14} className="text-[#eed68b] shrink-0 mt-0.5" />
                     <span>{ADDRESS_TEXT}</span>
                   </p>
                   <p className="flex items-center gap-2">
@@ -1911,11 +1908,11 @@ export default function Home() {
                     <span>WhatsApp: {PHONE_DISPLAY}</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <Mail size={14} className="text-[#dfb967] shrink-0" />
+                    <Mail size={14} className="text-[#eed68b] shrink-0" />
                     <span>{EMAIL_CONTACT}</span>
                   </p>
                   <p className="text-[11px] text-slate-400 mt-3 pt-3 border-t border-slate-800">
-                    Atendimento de Segunda a Sexta, das 09:00 às 18:00.
+                    Atendimento de Segunda a Sexta, das 08:00 às 18:00.
                   </p>
                 </div>
               </div>
@@ -1924,13 +1921,13 @@ export default function Home() {
             {/* Bottom Copyright & OAB Ethics Notice */}
             <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-400 text-center md:text-left">
               <p>
-                &copy; {new Date().getFullYear()} Mariana Corsi Advocacia Previdenciária.
+                &copy; {new Date().getFullYear()} Dr. Yan Marlon — Advocacia, Assessoria e Consultoria Jurídica.
                 Todos os direitos reservados.
               </p>
               <p className="max-w-xl text-[10px] leading-relaxed">
-                Este site tem caráter estritamente informativo e não constitui consulta
-                jurídica formal, em estrita conformidade com o Código de Ética e
-                Disciplina da Ordem dos Advogados do Brasil (OAB).
+                Este site possui finalidade meramente informativa e não configura consulta
+                jurídica formal, em total conformidade com as diretrizes do Código de Ética e
+                Disciplina da Ordem dos Advogados do Brasil (OAB/MG 195.229).
               </p>
             </div>
           </div>
@@ -1945,11 +1942,11 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center gap-2.5 rounded-full border-2 border-white/80 bg-[#25D366] px-4 py-3 text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:bg-[#1ebe5d]"
-            aria-label="Falar com a Dra. Mariana Corsi no WhatsApp"
+            aria-label="Falar com o Dr. Yan Marlon no WhatsApp"
           >
             <span className="absolute -top-1 -right-1 flex size-3">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#dfb967] opacity-75" />
-              <span className="relative inline-flex size-3 rounded-full bg-[#dfb967]" />
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#eed68b] opacity-75" />
+              <span className="relative inline-flex size-3 rounded-full bg-[#eed68b]" />
             </span>
             <WhatsAppIcon size={22} className="text-white" />
             <span className="hidden sm:inline text-xs font-bold tracking-wide uppercase">
@@ -1959,7 +1956,7 @@ export default function Home() {
         </div>
 
         {/* ========================================================================= */}
-        {/* 15. MODAL DE CONSULTA RÁPIDA PREVIDENCIÁRIA                               */}
+        {/* 15. MODAL DE CONSULTA RÁPIDA                                              */}
         {/* ========================================================================= */}
         <AnimatePresence>
           {modalOpen && (
@@ -1976,7 +1973,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95, y: 16 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 16 }}
-                className="relative z-10 w-full max-w-lg rounded-2xl border-2 border-[#c5a059]/60 bg-gradient-to-b from-[#060f1e] to-[#0a1628] p-6 sm:p-8 text-white shadow-2xl"
+                className="relative z-10 w-full max-w-lg rounded-2xl border-2 border-[#d4af37]/60 bg-gradient-to-b from-[#050a14] to-[#081020] p-6 sm:p-8 text-white shadow-2xl"
               >
                 <button
                   type="button"
@@ -1991,35 +1988,35 @@ export default function Home() {
                   <div className="relative size-10 shrink-0">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Mariana Corsi"
+                      alt="Dr. Yan Marlon"
                       fill
                       className="object-contain"
                     />
                   </div>
                   <div>
                     <h3 className="font-cinzel text-lg font-bold text-white">
-                      Análise do Caso Previdenciário
+                      Análise Jurídica Especializada
                     </h3>
-                    <p className="text-xs text-[#dfb967] font-semibold">
+                    <p className="text-xs text-[#eed68b] font-semibold">
                       {modalArea}
                     </p>
                   </div>
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  Para analisar seu direito com sigilo e rapidez, você será redirecionado
-                  ao WhatsApp oficial da{" "}
-                  <strong className="text-white">Dra. Mariana Corsi</strong>.
+                  Para analisar sua demanda com sigilo, agilidade e rigor técnico, você será
+                  redirecionado ao atendimento oficial do{" "}
+                  <strong className="text-white">Dr. Yan Marlon (OAB/MG 195.229)</strong>.
                 </p>
 
                 <div className="mt-5 space-y-2 rounded-xl border border-slate-700 bg-white/5 p-4 text-xs text-slate-300">
-                  <p className="font-bold text-white uppercase tracking-wider text-[11px] text-[#dfb967]">
-                    O que ter em mãos (se possível):
+                  <p className="font-bold text-white uppercase tracking-wider text-[11px] text-[#eed68b]">
+                    O que ter em mãos (se aplicável):
                   </p>
                   <ul className="space-y-1 pl-1">
-                    <li>&bull; Nome completo e cidade de residência</li>
-                    <li>&bull; Carteira de Trabalho ou Extrato CNIS (Meu INSS)</li>
-                    <li>&bull; Carta de indeferimento (caso o INSS tenha negado)</li>
+                    <li>&bull; Nome completo e cidade onde reside</li>
+                    <li>&bull; Breve resumo da situação ou litígio</li>
+                    <li>&bull; Contratos, notificações ou documentos relativos ao caso</li>
                   </ul>
                 </div>
 
@@ -2028,12 +2025,12 @@ export default function Home() {
                     variant="gold"
                     size="md"
                     href={getWhatsAppUrl(
-                      `Olá, Dra. Mariana! Gostaria de uma análise sobre: ${modalArea}.`
+                      `Olá, Dr. Yan Marlon! Gostaria de uma avaliação jurídica sobre: ${modalArea}.`
                     )}
                     target="_blank"
                     className="w-full justify-center"
                   >
-                    <WhatsAppIcon size={16} className="text-[#060f1e]" />
+                    <WhatsAppIcon size={16} className="text-[#050a14]" />
                     <span>Prosseguir para o WhatsApp</span>
                   </GlowingButton>
 

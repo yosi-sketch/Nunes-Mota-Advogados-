@@ -3,34 +3,34 @@
 :root {
   color-scheme: light dark;
   
-  /* Primary Midnight Navy (Safira Noturno Base) */
-  --color-black-pure: #060f1e;
-  --color-black-surface: #0a1628;
-  --color-black-card: #0e1f38;
-  --color-black-hover: #162d4e;
+  /* Primary Midnight Onyx & Deep Navy Base */
+  --color-black-pure: #050a14;
+  --color-black-surface: #081020;
+  --color-black-card: #0e182e;
+  --color-black-hover: #15223e;
 
   --color-white-pure: #ffffff;
-  --color-white-surface: #faf9f6;
+  --color-white-surface: #fbfaf6;
   --color-white-card: #ffffff;
   --color-white-muted: #f3f4f6;
 
-  /* Primary Logo Accent: Polished Warm Gold (Mariana Corsi) */
-  --brand-gold-shimmer: #fdfaf2;
-  --brand-gold-blush: #fbf5e6;
-  --brand-gold-light: #f3dfa7;
-  --brand-gold-accent: #dfb967;
-  --brand-gold-primary: #c5a059;
-  --brand-gold-rich: #a88238;
-  --brand-gold-deep: #83591c;
-  --brand-gold-dark: #4e340c;
+  /* Primary Logo Accent: Polished Imperial Warm Gold (Dr. Yan Marlon) */
+  --brand-gold-shimmer: #faf5e8;
+  --brand-gold-blush: #f5ecd2;
+  --brand-gold-light: #eed68b;
+  --brand-gold-accent: #e2be5f;
+  --brand-gold-primary: #d4af37;
+  --brand-gold-rich: #a17518;
+  --brand-gold-deep: #7a520e;
+  --brand-gold-dark: #472f07;
 
   /* Secondary Navy & Slate Tones */
-  --brand-navy-light: #e9f0f8;
-  --brand-navy-muted: #94a3b8;
-  --brand-navy-primary: #162d4e;
-  --brand-navy-deep: #0e1f38;
-  --brand-navy-midnight: #0a1628;
-  --brand-navy-pure: #060f1e;
+  --brand-navy-light: #e8eef7;
+  --brand-navy-muted: #8fa0b8;
+  --brand-navy-primary: #15223e;
+  --brand-navy-deep: #0e182e;
+  --brand-navy-midnight: #081020;
+  --brand-navy-pure: #050a14;
 }
 
 @theme inline {
@@ -38,29 +38,29 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Playfair Display", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-gold-50: #fdfaf2;
-  --color-gold-100: #fbf5e6;
-  --color-gold-200: #f3dfa7;
-  --color-gold-300: #e7ca7c;
-  --color-gold-400: #dfb967;
-  --color-gold-500: #c5a059;
-  --color-gold-600: #a88238;
-  --color-gold-700: #83591c;
-  --color-gold-800: #654414;
-  --color-gold-900: #4e340c;
+  --color-gold-50: #faf5e8;
+  --color-gold-100: #f5ecd2;
+  --color-gold-200: #eed68b;
+  --color-gold-300: #e2be5f;
+  --color-gold-400: #d4af37;
+  --color-gold-500: #c59b27;
+  --color-gold-600: #a17518;
+  --color-gold-700: #7a520e;
+  --color-gold-800: #5c3c0a;
+  --color-gold-900: #472f07;
 
-  --color-navy-50: #f0f4f9;
-  --color-navy-100: #dde7f3;
-  --color-navy-200: #c0d2e8;
-  --color-navy-300: #95b4d7;
-  --color-navy-400: #628fc0;
-  --color-navy-500: #3f71a7;
-  --color-navy-600: #2a5385;
-  --color-navy-700: #1c3a63;
-  --color-navy-800: #162d4e;
-  --color-navy-900: #0e1f38;
-  --color-navy-950: #0a1628;
-  --color-navy-990: #060f1e;
+  --color-navy-50: #eff3f9;
+  --color-navy-100: #dce5f2;
+  --color-navy-200: #bdcfe6;
+  --color-navy-300: #91b0d4;
+  --color-navy-400: #5e8bc0;
+  --color-navy-500: #3b6ea7;
+  --color-navy-600: #265085;
+  --color-navy-700: #1b3964;
+  --color-navy-800: #15223e;
+  --color-navy-900: #0e182e;
+  --color-navy-950: #081020;
+  --color-navy-990: #050a14;
 }
 
 html {
@@ -71,14 +71,14 @@ html {
 
 body {
   background: #ffffff;
-  color: #0e141c;
+  color: #0b121e;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #c5a059;
+  caret-color: #d4af37;
 }
 
 ::selection {
-  background: #c5a059;
-  color: #060f1e;
+  background: #d4af37;
+  color: #050a14;
 }
 
 .font-cinzel {
@@ -100,11 +100,11 @@ body {
 }
 
 .eyebrow-gold {
-  color: #c5a059;
+  color: #c59b27;
 }
 
 .eyebrow-navy {
-  color: #162d4e;
+  color: #15223e;
 }
 
 .eyebrow-dark {
@@ -112,7 +112,7 @@ body {
 }
 
 .eyebrow-light {
-  color: #dfb967;
+  color: #eed68b;
 }
 
 .eyebrow-gold::before,
@@ -151,7 +151,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #c5a059;
+  background: #d4af37;
   content: "";
   transform: scaleX(0);
   transform-origin: center;
@@ -159,7 +159,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #0a1628;
+  color: #081020;
 }
 
 .nav-link:hover::after {
@@ -173,13 +173,13 @@ body {
 }
 
 .footer-link:hover {
-  color: #dfb967;
+  color: #eed68b;
   transform: translateX(2px);
 }
 
 /* Luxury gold text gradient */
 .text-gradient-gold {
-  background: linear-gradient(135deg, #dfb967 0%, #c5a059 50%, #f3dfa7 100%);
+  background: linear-gradient(135deg, #eed68b 0%, #d4af37 50%, #faf5e8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
