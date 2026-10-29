@@ -36,43 +36,43 @@ export default function GlowingButton({
 
   // High-contrast prestige styling (Polished Warm Gold, Midnight Royal Navy & Silk Ivory)
   const variantClasses = {
-    // Primary Signature: Polished Imperial Warm Gold (Dr. Yan Marlon)
+    // Primary Signature: Polished Imperial Warm Gold (Rômulo Marini Advocacia)
     gold:
-      "relative border border-[#eed68b]/70 bg-gradient-to-r from-[#b38827] via-[#d4af37] to-[#eed68b] text-[#050a14] font-extrabold tracking-[0.14em] " +
+      "relative border border-[#f5d77f]/70 bg-gradient-to-r from-[#b38827] via-[#d4af37] to-[#f5d77f] text-[#040812] font-extrabold tracking-[0.14em] " +
       "shadow-[0_6px_22px_-2px_rgba(212,175,55,0.45),inset_0_1px_1px_rgba(255,255,255,0.7)] " +
-      "hover:-translate-y-0.5 hover:from-[#c59b27] hover:via-[#f9f1d2] hover:to-[#b38827] hover:text-[#050a14] " +
+      "hover:-translate-y-0.5 hover:from-[#c59b27] hover:via-[#fff4bd] hover:to-[#b38827] hover:text-[#040812] " +
       "hover:shadow-[0_10px_28px_rgba(212,175,55,0.65)] " +
       "active:translate-y-0 active:shadow-[0_3px_10px_rgba(212,175,55,0.4)]",
 
     // Secondary Accent: Midnight Royal Navy with subtle Gold Trim
     navy:
-      "relative border border-[#d4af37]/40 bg-gradient-to-r from-[#050a14] via-[#0e182e] to-[#081020] text-white font-bold tracking-[0.14em] " +
-      "shadow-[0_6px_20px_-2px_rgba(5,10,20,0.6),inset_0_1px_1px_rgba(255,255,255,0.15)] " +
-      "hover:-translate-y-0.5 hover:from-[#081020] hover:via-[#15223e] hover:to-[#0e182e] hover:border-[#eed68b] " +
+      "relative border border-[#d4af37]/40 bg-gradient-to-r from-[#040812] via-[#0c1527] to-[#070d1a] text-white font-bold tracking-[0.14em] " +
+      "shadow-[0_6px_20px_-2px_rgba(4,8,18,0.6),inset_0_1px_1px_rgba(255,255,255,0.15)] " +
+      "hover:-translate-y-0.5 hover:from-[#070d1a] hover:via-[#121e36] hover:to-[#0c1527] hover:border-[#f5d77f] " +
       "hover:shadow-[0_10px_28px_-2px_rgba(212,175,55,0.35)] " +
-      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(5,10,20,0.4)]",
+      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(4,8,18,0.4)]",
 
     // High-Contrast Solid Midnight (ideal on Light folds)
     dark:
-      "relative border border-[#15223e] bg-[#081020] text-white font-bold tracking-[0.13em] " +
-      "shadow-[0_6px_18px_rgba(5,10,20,0.3)] hover:-translate-y-0.5 hover:bg-[#0e182e] hover:border-[#d4af37] " +
+      "relative border border-[#121e36] bg-[#070d1a] text-white font-bold tracking-[0.13em] " +
+      "shadow-[0_6px_18px_rgba(4,8,18,0.3)] hover:-translate-y-0.5 hover:bg-[#0c1527] hover:border-[#d4af37] " +
       "hover:shadow-[0_10px_24px_rgba(212,175,55,0.25)]",
 
     // High-Contrast Pure White (ideal on Dark folds)
     white:
-      "relative border border-white bg-white text-[#081020] font-bold tracking-[0.13em] " +
-      "shadow-[0_6px_20px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:bg-[#fbfaf6] hover:border-[#eed68b] " +
+      "relative border border-white bg-white text-[#070d1a] font-bold tracking-[0.13em] " +
+      "shadow-[0_6px_20px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:bg-[#faf8f2] hover:border-[#f5d77f] " +
       "hover:shadow-[0_10px_26px_rgba(255,255,255,0.25)]",
 
     // Outline on Dark Folds
     outline:
-      "relative border border-[#d4af37]/40 bg-white/5 text-[#eed68b] font-bold tracking-[0.13em] backdrop-blur-md " +
-      "hover:-translate-y-0.5 hover:border-[#eed68b] hover:bg-[#d4af37]/15 hover:text-white",
+      "relative border border-[#d4af37]/40 bg-white/5 text-[#f5d77f] font-bold tracking-[0.13em] backdrop-blur-md " +
+      "hover:-translate-y-0.5 hover:border-[#f5d77f] hover:bg-[#d4af37]/15 hover:text-white",
 
     // Outline on Light Folds
     "outline-dark":
-      "relative border border-[#15223e]/25 bg-white/95 text-[#081020] font-bold tracking-[0.13em] " +
-      "hover:-translate-y-0.5 hover:border-[#d4af37] hover:text-[#7a520e] hover:bg-[#fbfaf6]",
+      "relative border border-[#121e36]/25 bg-white/95 text-[#070d1a] font-bold tracking-[0.13em] " +
+      "hover:-translate-y-0.5 hover:border-[#d4af37] hover:text-[#74520a] hover:bg-[#faf8f2]",
 
     // WhatsApp Conversion Green CTA
     emerald:

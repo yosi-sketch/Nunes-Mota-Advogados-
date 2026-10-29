@@ -4,33 +4,33 @@
   color-scheme: light dark;
   
   /* Primary Midnight Onyx & Deep Navy Base */
-  --color-black-pure: #050a14;
-  --color-black-surface: #081020;
-  --color-black-card: #0e182e;
-  --color-black-hover: #15223e;
+  --color-black-pure: #040812;
+  --color-black-surface: #070d1a;
+  --color-black-card: #0c1527;
+  --color-black-hover: #121e36;
 
   --color-white-pure: #ffffff;
-  --color-white-surface: #fbfaf6;
+  --color-white-surface: #faf8f2;
   --color-white-card: #ffffff;
-  --color-white-muted: #f3f4f6;
+  --color-white-muted: #f4efe6;
 
-  /* Primary Logo Accent: Polished Imperial Warm Gold (Dr. Yan Marlon) */
-  --brand-gold-shimmer: #faf5e8;
-  --brand-gold-blush: #f5ecd2;
-  --brand-gold-light: #eed68b;
-  --brand-gold-accent: #e2be5f;
+  /* Primary Logo Accent: 3D Polished Imperial Warm Gold (Rômulo Marini Advocacia) */
+  --brand-gold-shimmer: #fff4bd;
+  --brand-gold-blush: #fbf0cb;
+  --brand-gold-light: #f5d77f;
+  --brand-gold-accent: #e5b842;
   --brand-gold-primary: #d4af37;
-  --brand-gold-rich: #a17518;
-  --brand-gold-deep: #7a520e;
-  --brand-gold-dark: #472f07;
+  --brand-gold-rich: #a37517;
+  --brand-gold-deep: #74520a;
+  --brand-gold-dark: #4a3305;
 
   /* Secondary Navy & Slate Tones */
-  --brand-navy-light: #e8eef7;
-  --brand-navy-muted: #8fa0b8;
-  --brand-navy-primary: #15223e;
-  --brand-navy-deep: #0e182e;
-  --brand-navy-midnight: #081020;
-  --brand-navy-pure: #050a14;
+  --brand-navy-light: #e6edf7;
+  --brand-navy-muted: #8899b3;
+  --brand-navy-primary: #121e36;
+  --brand-navy-deep: #0c1527;
+  --brand-navy-midnight: #070d1a;
+  --brand-navy-pure: #040812;
 }
 
 @theme inline {
@@ -38,29 +38,29 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Playfair Display", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-gold-50: #faf5e8;
-  --color-gold-100: #f5ecd2;
-  --color-gold-200: #eed68b;
-  --color-gold-300: #e2be5f;
-  --color-gold-400: #d4af37;
-  --color-gold-500: #c59b27;
-  --color-gold-600: #a17518;
-  --color-gold-700: #7a520e;
-  --color-gold-800: #5c3c0a;
-  --color-gold-900: #472f07;
+  --color-gold-50: #fffbf0;
+  --color-gold-100: #fff4bd;
+  --color-gold-200: #fbf0cb;
+  --color-gold-300: #f5d77f;
+  --color-gold-400: #e5b842;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #c59b27;
+  --color-gold-700: #a37517;
+  --color-gold-800: #74520a;
+  --color-gold-900: #4a3305;
 
-  --color-navy-50: #eff3f9;
-  --color-navy-100: #dce5f2;
-  --color-navy-200: #bdcfe6;
-  --color-navy-300: #91b0d4;
-  --color-navy-400: #5e8bc0;
-  --color-navy-500: #3b6ea7;
-  --color-navy-600: #265085;
+  --color-navy-50: #eef3f9;
+  --color-navy-100: #dae4f2;
+  --color-navy-200: #b9cde6;
+  --color-navy-300: #8baed4;
+  --color-navy-400: #5889bf;
+  --color-navy-500: #366ba4;
+  --color-navy-600: #234f82;
   --color-navy-700: #1b3964;
-  --color-navy-800: #15223e;
-  --color-navy-900: #0e182e;
-  --color-navy-950: #081020;
-  --color-navy-990: #050a14;
+  --color-navy-800: #121e36;
+  --color-navy-900: #0c1527;
+  --color-navy-950: #070d1a;
+  --color-navy-990: #040812;
 }
 
 html {
@@ -78,7 +78,7 @@ body {
 
 ::selection {
   background: #d4af37;
-  color: #050a14;
+  color: #040812;
 }
 
 .font-cinzel {
@@ -104,7 +104,7 @@ body {
 }
 
 .eyebrow-navy {
-  color: #15223e;
+  color: #121e36;
 }
 
 .eyebrow-dark {
@@ -112,7 +112,7 @@ body {
 }
 
 .eyebrow-light {
-  color: #eed68b;
+  color: #f5d77f;
 }
 
 .eyebrow-gold::before,
@@ -159,7 +159,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #081020;
+  color: #070d1a;
 }
 
 .nav-link:hover::after {
@@ -173,13 +173,13 @@ body {
 }
 
 .footer-link:hover {
-  color: #eed68b;
+  color: #f5d77f;
   transform: translateX(2px);
 }
 
-/* Luxury gold text gradient */
+/* Luxury 3D gold text gradient calibrated to the logo */
 .text-gradient-gold {
-  background: linear-gradient(135deg, #eed68b 0%, #d4af37 50%, #faf5e8 100%);
+  background: linear-gradient(135deg, #fff4bd 0%, #f5d77f 30%, #d4af37 60%, #e5b842 80%, #a37517 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
