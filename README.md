@@ -1,25 +1,21 @@
-# Alexandre Abreu Lúcio | Advocacia de Excelência
+# Dra. Ângela Maria Gonçalves Rabelo | Advocacia, Consultoria & Assessoria Jurídica
 
-Landing page e site institucional de altíssimo padrão desenvolvido em Next.js 16 (App Router), Tailwind CSS v4 e Framer Motion para o **Escritório de Advocacia - Dr. Alexandre Abreu Lúcio** (OAB/MG 122.827) em Pitangui - MG e com atuação em todo o Brasil.
+Landing page e site institucional de altíssimo padrão desenvolvido em Next.js 16 (App Router), Tailwind CSS v4 e Framer Motion para a **Dra. Ângela Maria Gonçalves Rabelo — Advocacia, Consultoria & Assessoria Jurídica** em Cláudio - MG e com atuação em todo o Brasil.
 
-## ⚖️ Dados do Cliente
+## ⚖️ Dados da Cliente
 
-- **Profissional / Escritório:** Escritório de Advocacia - Dr. Alexandre Abreu Lúcio
-- **Advogado Titular:** Dr. Alexandre Abreu Lúcio (OAB/MG 122.827)
-- **Cargos e Distinções:**
-  - Conselheiro Subseccional da OAB (2025/2027)
-  - Membro da Comissão de Defesa das Prerrogativas da OAB/MG
-  - Membro do IBDFAM (Instituto Brasileiro de Direito de Família)
-- **Slogan:** Defesa combativa, rigor técnico e soluções jurídicas com discrição, ética e excelência
-- **Localização:** Praça Dr. Isauro Epifânio, 141 - bairro São Francisco, Pitangui - MG, 35650-000
-- **WhatsApp / Telefone:** (37) 99971-0510
-- **E-mail:** contato@alexandreabreulucio.adv.br
-- **Avaliações:** 5,0 ★ no Google (39 avaliações)
-- **Instagram:** [@alexandreabreulucio](https://www.instagram.com/alexandreabreulucio/)
+- **Profissional / Escritório:** Dra. Ângela Maria Gonçalves Rabelo — Advocacia, Consultoria & Assessoria Jurídica
+- **Advogada Titular:** Dra. Ângela Maria Gonçalves Rabelo
+- **Slogan:** Comprometimento ético, profundo conhecimento jurídico e atendimento humanizado e combativo
+- **Localização:** Praça Levy Vitói de Freitas, n° 28 - Sl 303 - Centro, Cláudio - MG, 35530-000
+- **WhatsApp / Telefone:** (37) 99921-8631
+- **E-mail:** contato@angelamaria.adv.br
+- **Avaliações:** 5,0 ★ no Google (35 avaliações)
+- **Instagram:** [@angelamaria.advocacia](https://www.instagram.com/angelamaria.advocacia/)
 
 ## 🎨 Identidade Visual
 
-- **Paleta de Cores:** Champagne Platinum & Brushed Sand Gold (`#c5b293`, `#dfcfb2`, `#9e8b6e`, `#f9f6ef`) e Deep Obsidian Noir Charcoal (`#090b0e`, `#0e1217`, `#141922`), combinados com superfícies em Silk Pearl (`#ffffff`, `#faf8f5`, `#f4f0e8`).
+- **Paleta de Cores:** Carmine Ruby Red (`#b81424`, `#dc2626`, `#7a0812`, `#fda4af`) e Charcoal Obsidian & Carbon Noir (`#0a0d12`, `#0e1218`, `#141923`), combinados com superfícies em Silk Pearl & Pure White (`#ffffff`, `#f9fafb`, `#f1f4f8`) e detalhes metálicos em Platinum & Titanium (`#cbd5e1`, `#e2e8f0`).
 - **Tipografia:** Cinzel (`font-cinzel`), Playfair Display (`font-serif`) e Plus Jakarta Sans (`font-sans`).
 - **Assets:** Extraídos do logo oficial e organizados na pasta `public/` e `app/`.
 

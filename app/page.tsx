@@ -6,7 +6,6 @@ import { AnimatePresence, motion, type Variants, MotionConfig } from "framer-mot
 import {
   ArrowRight,
   ArrowUpRight,
-  Award,
   CheckCircle2,
   Clock,
   HeartHandshake,
@@ -22,48 +21,47 @@ import {
   X,
   ChevronDown,
   Users,
-  Briefcase,
   Building2,
   Compass,
-  FileSpreadsheet,
-  Globe,
+  Home as HomeIcon,
+  Briefcase,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5537999710510";
-const PHONE_DISPLAY = "(37) 99971-0510";
-const EMAIL_CONTACT = "contato@alexandreabreulucio.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/alexandreabreulucio/";
-const INSTAGRAM_HANDLE = "@alexandreabreulucio";
+const WHATSAPP_NUMBER = "5537999218631";
+const PHONE_DISPLAY = "(37) 99921-8631";
+const EMAIL_CONTACT = "contato@angelamaria.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/angelamaria.advocacia/";
+const INSTAGRAM_HANDLE = "@angelamaria.advocacia";
 
-const FIRM_NAME = "Escritório de Advocacia - Dr. Alexandre Abreu Lúcio";
-const FIRM_SHORT_NAME = "Alexandre Abreu Lúcio — Advocacia";
+const FIRM_NAME = "Dra. Ângela Maria Gonçalves Rabelo — Advocacia, Consultoria & Assessoria Jurídica";
+const FIRM_SHORT_NAME = "Ângela Maria Gonçalves Rabelo — Advocacia";
 const FIRM_SLOGAN =
-  "Defesa combativa, rigor técnico e soluções jurídicas com discrição, ética e excelência";
-const LAWYER_NAME = "Dr. Alexandre Abreu Lúcio";
-const LAWYER_OAB = "OAB/MG 122.827";
+  "Comprometimento ético, profundo conhecimento jurídico e atendimento humanizado e combativo";
+const LAWYER_NAME = "Dra. Ângela Maria Gonçalves Rabelo";
+const LAWYER_TITLE = "Advogada Titular";
 
 const ADDRESS_TEXT =
-  "Praça Dr. Isauro Epifânio, 141 - bairro São Francisco, Pitangui - MG, 35650-000";
+  "Pça. Levy Vitói de Freitas, n° 28 - Sl 303 - Centro, Cláudio - MG, 35530-000";
 const REGION_TEXT =
-  "Pitangui · Centro-Oeste Mineiro · Minas Gerais & Atendimento Digital em Todo o Brasil";
+  "Cláudio · Centro-Oeste Mineiro · Minas Gerais & Atendimento Digital em Todo o Brasil";
 
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Alexandre+Abreu+L%C3%BAcio+%E2%80%94+Advocacia%0APitangui+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=%C3%82ngela+Maria+Gon%C3%A7alves+Rabelo+%E2%80%94+Advogada%0ACl%C3%A1udio+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/search?sca_esv=34388a73116c39a8&sxsrf=AKL5yDh6Ar49AJnbWOYP4bHubI94R1JngA:1793290699607&q=escrit%C3%B3rio+de+advocacia+-+dr.+alexandre+abreu+l%C3%BAcio+pitangui+endere%C3%A7o&ludocid=2858374849778695354&sa=X&ved=2ahUKEwiB34O50N-XAxWtqJUCHWDtKC8Q6BN6BAg7EAI";
+  "https://www.google.com/search?sca_esv=a225a88ab5a0d3cb&sxsrf=AKL5yDgTXKgWZDWvMZd0SkTFaGDI5fo7uw:1793302265465&q=dra.+%C3%A2ngela+maria+gon%C3%A7alves+rabelo+cl%C3%A1udio+endere%C3%A7o&ludocid=1494783806736158895&sa=X&ved=2ahUKEwiM0YfE-9-XAxWQCLkGHTX_OFEQ6BN6BAg-EAI";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/hero-advogado.jpg";
-const FOTO_SOBRE_SRC = "/sobre-advogado.jpg";
+const FOTO_HERO_SRC = "/hero-advogada.jpg";
+const FOTO_SOBRE_SRC = "/sobre-advogada.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dr. Alexandre! Gostaria de conversar sobre o meu caso e agendar um atendimento jurídico.";
+    "Olá, Dra. Ângela! Gostaria de conversar sobre o meu caso e agendar uma consulta jurídica.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -159,229 +157,251 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-familia-ibdfam",
-    title: "Direito de Família & Relações Familiares (IBDFAM)",
-    icon: Users,
-    tag: "Divórcio Consensual e Litigioso · Partilha de Bens · Guarda e Convivência · Alimentos",
+    id: "direito-penal-defesa-prisoes",
+    title: "Direito Penal, Prisões & Audiências (Plantão 24h)",
+    icon: Shield,
+    tag: "Flagrantes 24h · Audiências de Custódia · Defesas Prévias · Tribunal do Júri",
     summary:
-      "Atuação acolhedora, estratégica e pacificadora de conflitos com a autoridade de membro do Instituto Brasileiro de Direito de Família (IBDFAM).",
+      "Atuação ágil, combativa e intransigente na preservação da liberdade e dos direitos fundamentais perante delegacias, varas criminais e tribunais.",
     details:
-      "Questões de família exigem sensibilidade humana, discrição irrestrita e firmeza jurídica para preservar relacionamentos e proteger o patrimônio. Como membro do IBDFAM, o Dr. Alexandre Abreu Lúcio conduz divórcios consensuais e litigiosos, dissoluções de união estável, partilha de patrimônio com apuração de bens, fixação e revisão de alimentos (pensão alimentícia), além de acordos equilibrados de guarda e convivência com foco no melhor interesse dos filhos.",
+      "Em momentos críticos em que a liberdade e a dignidade estão em jogo, cada minuto é determinante. A Dra. Ângela Maria atua com rapidez e rigor técnico em prisões em flagrante, audiências de custódia, pedidos de revogação de prisão preventiva, habeas corpus perante os Tribunais de Justiça e Superiores, acompanhamento em inquéritos policiais e sustentação perante o Tribunal do Júri.",
     topics: [
-      "Divórcio Consensual Extrajudicial em Cartório (rápido, prático e sem desgaste) e Divórcio Judicial Litigioso",
-      "Dissolução de União Estável com partilha equilibrada de bens e proteção contra fraudes patrimoniais",
-      "Ações de Fixação, Revisão, Exoneração e Execução de Alimentos (Pensão Alimentícia)",
-      "Regulamentação de Guarda (compartilhada e unilateral) e plano detalhado de convivência familiar",
-      "Investigação e Reconhecimento de Paternidade, filiação socioafetiva e tutela contra alienação parental",
-      "Elaboração de Pactos Antenupciais e Contratos de Convivência com planejamento de regime de bens",
+      "Plantão e Atendimento Emergencial 24h em Prisões em Flagrante e Delegacias de Polícia",
+      "Representação em Audiências de Custódia e formulação imediata de pedidos de liberdade provisória",
+      "Impetração de Habeas Corpus, Pedidos de Relaxamento de Prisão Ilegal e Revogação de Preventiva",
+      "Defesa Prévia, Resposta à Acusação, memoriais e sustentação oral em Ações Penais",
+      "Acompanhamento presencial do investigado em oitivas, depoimentos e perícias",
+      "Defesa combativa e estratégica em Sessões de Julgamento perante o Tribunal do Júri",
+      "Execução Penal: progressão de regime (fechado/semiaberto/aberto), livramento condicional e indulto",
     ],
     whatsAppText:
-      "Olá, Dr. Alexandre! Gostaria de consultar sobre uma questão de Direito de Família (divórcio, pensão ou guarda).",
+      "Olá, Dra. Ângela! Preciso de atendimento urgente em Direito Penal (prisão, flagrante, audiência de custódia ou defesa).",
   },
   {
-    id: "sucessoes-inventarios-planejamento",
-    title: "Sucessões, Inventários & Planejamento Patrimonial",
-    icon: Building2,
-    tag: "Inventário em Cartório · Inventário Judicial · Heranças · Planejamento Sucessório",
+    id: "direito-familia-divorcios-guarda-pensao",
+    title: "Direito de Família, Divórcios, Guarda & Pensão",
+    icon: Users,
+    tag: "Divórcio em Cartório · Partilha de Bens · Guarda Compartilhada · Alimentos",
     summary:
-      "Condução ágil e pacífica de inventários judiciais e extrajudiciais, com desfecho seguro, economia de tributos e proteção aos herdeiros.",
+      "Acolhimento humanizado, sensibilidade e firmeza jurídica para conduzir divórcios, partilhas patrimoniais e proteção dos direitos dos filhos.",
     details:
-      "O momento da perda de um ente querido não deve ser agravado por conflitos ou demoras burocráticas. O Dr. Alexandre Abreu Lúcio conduz Inventários Extrajudiciais em Cartório de Notas — com extrema celeridade e custos reduzidos quando há consenso entre herdeiros —, além de Inventários Judiciais complexos, arrolamentos, testamentos, doações com reserva de usufruto e planejamento sucessório estruturado para transferência harmoniosa de bens.",
+      "Conflitos familiares requerem escuta atenta, paciência para esclarecer dúvidas e firmeza para proteger seus direitos e o futuro dos seus filhos. A Dra. Ângela Maria conduz divórcios consensuais céleres em Cartório de Notas e divórcios judiciais litigiosos, partilhas justas de patrimônio, ações de fixação, revisão ou execução de pensão alimentícia, além de acordos de guarda e convivência familiar.",
     topics: [
-      "Inventário Extrajudicial em Cartório de Notas (procedimento ágil, econômico e sem burocracia forense)",
-      "Inventário Judicial e partilha de bens litigiosa entre herdeiros com apuração rigorosa do espólio",
-      "Planejamento Sucessório preventivo com doação com reserva de usufruto e estruturação patrimonial",
-      "Alvarás Judiciais para liberação rápida de saldos bancários, FGTS, PIS/PASEP e veículos de falecidos",
-      "Regularização fundiária e imobiliária de bens herdados perante os Cartórios de Registro de Imóveis",
+      "Divórcio Consensual Extrajudicial em Cartório de Notas (procedimento ágil, prático e sem desgaste forense)",
+      "Divórcio Judicial Litigioso com partilha justa de bens e proteção contra ocultação patrimonial",
+      "Ações de Fixação, Revisão, Exoneração e Execução de Alimentos (Pensão Alimentícia)",
+      "Regulamentação de Guarda (compartilhada e unilateral) e plano detalhado de convivência familiar",
+      "Dissolução de União Estável com apuração do patrimônio comum e direitos sucessórios",
+      "Investigação e Reconhecimento de Paternidade, filiação socioafetiva e tutela contra alienação parental",
+      "Pactos Antenupciais e Contratos de Convivência com planejamento de regime patrimonial",
+    ],
+    whatsAppText:
+      "Olá, Dra. Ângela! Gostaria de consultar sobre uma questão de Família (divórcio, pensão alimentícia ou guarda).",
+  },
+  {
+    id: "sucessoes-inventarios-partilha",
+    title: "Inventários, Heranças & Partilha de Bens",
+    icon: Building2,
+    tag: "Inventário em Cartório · Inventário Judicial · Herança · Planejamento Sucessório",
+    summary:
+      "Condução rápida e pacificadora de inventários em cartório e na via judicial, com proteção aos herdeiros e segurança na transmissão de bens.",
+    details:
+      "A partida de um ente querido não deve se transformar em litígio prolongado ou custos desmedidos. Quando há concordância entre herdeiros, a Dra. Ângela realiza o Inventário Extrajudicial em Cartório de Notas — um procedimento célere, econômico e sem burocracia excessiva —, atuando também em inventários judiciais complexos, alvarás para liberação de saldos e regularização de imóveis herdados.",
+    topics: [
+      "Inventário Extrajudicial em Cartório de Notas (procedimento rápido, com menor custo e sem fila judicial)",
+      "Inventário Judicial e arrolamento comum ou sumário com apuração rigorosa de bens e dívidas",
+      "Planejamento Sucessório preventivo com doação com reserva de usufruto e estruturação familiar",
+      "Alvarás Judiciais para saque rápido de saldos bancários, FGTS, PIS/PASEP e transferência de veículos",
+      "Regularização fundiária e registro das partilhas perante o Cartório de Registro de Imóveis",
+      "Mediação e conciliação amigável entre herdeiros para evitar disputas patrimoniais",
       "Defesa contra exclusão indevida de herdeiros necessários e anulação de partilhas fraudulentas",
     ],
     whatsAppText:
-      "Olá, Dr. Alexandre! Gostaria de orientações para abertura de inventário ou planejamento sucessório.",
+      "Olá, Dra. Ângela! Gostaria de orientações para abertura de inventário ou partilha de herança.",
   },
   {
-    id: "direito-civil-indenizacoes-contratos",
+    id: "usucapiao-regularizacao-imoveis",
+    title: "Usucapião, Propriedade & Regularização de Imóveis",
+    icon: HomeIcon,
+    tag: "Usucapião em Cartório · Usucapião Judicial · Regularização de Escrituras · Posse",
+    summary:
+      "Regularização definitiva de imóveis urbanos e rurais para obtenção de escritura pública, proteção patrimonial e valorização do seu bem.",
+    details:
+      "Viver ou produzir em um imóvel sem a escritura definitiva expõe sua família a riscos jurídicos e impede a alienação legal ou obtenção de crédito imobiliário. A Dra. Ângela Maria é especialista em processos de Usucapião Extrajudicial perante o Cartório de Registro de Imóveis e Usucapião Judicial, além de defesas possessórias e regularização fundiária.",
+    topics: [
+      "Usucapião Extrajudicial em Cartório de Registro de Imóveis (via rápida sem necessidade de processo judicial)",
+      "Ações Judiciais de Usucapião (ordinária, extraordinária, especial urbana e rural)",
+      "Regularização de imóveis de gaveta, contratos antigos de promessa de compra e venda e heranças pendentes",
+      "Ações Possessórias: Reintegração de Posse, Manutenção de Posse e Interdito Proibitório",
+      "Desmembramento, unificação de lotes e retificação de áreas perante o Registro Imobiliário",
+      "Auditoria jurídica imobiliária para compra e venda segura de imóveis urbanos e rurais",
+    ],
+    whatsAppText:
+      "Olá, Dra. Ângela! Preciso de orientação sobre regularização de imóvel ou processo de usucapião.",
+  },
+  {
+    id: "direito-civil-contratos-indenizacoes",
     title: "Direito Civil, Contratos & Reparação de Danos",
     icon: Scale,
-    tag: "Indenizações por Danos Morais e Materiais · Contratos · Cobranças · Usucapião",
+    tag: "Elaboração e Revisão de Contratos · Indenizações por Danos Morais · Cobranças",
     summary:
-      "Rigor técnico na elaboração e blindagem de contratos, cobrança estratégica de créditos e ações de responsabilidade civil para reparar prejuízos.",
+      "Elaboração técnica de instrumentos contratuais seguros, cobrança estratégica de dívidas e ações para reparação de perdas e danos.",
     details:
-      "Relações patrimoniais e negociais exigem precisão jurídica para blindar direitos e afastar litígios dispendiosos. O Dr. Alexandre atua em ações de indenização por perdas e danos decorrentes de atos ilícitos ou acidentes, cobranças e execuções judiciais de dívidas e títulos, elaboração e revisão minuciosa de contratos cíveis e imobiliários, usucapião, reintegrações de posse e cumprimento compulsório de obrigações contratuais.",
+      "Segurança jurídica nos negócios e na vida pessoal exige contratos bem estruturados que afastem litígios futuros. O escritório da Dra. Ângela elabora e audita contratos com rigor técnico, ajuíza ações indenizatórias por danos morais, materiais e estéticos, além de conduzir execuções e cobranças de créditos inadimplidos.",
     topics: [
-      "Ações Indenizatórias por Danos Morais, Materiais, Estéticos e Lucros Cessantes",
-      "Execução de Títulos Judiciais e Extrajudiciais, Ações Monitórias e recuperação de créditos inadimplidos",
-      "Elaboração minuciosa e revisão técnica de Contratos Civis, Imobiliários e Comerciais",
-      "Ações de Usucapião (judicial e extrajudicial em cartório), ações possessórias e disputas de propriedade",
-      "Resolução pacífica de impasses contratuais e mediação técnica extrajudicial",
-      "Cumprimento forçado de obrigações de fazer e rescisões motivadas com apuração de perdas e danos",
+      "Ações Indenizatórias por Danos Morais, Danos Materiais, Estéticos e Lucros Cessantes",
+      "Elaboração minuciosa e revisão de Contratos Civis, Imobiliários, Comerciais e Prestação de Serviços",
+      "Cobrança Judicial e Extrajudicial de Títulos (Cheques, Notas Promissórias, Duplicatas e Contratos)",
+      "Cumprimento forçado de obrigações de fazer e rescisões contratuais motivadas com perdas e danos",
+      "Resolução pacífica de impasses negociais por meio de notificações e mediação jurídica",
+      "Defesa do consumidor em casos de cobranças indevidas e fraudes",
     ],
     whatsAppText:
-      "Olá, Dr. Alexandre! Preciso de assessoria jurídica em Direito Civil, contratos ou cobrança/indenização.",
+      "Olá, Dra. Ângela! Gostaria de consultar sobre elaboração de contrato, cobrança ou ação indenizatória.",
   },
   {
-    id: "direito-consumidor-bancario",
-    title: "Direito do Consumidor & Defesa Contra Abusos",
-    icon: Shield,
-    tag: "Negativação Indevida SPC/Serasa · Golpes Bancários · Juros Abusivos · Fraudes",
-    summary:
-      "Combate enérgico a práticas abusivas de instituições financeiras e fornecedores, com pedidos liminares de urgência e indenização integral.",
-    details:
-      "O consumidor não deve arcar com prejuízos provocados por fraudes, falhas de segurança bancária ou cobranças indevidas. O escritório atua com celeridade para obter decisões liminares imediatas que limpam o nome negativado no SPC e Serasa, revertem empréstimos fraudulentos (inclusive consignados não contratados), recuperam valores desviados em golpes e combatem cláusulas abusivas e juros extorsivos em financiamentos.",
-    topics: [
-      "Ação com Pedido Liminar para exclusão de negativação indevida no SPC/Serasa e indenização por dano moral",
-      "Ações contra Golpes do Pix, fraudes bancárias, clonagem de cartões e invasões de contas correntes",
-      "Anulação e restituição em dobro de Empréstimos Consignados e RMC (Reserva de Margem) não autorizados",
-      "Ação Revisional de juros abusivos, tarifas ilegais e vendas casadas em financiamentos e contratos",
-      "Indenizações por recusa indevida de cobertura de planos de saúde e seguradoras",
-      "Defesa contra cobranças vexatórias, protestos indevidos e práticas desleais de consumo",
-    ],
-    whatsAppText:
-      "Olá, Dr. Alexandre! Sofri uma negativação indevida ou problema com banco/consumo e preciso de ajuda.",
-  },
-  {
-    id: "direito-previdenciario-inss",
-    title: "Direito Previdenciário & Benefícios do INSS",
-    icon: HeartHandshake,
-    tag: "Aposentadorias · BPC/LOAS · Auxílio-Doença · Invalidez · Planejamento Previdenciário",
-    summary:
-      "Planejamento previdenciário minucioso, requerimentos administrativos e processos na Justiça Federal para reverter negativas do INSS.",
-    details:
-      "A conquista do benefício previdenciário representa a segurança e o sustento de quem trabalhou a vida inteira ou enfrenta incapacidade temporária ou permanente. O Dr. Alexandre analisa todo o histórico contributivo no CNIS, identifica a regra de transição mais vantajosa pós-Reforma, e ingressa na Justiça Federal para anular indeferimentos arbitrários do INSS, garantindo a concessão do benefício com o pagamento de todos os atrasados devidos.",
-    topics: [
-      "Aposentadoria por Idade, Tempo de Contribuição e Especial (enquadramento nas regras mais vantajosas da Reforma)",
-      "Planejamento Previdenciário com auditoria minuciosa do CNIS e cálculo do maior valor de benefício",
-      "BPC / LOAS (Benefício de Prestação Continuada para Idosos 65+ e Pessoas com Deficiência de baixa renda)",
-      "Auxílio por Incapacidade Temporária (Auxílio-Doença) e Aposentadoria por Incapacidade Permanente (Invalidez)",
-      "Pensão por Morte para dependentes com comprovação segura de união estável e dependência econômica",
-      "Ações perante a Justiça Federal para reverter perícias negativas do INSS e receber todos os retroativos",
-    ],
-    whatsAppText:
-      "Olá, Dr. Alexandre! Gostaria de uma avaliação sobre minha aposentadoria ou benefício no INSS.",
-  },
-  {
-    id: "direito-trabalho-defesa-laboral",
-    title: "Direito do Trabalho & Defesa dos Direitos Laborais",
+    id: "consultoria-assessoria-estrategica",
+    title: "Consultoria & Assessoria Jurídica Estratégica",
     icon: Briefcase,
-    tag: "Rescisão Indireta · Horas Extras · Acidentes de Trabalho · Insalubridade e Periculosidade",
+    tag: "Consultoria Preventiva · Audiências · Pareceres · Atendimento Online no Brasil",
     summary:
-      "Atuação combativa na Justiça do Trabalho para reparação de abusos, apuração de verbas sonegadas e respeito à dignidade laboral.",
+      "Apoio jurídico consultivo e contencioso sob medida para pessoas físicas e empresas, com atendimento digital em todo o Brasil.",
     details:
-      "O trabalhador que dedica seu tempo e esforço tem direito ao cumprimento irrestrito das leis trabalhistas. O escritório promove ações para cobrança judicial de verbas rescisórias pendentes, reconhecimento de vínculo empregatício sem carteira assinada, rescisão indireta em razão de faltas graves da empresa, indenizações por acidentes de trabalho e doenças ocupacionais, além de adicionais de periculosidade e insalubridade.",
+      "Decisões fundamentadas evitam desgastes financeiros e processos judiciais onerosos. A Dra. Ângela oferece consultoria preventiva contínua, emissão de pareceres jurídicos, representação em audiências de conciliação e julgamento, e atendimento 100% digital estruturado por videochamada e assinatura eletrônica com plena validade perante os tribunais.",
     topics: [
-      "Ação de Rescisão Indireta do Contrato de Trabalho (demissão motivada pelo descumprimento das obrigações do empregador)",
-      "Apuração e cobrança judicial de Verbas Rescisórias, salários em atraso, depósitos de FGTS e multa de 40%",
-      "Cobrança de Horas Extras, horas de sobreaviso, adicional noturno e descansos semanais remunerados suprimidos",
-      "Reconhecimento de vínculo de emprego com anotação retroativa na Carteira de Trabalho (CTPS)",
-      "Adicionais de Insalubridade e Periculosidade decorrentes de exposição a riscos e agentes nocivos",
-      "Indenizações por Acidente de Trabalho, doenças profissionais (LER/DORT) e assédio moral corporativo",
-      "Reversão judicial de Demissões por Justa Causa indevidas com restabelecimento de todas as indenizações",
+      "Consultoria jurídica preventiva personalizada para pessoas físicas e negócios locais",
+      "Representação em Audiências de Conciliação, Mediação, Instrução e Julgamento",
+      "Elaboração de pareceres técnicos e orientações estratégicas pré-contenciosas",
+      "Atendimento 100% online estruturado por videoconferência com total confidencialidade",
+      "Assinatura eletrônica e digital de contratos e procurações diretamente no celular",
+      "Acompanhamento e atualizações frequentes sobre cada andamento do seu processo",
     ],
     whatsAppText:
-      "Olá, Dr. Alexandre! Gostaria de consultar sobre meus direitos trabalhistas (rescisão, demissão ou horas extras).",
+      "Olá, Dra. Ângela! Gostaria de agendar uma consultoria jurídica estratégica com você.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Carlos Eduardo Resende",
+    name: "Janinho Araújo",
     reviewerTag: "Avaliação no Google · 5,0 ★",
-    badge: "Excelente Atendimento e Muita Segurança",
+    badge: "Conduta Exemplar e Profundo Conhecimento Jurídico",
     rating: 5,
     content:
-      "Dr. Alexandre é um profissional diferenciado. Extremamente ético, atencioso e com um conhecimento jurídico admirável. Conduziu nosso inventário com uma rapidez impressionante e muita tranquilidade para toda a família. Recomendo de olhos fechados!",
-    reply: "Agradeço a confiança depositada em nosso trabalho, Carlos!",
+      "Gostaria de destacar a excelente conduta profissional da Advogada Dra. Ângela Maria, cuja atuação exemplar se reflete em seu comprometimento ético e profundo conhecimento jurídico. Sua postura íntegra e cordial faz dela uma referência na área do Direito. Sem dúvida um exemplo de profissionalismo e competência.",
+    reply: "Obrigada 🙏🏻",
   },
   {
-    name: "Mariana Vasconcelos de Oliveira",
+    name: "Thais Mendes",
     reviewerTag: "Avaliação no Google · 5,0 ★",
-    badge: "Clareza, Transparência e Resultado",
+    badge: "Paciência, Atenção e Cuidado aos Detalhes",
     rating: 5,
     content:
-      "Fui muito bem acolhida desde a primeira consulta. O Dr. Alexandre explicou cada etapa do processo com muita clareza e transparência, sempre pronto a tirar dúvidas no WhatsApp. Conquistamos um resultado excelente. Nota mil!",
+      "Ótima profissional, tem toda paciência pra te explicar sobre tal processo, te ouve e está sempre atenta aos detalhes 😍🙏",
+    reply: "Obrigada 🙏🏻",
   },
   {
-    name: "Roberto Mendes da Silva",
+    name: "Mirelle Diniz",
     reviewerTag: "Avaliação no Google · 5,0 ★",
-    badge: "Advocacia de Altíssimo Nível e Firmeza",
+    badge: "Agilidade no Divórcio e Clareza Total",
     rating: 5,
     content:
-      "Advocacia de altíssimo nível em Pitangui e em toda a região! O Dr. Alexandre defendeu meus interesses com uma firmeza e dedicação que poucos advogados demonstram. Sua experiência institucional e ética transparecem na solidez do trabalho.",
+      "Advogada excelente. Me ajudou em tudo que precisava sem deixar dúvidas além de agilizar meu processo de divórcio!",
+    reply: "Obrigada pela confiança.",
   },
   {
-    name: "Patrícia Helena Guimarães",
+    name: "Célio Missões",
     reviewerTag: "Avaliação no Google · 5,0 ★",
-    badge: "Sensibilidade e Profissionalismo Impecável",
+    badge: "Atendimento Acolhedor e Esclarecimento Completo",
     rating: 5,
     content:
-      "Precisei de suporte em uma questão delicada de Direito de Família e o Dr. Alexandre foi fundamental. Soube conduzir com sensibilidade, firmeza e respeito à integridade de todos. O escritório é impecável e o atendimento humanizado.",
+      "Fui muito bem recebido, e todas as minhas dúvidas foram esclarecidas durante a consulta. Fiquei muito satisfeito.",
+    reply: "Obrigada pela confiança.",
   },
   {
-    name: "Geraldo Magela Duarte",
+    name: "Laís Oliveira",
     reviewerTag: "Avaliação no Google · 5,0 ★",
-    badge: "Competência e Vitória na Justiça Federal",
+    badge: "Agilidade, Presteza e Alta Recomendação",
     rating: 5,
     content:
-      "Profissional sério, honesto e competente. Reverteu uma negativa injusta do INSS com maestria perante a Justiça Federal e garantiu todos os retroativos devidos. Nota dez pelo profissionalismo e dedicação!",
-    reply: "Fico muito honrado com seu relato, Sr. Geraldo. Conte sempre conosco!",
+      "Excelente profissional que atende com agilidade e presteza!! Super indico!",
+    reply: "Obrigada",
   },
   {
-    name: "Luciana Fernandes Costa",
+    name: "Viviane Barros",
     reviewerTag: "Local Guide · 5,0 ★",
-    badge: "Atendimento Digital Impecável em Todo o Brasil",
+    badge: "Atenciosa, Dedicada e Humana",
     rating: 5,
     content:
-      "Atendimento impecável! Resido fora de Pitangui e fizemos tudo por videoconferência e WhatsApp com extrema segurança e agilidade. A dedicação e clareza nas explicações me deram muita tranquilidade.",
+      "Excelente profissional, atenciosa e dedicada. Obrigada por tudo!",
+    reply: "Obrigada",
   },
   {
-    name: "Antônio Marcos Ferreira",
+    name: "Lucas Lima",
     reviewerTag: "Avaliação no Google · 5,0 ★",
-    badge: "Transparência Total e Honestidade",
+    badge: "Muito Humana e Atenciosa",
     rating: 5,
     content:
-      "Dr. Alexandre Abreu Lúcio é sinônimo de credibilidade. Transparência total em relação a honorários e estratégias da causa. Se você busca um advogado de confiança e de resultados, não existe melhor escolha.",
+      "Excelente profissional! Muito humana e atenciosa!",
+    reply: "Obrigada",
   },
   {
-    name: "Camila Alvarenga Santos",
+    name: "Simone Aparecida de Oliveira Sousa",
     reviewerTag: "Avaliação no Google · 5,0 ★",
-    badge: "Eficiência e Resolução Rápida",
+    badge: "Excelente Profissional, Super Competente",
     rating: 5,
     content:
-      "Competência técnica exemplar aliada a uma atenção genuína ao cliente. Me auxiliou na anulação de cobranças indevidas e danos morais de forma rápida e eficiente. Nota 5 estrelas mais que merecida!",
+      "Excelente profissional, super competente.",
+    reply: "Obrigada",
   },
   {
-    name: "José Vicente de Paula",
+    name: "Antonio Gonçalves Xavier",
     reviewerTag: "Avaliação no Google · 5,0 ★",
-    badge: "Honra a Advocacia Mineira",
+    badge: "Dedicada e em Busca de Constante Atualização",
     rating: 5,
     content:
-      "Um advogado que honra a beca e a advocacia mineira. Firme na defesa dos direitos e sempre disponível para esclarecer o andamento dos processos. Excelente experiência em Pitangui - MG.",
+      "Excelente Profissional! Dedicada, atenciosa em busca sempre de atualizações.",
+    reply: "Obrigada",
+  },
+  {
+    name: "Adriana Clericuzi",
+    reviewerTag: "Avaliação no Google · 5,0 ★",
+    badge: "Dedicada e Comprometida",
+    rating: 5,
+    content:
+      "Excelente profissional! Dedicada e comprometida!",
+    reply: "Obrigada",
   },
 ];
 
 const faqs = [
   {
-    q: "Onde fica localizado o escritório do Dr. Alexandre Abreu Lúcio?",
-    a: "Nosso escritório está localizado na Praça Dr. Isauro Epifânio, 141 - bairro São Francisco, Pitangui - MG (CEP 35650-000). Dispomos de um espaço discreto, moderno e estruturado para atendimentos presenciais com hora marcada, além de atendimento digital ágil para clientes de Nova Serrana, Pará de Minas, Conceição do Pará, Bom Despacho, Divinópolis, Belo Horizonte e de todo o Brasil.",
+    q: "Onde fica localizado o escritório da Dra. Ângela Maria Gonçalves Rabelo?",
+    a: "Nosso escritório está estrategicamente localizado no coração de Cláudio - MG, na Praça Levy Vitói de Freitas, n° 28 - Sala 303 - Centro (CEP 35530-000). Dispomos de um ambiente moderno, acolhedor e com total discrição para atendimentos presenciais com hora marcada, além de atendimento digital ágil para clientes de Divinópolis, Itapecerica, Carmo da Mata, Oliveira, Carmópolis de Minas, Belo Horizonte e de todo o Brasil.",
   },
   {
-    q: "Como funciona o atendimento online para quem reside fora de Pitangui?",
-    a: "O atendimento digital é rápido, seguro e muito próximo. Realizamos consultas por videochamada ou WhatsApp, examinamos seus documentos e fotos de forma eletrônica e você assina procurações e contratos diretamente na tela do seu celular, com certificação digital criptografada e plena validade jurídica perante todos os tribunais do país.",
-  },
-  {
-    q: "Qual a importância de contar com um membro do IBDFAM em causas de família e inventários?",
-    a: "O IBDFAM (Instituto Brasileiro de Direito de Família) reúne os maiores especialistas do país em soluções contemporâneas, humanizadas e protetivas para relações familiares e sucessórias. Contar com um membro do IBDFAM assegura que o seu caso seja conduzido com as teses jurídicas mais modernas, buscando a pacificação de conflitos, rapidez na partilha e blindagem dos seus direitos patrimoniais.",
+    q: "Como proceder em caso de prisão em flagrante ou emergência criminal?",
+    a: "Em situações de prisão em flagrante, cumprimento de mandado ou audiência de custódia, o contato deve ser imediato pelo WhatsApp ou telefone (37) 99921-8631. A Dra. Ângela Maria atua com prontidão para comparecer à delegacia, acompanhar a audiência de custódia e requerer a imediata concessão de liberdade ou revogação de prisão ilegal.",
   },
   {
     q: "Como funciona a abertura de um Inventário em Cartório (Extrajudicial)?",
-    a: "Quando todos os herdeiros são maiores, capazes e há consenso na divisão dos bens (sem testamento com divergência), o inventário pode ser lavrado diretamente por escritura pública em Cartório de Notas. É um procedimento muito mais célere e econômico do que a via judicial tradicional. O Dr. Alexandre conduz todo o levantamento de certidões, cálculo do ITCD e redação da minuta da partilha.",
+    a: "Quando os herdeiros são maiores, capazes e há consenso na partilha dos bens (sem testamento com divergência), o inventário pode ser lavrado diretamente em Cartório de Notas por escritura pública. É um procedimento consideravelmente mais rápido e econômico do que a via judicial tradicional. A Dra. Ângela conduz o levantamento documental, cálculo tributário (ITCD) e a elaboração da minuta de partilha com máxima segurança.",
   },
   {
-    q: "Fui vítima de negativação indevida ou golpe bancário. Como proceder?",
-    a: "Reúna extratos, comprovantes de contestação e notificações. O Dr. Alexandre ajuíza imediatamente ação com pedido de tutela de urgência (liminar) para exclusão do seu nome dos órgãos de proteção ao crédito (SPC/Serasa) no prazo de 24 a 48 horas, cumulada com pedido de indenização por danos morais e restituição dos prejuízos materiais sofridos.",
+    q: "Como funciona o divórcio e em quanto tempo ele pode ser concluído?",
+    a: "Se o casal concordar com a separação e partilha de bens, o divórcio consensual pode ser realizado diretamente em cartório de forma célere e tranquila. Havendo filhos menores ou divergências quanto à partilha ou pensão, a Dra. Ângela ingressa com a ação judicial buscando a solução mais rápida e justa, com foco prioritário no bem-estar dos filhos e na segurança patrimonial.",
   },
   {
-    q: "Como posso agendar uma conversa com o Dr. Alexandre Abreu Lúcio?",
-    a: "Você pode clicar em qualquer um dos botões desta página para iniciar uma conversa direta pelo WhatsApp no número (37) 99971-0510. Basta nos contar resumidamente a sua necessidade e agendaremos o seu horário com a maior brevidade.",
+    q: "Como saber se tenho direito à usucapião do meu imóvel?",
+    a: "A usucapião é a forma legal de transformar a posse prolongada, mansa e pacífica de um imóvel urbano ou rural em propriedade definitiva registrada em seu nome no Cartório de Registro de Imóveis. Na consulta, a Dra. Ângela examina seu tempo de posse, documentos, confrontantes e IPTU/ITR para indicar a via mais rápida (extrajudicial em cartório ou judicial).",
+  },
+  {
+    q: "Como funciona o atendimento online para quem reside fora de Cláudio - MG?",
+    a: "O atendimento digital é simples, seguro e muito próximo. Realizamos a consulta por videoconferência ou WhatsApp, analisamos seus documentos digitalizados e você assina a procuração e o contrato diretamente na tela do seu celular com certificado digital criptografado, válido perante todos os juizados e tribunais do país.",
+  },
+  {
+    q: "Como posso agendar uma conversa com a Dra. Ângela Maria?",
+    a: "Você pode clicar em qualquer um dos botões desta página para iniciar uma conversa direta pelo WhatsApp no número (37) 99921-8631. Conte-nos brevemente a sua necessidade e agendaremos seu atendimento com agilidade e total sigilo.",
   },
 ];
 
@@ -418,10 +438,10 @@ function Heading({
   const isDark = theme === "dark";
   return (
     <div className={`max-w-2xl ${className}`}>
-      <p className={isDark ? "eyebrow-light" : "eyebrow-gold"}>{eyebrow}</p>
+      <p className={isDark ? "eyebrow-light" : "eyebrow-ruby"}>{eyebrow}</p>
       <h2
         className={`mt-3 font-serif text-3xl leading-[1.15] tracking-[-0.02em] sm:text-4xl lg:text-[2.85rem] ${
-          isDark ? "text-white" : "text-[#0e1217]"
+          isDark ? "text-white" : "text-[#0a0d12]"
         }`}
       >
         {children}
@@ -457,15 +477,15 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="relative min-h-screen selection:bg-[#c5b293] selection:text-[#090b0e]">
-        {/* DOBRA 0: Top Announcement Bar (Deep Obsidian Noir - Alto Contraste) */}
-        <div className="border-b border-slate-800 bg-[#090b0e] px-4 py-2.5 text-center text-xs text-slate-300">
+      <main className="relative min-h-screen selection:bg-[#b81424] selection:text-white">
+        {/* DOBRA 0: Top Announcement Bar (Obsidian Charcoal - Alto Contraste com Ruby) */}
+        <div className="border-b border-slate-800 bg-[#0a0d12] px-4 py-2.5 text-center text-xs text-slate-300">
           <div className="mx-auto flex max-w-7xl xl:max-w-[1380px] 2xl:max-w-[1460px] items-center justify-between gap-3 text-[11px] sm:text-xs">
             <span className="flex items-center gap-1.5 font-medium text-white">
-              <MapPin size={13} className="text-[#dfcfb2]" />
-              <strong>Sede em Pitangui - MG</strong>
+              <MapPin size={13} className="text-[#f43f5e]" />
+              <strong>Sede em Cláudio - MG</strong>
               <span className="hidden md:inline text-slate-400">
-                · Praça Dr. Isauro Epifânio, 141 - São Francisco · Atendimento Presencial & Online em Todo o Brasil
+                · Praça Levy Vitói de Freitas, 28 - Sl 303 - Centro · Atendimento Presencial & Online em Todo o Brasil
               </span>
             </span>
 
@@ -473,19 +493,19 @@ export default function Home() {
               href={GOOGLE_SEARCH_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-[#fbf9f4] transition-colors"
+              className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-[#fda4af] transition-colors"
             >
-              <span className="flex text-[#dfcfb2]">
+              <span className="flex text-[#fda4af]">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={11} className="fill-[#dfcfb2]" />
+                  <Star key={i} size={11} className="fill-[#fda4af]" />
                 ))}
               </span>
-              <span>5,0 ★ no Google (39 avaliações)</span>
+              <span>5,0 ★ no Google (35 avaliações)</span>
             </a>
           </div>
         </div>
 
-        {/* Global Floating Header (Clean Silk White, Obsidian & Champagne Gold) */}
+        {/* Global Floating Header (Clean Silk White, Carbon & Carmine Ruby) */}
         <header
           className={`sticky top-0 z-40 transition-all duration-300 ${
             isScrolled
@@ -497,14 +517,14 @@ export default function Home() {
             {/* Logo on Left */}
             <a
               href="#inicio"
-              aria-label="Escritório de Advocacia Dr. Alexandre Abreu Lúcio - Início"
+              aria-label="Dra. Ângela Maria Gonçalves Rabelo - Início"
               onClick={closeMenu}
-              className="flex shrink-0 items-center gap-3 sm:gap-3.5 transition-opacity hover:opacity-95 mr-6 lg:mr-8 xl:mr-10"
+              className="flex shrink-0 items-center gap-2.5 sm:gap-3 transition-opacity hover:opacity-95 mr-4 lg:mr-6 xl:mr-8"
             >
-              <div className="relative size-[48px] sm:size-[54px] lg:size-[58px] shrink-0">
+              <div className="relative size-[34px] sm:size-[38px] lg:size-[40px] shrink-0">
                 <Image
                   src={LOGO_SYMBOL_SRC}
-                  alt="Monograma AL - Dr. Alexandre Abreu Lúcio"
+                  alt="Monograma AM - Dra. Ângela Maria Gonçalves Rabelo"
                   fill
                   priority
                   unoptimized
@@ -512,11 +532,11 @@ export default function Home() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-cinzel text-[15px] sm:text-[17px] lg:text-[19px] font-bold tracking-[0.14em] text-[#0e1217] leading-tight">
-                  ALEXANDRE ABREU LÚCIO
+                <span className="font-cinzel text-[12px] sm:text-[13px] lg:text-[14px] font-bold tracking-[0.12em] text-[#0a0d12] leading-tight">
+                  ÂNGELA MARIA GONÇALVES RABELO
                 </span>
-                <span className="text-[9px] sm:text-[10px] lg:text-[10.5px] font-bold tracking-[0.22em] text-[#8e7a5e] uppercase mt-0.5">
-                  ADVOCACIA &bull; OAB/MG 122.827
+                <span className="text-[7.5px] sm:text-[8px] lg:text-[8.5px] font-bold tracking-[0.18em] text-[#b81424] uppercase mt-0.5">
+                  ADVOCACIA &bull; CONSULTORIA &bull; ASSESSORIA JURÍDICA
                 </span>
               </div>
             </a>
@@ -527,7 +547,7 @@ export default function Home() {
               className="hidden lg:flex items-center gap-5 xl:gap-7 2xl:gap-8 whitespace-nowrap text-[11px] xl:text-[12px] font-medium tracking-[0.1em] xl:tracking-[0.12em]"
             >
               <a className="nav-link" href="#sobre">
-                O Advogado
+                A Advogada
               </a>
               <a className="nav-link" href="#atuacao">
                 Áreas de Atuação
@@ -536,7 +556,7 @@ export default function Home() {
                 Diferenciais
               </a>
               <a className="nav-link" href="#avaliacoes">
-                Avaliações (39)
+                Avaliações (35)
               </a>
               <a className="nav-link hidden 2xl:inline-block" href="#faq">
                 Dúvidas
@@ -546,20 +566,18 @@ export default function Home() {
               </a>
             </nav>
 
-            {/* Right Action: Primary WhatsApp Button (Champagne Gold Signature) */}
+            {/* Right Action: Header Consultation Button */}
             <div className="hidden lg:flex items-center gap-3 shrink-0 ml-auto lg:ml-6 xl:ml-8">
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dr. Alexandre! Gostaria de agendar uma consulta jurídica com você."
+                  "Olá, Dra. Ângela! Gostaria de agendar uma consulta jurídica com você."
                 )}
                 target="_blank"
                 size="sm"
-                variant="gold"
+                variant="ruby"
                 className="rounded-lg shadow-sm text-[11px] px-4 py-2.5 xl:px-5 xl:py-3 whitespace-nowrap"
               >
-                <WhatsAppIcon size={15} />
-                <span className="hidden xl:inline">Falar no WhatsApp</span>
-                <span className="xl:hidden">WhatsApp</span>
+                <span>Agendar Consulta</span>
                 <ArrowUpRight size={13} />
               </GlowingButton>
             </div>
@@ -588,57 +606,60 @@ export default function Home() {
               >
                 <div className="flex flex-col gap-3 py-3">
                   <a
-                    className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-800 hover:text-[#8e7a5e]"
+                    className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-800 hover:text-[#b81424]"
                     href="#sobre"
                     onClick={closeMenu}
                   >
-                    O Advogado & Escritório
+                    A Advogada & Escritório
                   </a>
                   <a
-                    className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-800 hover:text-[#8e7a5e]"
+                    className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-800 hover:text-[#b81424]"
                     href="#atuacao"
                     onClick={closeMenu}
                   >
                     Áreas de Atuação
                   </a>
                   <a
-                    className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-800 hover:text-[#8e7a5e]"
+                    className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-800 hover:text-[#b81424]"
                     href="#diferenciais"
                     onClick={closeMenu}
                   >
                     Diferenciais
                   </a>
                   <a
-                    className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-800 hover:text-[#8e7a5e]"
+                    className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-800 hover:text-[#b81424]"
                     href="#avaliacoes"
                     onClick={closeMenu}
                   >
-                    Avaliações no Google (39)
+                    Avaliações no Google (35)
                   </a>
                   <a
-                    className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-800 hover:text-[#8e7a5e]"
+                    className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-800 hover:text-[#b81424]"
                     href="#faq"
                     onClick={closeMenu}
                   >
                     Perguntas Frequentes
                   </a>
                   <a
-                    className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-800 hover:text-[#8e7a5e]"
+                    className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-800 hover:text-[#b81424]"
                     href="#contato"
                     onClick={closeMenu}
                   >
-                    Contato & Sede em Pitangui
+                    Contato & Sede em Cláudio - MG
                   </a>
 
                   <div className="pt-3">
                     <GlowingButton
-                      href={getWhatsAppUrl()}
+                      href={getWhatsAppUrl(
+                        "Olá, Dra. Ângela! Gostaria de agendar uma consulta jurídica com você."
+                      )}
                       target="_blank"
                       size="sm"
-                      variant="gold"
+                      variant="ruby"
                       className="w-full justify-center"
                     >
-                      <WhatsAppIcon size={15} /> Atendimento no WhatsApp
+                      <span>Agendar Consulta Jurídica</span>
+                      <ArrowRight size={14} />
                     </GlowingButton>
                   </div>
                 </div>
@@ -647,14 +668,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* DOBRA 1: HERO SECTION (Clean Silk White & Brushed Champagne Aura) */}
+        {/* DOBRA 1: HERO SECTION (Silk White & Ruby Light Aura) */}
         <section
           id="inicio"
           className="relative isolate scroll-mt-24 border-b border-slate-200 bg-white py-14 sm:py-16 lg:py-20 overflow-hidden"
         >
           {/* Subtle warm luxury background aura */}
-          <div className="pointer-events-none absolute right-0 top-0 -z-10 size-[48rem] rounded-full bg-[radial-gradient(circle,rgba(223,207,178,0.18),transparent_65%)]" />
-          <div className="pointer-events-none absolute left-0 bottom-0 -z-10 size-[38rem] rounded-full bg-[radial-gradient(circle,rgba(9,11,14,0.05),transparent_65%)]" />
+          <div className="pointer-events-none absolute right-0 top-0 -z-10 size-[48rem] rounded-full bg-[radial-gradient(circle,rgba(220,38,38,0.08),transparent_65%)]" />
+          <div className="pointer-events-none absolute left-0 bottom-0 -z-10 size-[38rem] rounded-full bg-[radial-gradient(circle,rgba(10,13,18,0.04),transparent_65%)]" />
 
           <div className="mx-auto grid min-h-[620px] max-w-7xl xl:max-w-[1380px] 2xl:max-w-[1460px] items-center gap-10 px-5 sm:px-8 lg:min-h-[700px] lg:grid-cols-[1.08fr_0.92fr] xl:grid-cols-[1.12fr_0.88fr] lg:gap-12 xl:gap-16 lg:px-12">
             <motion.div
@@ -663,25 +684,25 @@ export default function Home() {
               variants={stagger}
               className="relative z-10 max-w-2xl lg:max-w-xl xl:max-w-2xl"
             >
-              {/* Secondary Champagne Accent Eyebrow Pill */}
+              {/* Secondary Ruby Accent Eyebrow Pill */}
               <motion.div
                 variants={reveal}
-                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#c5b293]/40 bg-[#fbf9f4] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#8e7a5e] shadow-xs"
+                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#b81424]/30 bg-[#fff1f2] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#b81424] shadow-xs"
               >
                 <span className="relative flex size-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dfcfb2] opacity-75"></span>
-                  <span className="relative inline-flex size-2 rounded-full bg-[#c5b293]"></span>
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#f43f5e] opacity-75"></span>
+                  <span className="relative inline-flex size-2 rounded-full bg-[#b81424]"></span>
                 </span>
-                <span>DR. ALEXANDRE ABREU LÚCIO &bull; OAB/MG 122.827</span>
+                <span>DRA. ÂNGELA MARIA GONÇALVES RABELO &bull; ADVOGADA</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0e1217] sm:text-[2.65rem] sm:leading-[1.14] lg:text-[3.25rem] xl:text-[3.45rem]"
+                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0a0d12] sm:text-[2.65rem] sm:leading-[1.14] lg:text-[3.25rem] xl:text-[3.45rem]"
               >
-                Defesa combativa dos seus direitos, rigor técnico e{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#8e7a5e] via-[#c5b293] to-[#dfcfb2]">
-                  soluções jurídicas de excelência.
+                Defesa combativa dos seus direitos, acolhimento humano e{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#7a0812] via-[#b81424] to-[#e11d48]">
+                  soluções jurídicas com rigor técnico e excelência.
                 </span>
               </motion.h1>
 
@@ -689,7 +710,7 @@ export default function Home() {
                 variants={reveal}
                 className="mt-5 max-w-xl text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-8"
               >
-                Sob a liderança do advogado <strong className="font-semibold text-slate-900">Dr. Alexandre Abreu Lúcio</strong> — Conselheiro Subseccional da OAB (2025/2027), membro da Comissão de Prerrogativas da OAB/MG e membro do IBDFAM —, nosso escritório alia autoridade jurídica e discrição em <strong className="font-semibold text-slate-900">Direito de Família, Sucessões (Inventários), Cível, Consumidor, Previdenciário e Trabalhista</strong>. Avaliado com nota máxima 5,0 ★ no Google (39 avaliações). Sede em Pitangui - MG e atuação em todo o Brasil.
+                Sob a liderança da advogada <strong className="font-semibold text-slate-900">Dra. Ângela Maria Gonçalves Rabelo</strong>, nosso escritório alia rigor jurídico, ética inabalável e atendimento atencioso aos detalhes em <strong className="font-semibold text-slate-900">Defesas Penais & Prisões 24h, Direito de Família (Divórcios, Guarda e Pensão), Inventários, Usucapião e Contratos</strong>. Avaliado com nota máxima 5,0 ★ no Google (35 avaliações). Sede no Centro de Cláudio - MG e assessoria digital em todo o Brasil.
               </motion.p>
 
               {/* Action Buttons */}
@@ -699,14 +720,16 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Alexandre! Gostaria de conversar com você para analisar o meu caso."
+                    "Olá, Dra. Ângela! Gostaria de conversar com você para analisar o meu caso."
                   )}
                   target="_blank"
                   size="lg"
-                  variant="gold"
+                  variant="ruby"
                   className="rounded-lg shadow-lg"
                 >
-                  <WhatsAppIcon size={17} /> Falar no WhatsApp com o Dr. Alexandre
+                  <Scale size={16} />
+                  <span>Analisar Meu Caso</span>
+                  <ArrowRight size={14} />
                 </GlowingButton>
 
                 <GlowingButton
@@ -715,7 +738,7 @@ export default function Home() {
                   variant="outline-dark"
                   className="rounded-lg"
                 >
-                  Conhecer Nossas Áreas <ArrowRight size={14} />
+                  Conhecer Áreas de Atuação <ArrowRight size={14} />
                 </GlowingButton>
               </motion.div>
 
@@ -725,21 +748,21 @@ export default function Home() {
                 className="mt-10 grid grid-cols-2 gap-3 pt-6 border-t border-slate-200 sm:grid-cols-3 text-xs text-slate-600"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#8e7a5e] shrink-0" />
-                  <span>Membro do IBDFAM (Família)</span>
+                  <CheckCircle2 size={16} className="text-[#b81424] shrink-0" />
+                  <span>5,0 ★ no Google (35 avaliações)</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#8e7a5e] shrink-0" />
-                  <span>Conselheiro OAB 2025/2027</span>
+                  <CheckCircle2 size={16} className="text-[#b81424] shrink-0" />
+                  <span>Plantão Penal & Prisões 24h</span>
                 </div>
                 <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
-                  <CheckCircle2 size={16} className="text-[#8e7a5e] shrink-0" />
-                  <span>Inventários & Atuação Nacional</span>
+                  <CheckCircle2 size={16} className="text-[#b81424] shrink-0" />
+                  <span>Família, Inventários & Usucapião</span>
                 </div>
               </motion.div>
             </motion.div>
 
-            {/* Visual presentation - Dr. Alexandre Official Portrait */}
+            {/* Visual presentation - Dra. Ângela Official Portrait */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -747,12 +770,12 @@ export default function Home() {
               className="relative mx-auto w-full max-w-[480px] lg:max-w-[460px] xl:max-w-[500px]"
             >
               {/* Luxury ambient warm glow */}
-              <div className="pointer-events-none absolute -inset-3 -z-10 rounded-[2.5rem] bg-gradient-to-tr from-[#c5b293]/35 via-[#dfcfb2]/20 to-[#090b0e]/15 blur-2xl opacity-75" />
+              <div className="pointer-events-none absolute -inset-3 -z-10 rounded-[2.5rem] bg-gradient-to-tr from-[#b81424]/25 via-[#fda4af]/20 to-[#0a0d12]/15 blur-2xl opacity-75" />
 
-              <div className="relative aspect-[3.6/5] sm:aspect-[3.8/5] overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-slate-50 shadow-[0_25px_60px_-15px_rgba(9,11,14,0.25)] ring-1 ring-black/5">
+              <div className="relative aspect-[3.6/5] sm:aspect-[3.8/5] overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-slate-50 shadow-[0_25px_60px_-15px_rgba(10,13,18,0.25)] ring-1 ring-black/5">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dr. Alexandre Abreu Lúcio — Advogado Titular"
+                  alt="Dra. Ângela Maria Gonçalves Rabelo — Advogada Titular em seu escritório"
                   fill
                   priority
                   unoptimized
@@ -763,17 +786,17 @@ export default function Home() {
                 <div className="absolute inset-x-3 bottom-3 sm:inset-x-5 sm:bottom-5 lg:inset-x-5 lg:bottom-5 rounded-xl sm:rounded-2xl border border-slate-200/90 bg-white/95 p-3.5 sm:p-4 lg:p-4.5 shadow-xl backdrop-blur-md">
                   <div className="flex items-center justify-between gap-3 sm:gap-4">
                     <div>
-                      <p className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#8e7a5e]">
-                        Advogado Titular · OAB/MG 122.827
+                      <p className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#b81424]">
+                        Advogada Titular &bull; Consultoria Jurídica
                       </p>
                       <p className="font-serif text-sm font-bold text-slate-900 sm:text-base lg:text-lg">
-                        Dr. Alexandre Abreu Lúcio
+                        Dra. Ângela Maria Gonçalves Rabelo
                       </p>
                       <p className="text-[10.5px] sm:text-[11.5px] text-slate-600 line-clamp-1 mt-0.5">
-                        Conselheiro OAB &bull; Membro do IBDFAM &bull; Prerrogativas OAB/MG
+                        Defesas &bull; Prisões &bull; Família &bull; Inventário &bull; Usucapião
                       </p>
                     </div>
-                    <span className="shrink-0 rounded-lg border border-[#c5b293]/35 bg-[#fbf9f4] px-2.5 py-1.5 sm:px-3 sm:py-1.5 text-[10px] sm:text-[11px] font-bold text-[#8e7a5e] shadow-xs">
+                    <span className="shrink-0 rounded-lg border border-[#b81424]/30 bg-[#fff1f2] px-2.5 py-1.5 sm:px-3 sm:py-1.5 text-[10px] sm:text-[11px] font-bold text-[#b81424] shadow-xs">
                       5,0 ★ Google
                     </span>
                   </div>
@@ -783,13 +806,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 2: SOBRE O ADVOGADO & O ESCRITÓRIO (Silk Surface) */}
+        {/* DOBRA 2: SOBRE A ADVOGADA & O ESCRITÓRIO (Silk Surface) */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-b border-slate-200 bg-[#faf8f5] py-20 text-slate-900 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-slate-200 bg-[#f9fafb] py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
-            {/* Visual presentation - Dr. Alexandre Portrait & Authority Card */}
+            {/* Visual presentation - Dra. Ângela Portrait & Authority Card */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -800,7 +823,7 @@ export default function Home() {
               <div className="relative aspect-[3.7/5] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dr. Alexandre Abreu Lúcio — Atendimento em Pitangui - MG e todo o Brasil"
+                  alt="Dra. Ângela Maria Gonçalves Rabelo — Atendimento em Cláudio - MG e todo o Brasil"
                   fill
                   unoptimized
                   className="object-cover object-top"
@@ -809,24 +832,24 @@ export default function Home() {
 
               {/* Authority badge card */}
               <div className="absolute -bottom-8 right-2 max-w-[340px] rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-xl sm:-right-4 sm:px-6">
-                <div className="flex items-center gap-2 text-[#8e7a5e]">
+                <div className="flex items-center gap-2 text-[#b81424]">
                   <Sparkles size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8e7a5e]">
-                    Autoridade Institucional
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#b81424]">
+                    Excelência Jurídica Reconhecida
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-slate-900">
-                  Dr. Alexandre Abreu Lúcio
+                  Dra. Ângela Maria Gonçalves Rabelo
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#8e7a5e]">
-                  OAB/MG 122.827 &bull; Conselheiro OAB 2025/2027
+                <p className="mt-0.5 text-[11px] font-medium text-[#b81424]">
+                  Advocacia, Consultoria & Assessoria Jurídica
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-slate-500">
-                  Praça Dr. Isauro Epifânio, 141 - São Francisco · Pitangui - MG
+                  Praça Levy Vitói de Freitas, 28 - Sala 303 - Centro · Cláudio - MG
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#c5b293]/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#b81424]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography */}
@@ -838,18 +861,18 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#c5b293]/30 bg-[#fbf9f4] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8e7a5e] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#b81424]/25 bg-[#fff1f2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#b81424] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#c5b293]" />
-                <span>RIGOR TÉCNICO, ÉTICA E COMPROMISSO INABALÁVEL</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#b81424]" />
+                <span>COMPROMETIMENTO ÉTICO, RIGOR TÉCNICO E ATENDIMENTO HUMANIZADO</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0e1217] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0a0d12] sm:text-4xl lg:text-[3.25rem]"
               >
                 Uma advocacia combativa, estratégica e dedicada à{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#8e7a5e] via-[#c5b293] to-[#dfcfb2]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#7a0812] via-[#b81424] to-[#e11d48]">
                   defesa intransigente dos seus direitos.
                 </span>
               </motion.h2>
@@ -858,26 +881,26 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-slate-600"
               >
-                O <strong className="font-bold text-slate-900">Dr. Alexandre Abreu Lúcio (OAB/MG 122.827)</strong> construiu uma carreira jurídica consolidada e de alto prestígio em Minas Gerais. Eleito Conselheiro Subseccional da OAB para o triênio 2025/2027, membro atuante da seleta Comissão de Defesa das Prerrogativas da OAB/MG e membro do prestigiado Instituto Brasileiro de Direito de Família (IBDFAM), ele alia conhecimento técnico profundo, liderança institucional e atendimento personalizado a cada constituinte.
+                A <strong className="font-bold text-slate-900">Dra. Ângela Maria Gonçalves Rabelo</strong> consolidou uma trajetória pautada pela postura ética, atendimento atencioso aos detalhes e profundo conhecimento das normas jurídicas. Reconhecida por seus constituintes pela paciência para esclarecer cada fase processual e pela dedicação incansável em busca dos melhores resultados, ela oferece suporte jurídico combativo e de alto padrão.
               </motion.p>
 
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-slate-600"
               >
-                Seja para pacificar disputas familiares e conduzir inventários com agilidade e proteção do patrimônio, reparar prejuízos contra instituições bancárias e fornecedores, assegurar benefícios do INSS ou defender trabalhadores e empresas na Justiça do Trabalho, cada caso é conduzido com discrição absoluta, energia combativa e transparência em todas as fases.
+                Seja atuando em defesas criminais de urgência e audiências de custódia, conduzindo divórcios e partilhas com sensibilidade e rapidez, viabilizando inventários em cartório, regularizando imóveis via usucapião ou elaborando contratos seguros, cada causa é tratada de forma única, com discrição irrestrita e transparência absoluta.
               </motion.p>
 
-              {/* Client Quote Card */}
+              {/* Client Quote Card (Real Google Review) */}
               <motion.div
                 variants={reveal}
                 className="mt-6 rounded-xl border border-slate-200 bg-white p-5 shadow-xs"
               >
                 <blockquote className="font-serif text-sm italic leading-relaxed text-slate-800">
-                  &ldquo;Dr. Alexandre é um profissional diferenciado. Extremamente ético, atencioso e com um conhecimento admirável. Conduziu nosso inventário com uma rapidez impressionante e muita tranquilidade para toda a família. Recomendo de olhos fechados!&rdquo;
+                  &ldquo;Gostaria de destacar a excelente conduta profissional da Advogada Dra. Ângela Maria, cuja atuação exemplar se reflete em seu comprometimento ético e profundo conhecimento jurídico. Sua postura íntegra e cordial faz dela uma referência na área do Direito. Sem dúvida um exemplo de profissionalismo e competência.&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#8e7a5e]">
-                  — Carlos Eduardo Resende (Avaliação verificada 5,0 ★ no Google)
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#b81424]">
+                  — Janinho Araújo (Avaliação verificada 5,0 ★ no Google Meu Negócio)
                 </p>
               </motion.div>
 
@@ -889,19 +912,19 @@ export default function Home() {
                 <div className="rounded-lg border border-slate-200 bg-white p-3 shadow-xs">
                   <p className="font-bold text-slate-900">5,0 ★ no Google</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    39 avaliações 5 estrelas
+                    35 avaliações 5 estrelas
                   </p>
                 </div>
                 <div className="rounded-lg border border-slate-200 bg-white p-3 shadow-xs">
-                  <p className="font-bold text-slate-900">Conselho OAB 25/27</p>
+                  <p className="font-bold text-slate-900">Atendimento 24h</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    Comissão de Prerrogativas
+                    Flagrantes e Prisões
                   </p>
                 </div>
                 <div className="rounded-lg border border-slate-200 bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
-                  <p className="font-bold text-slate-900">Membro IBDFAM</p>
+                  <p className="font-bold text-slate-900">Atuação Nacional</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    Direito de Família & Sucessões
+                    Sede em Cláudio & Online
                   </p>
                 </div>
               </motion.div>
@@ -911,11 +934,11 @@ export default function Home() {
                 className="mt-8 flex flex-col gap-3 text-xs text-slate-800"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#8e7a5e] shrink-0" />
-                  <span>Sede na Praça Dr. Isauro Epifânio, 141 - São Francisco, Pitangui - MG</span>
+                  <CheckCircle2 size={16} className="text-[#b81424] shrink-0" />
+                  <span>Sede na Pça. Levy Vitói de Freitas, 28 - Sl 303 - Centro, Cláudio - MG</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#8e7a5e] shrink-0" />
+                  <CheckCircle2 size={16} className="text-[#b81424] shrink-0" />
                   <span>Atendimento online seguro e consultoria estratégica em todo o Brasil</span>
                 </div>
               </motion.div>
@@ -923,41 +946,42 @@ export default function Home() {
               <motion.div variants={reveal} className="mt-8">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Alexandre! Gostaria de conversar com você sobre a minha causa."
+                    "Olá, Dra. Ângela! Gostaria de conversar com você sobre a minha causa."
                   )}
                   target="_blank"
                   size="md"
-                  variant="gold"
+                  variant="ruby"
                 >
-                  <WhatsAppIcon size={16} /> Falar com o Dr. Alexandre Abreu Lúcio
+                  <span>Agendar Atendimento Jurídico</span>
+                  <ArrowRight size={14} />
                 </GlowingButton>
               </motion.div>
             </motion.div>
           </div>
         </section>
 
-        {/* DOBRA 3: ÁREAS DE ATUAÇÃO (Deep Obsidian Noir - Alto Impacto) */}
+        {/* DOBRA 3: ÁREAS DE ATUAÇÃO (Obsidian Charcoal - Alto Impacto com Destaques Ruby) */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-b border-slate-800 bg-[#090b0e] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-slate-800 bg-[#0a0d12] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 theme="dark"
                 eyebrow="PILARES DE ATUAÇÃO ESPECIALIZADA"
-                description="Conheça nossas áreas de especialidade técnica. Clique em qualquer área para ver os detalhes, procedimentos e direcionamento imediato para o seu caso."
+                description="Conheça nossas áreas de atuação jurídica. Clique em qualquer área para ver os detalhes, procedimentos e direcionamento imediato para a sua necessidade."
               >
-                Soluções jurídicas com autoridade em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#fbf9f4] to-[#dfcfb2]">
-                  Pitangui, Minas Gerais e em todo o Brasil.
+                Soluções jurídicas com rigor técnico em{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#fff1f2] to-[#fda4af]">
+                  Cláudio, Minas Gerais e em todo o Brasil.
                 </span>
               </Heading>
 
               <div className="shrink-0">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Alexandre! Gostaria de tirar uma dúvida sobre uma área de atuação."
+                    "Olá, Dra. Ângela! Gostaria de tirar uma dúvida sobre uma área de atuação."
                   )}
                   target="_blank"
                   size="md"
@@ -982,23 +1006,23 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group relative flex flex-col justify-between rounded-xl border border-slate-800 bg-[#0e1217] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#c5b293] hover:bg-[#131820] hover:shadow-[0_12px_36px_rgba(197,178,147,0.22)]"
+                    className="group relative flex flex-col justify-between rounded-xl border border-slate-800 bg-[#0e1218] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#b81424] hover:bg-[#141923] hover:shadow-[0_12px_36px_rgba(184,20,36,0.22)]"
                   >
                     <div>
                       <div className="flex items-center justify-between">
-                        <div className="grid size-12 place-items-center rounded-lg border border-slate-700 bg-[#1b222c] text-[#dfcfb2] transition-colors group-hover:border-[#c5b293] group-hover:bg-[#c5b293] group-hover:text-[#090b0e]">
+                        <div className="grid size-12 place-items-center rounded-lg border border-slate-700 bg-[#1a2230] text-[#fda4af] transition-colors group-hover:border-[#b81424] group-hover:bg-[#b81424] group-hover:text-white">
                           <Icon size={22} />
                         </div>
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#dfcfb2]">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#fda4af]">
                           Especialidade
                         </span>
                       </div>
 
-                      <h3 className="mt-5 font-serif text-xl font-bold text-white transition-colors group-hover:text-[#fbf9f4]">
+                      <h3 className="mt-5 font-serif text-xl font-bold text-white transition-colors group-hover:text-[#fff1f2]">
                         {area.title}
                       </h3>
 
-                      <p className="mt-1.5 text-[11px] font-semibold text-[#f1e7d6]">
+                      <p className="mt-1.5 text-[11px] font-semibold text-[#fecdd3]">
                         {area.tag}
                       </p>
 
@@ -1011,7 +1035,7 @@ export default function Home() {
                       <button
                         type="button"
                         onClick={() => setActiveArea(area)}
-                        className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-300 transition-colors hover:text-[#dfcfb2] cursor-pointer"
+                        className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-300 transition-colors hover:text-[#fda4af] cursor-pointer"
                       >
                         Ver Detalhes & Tópicos <ArrowRight size={13} />
                       </button>
@@ -1042,11 +1066,11 @@ export default function Home() {
             <Heading
               theme="light"
               eyebrow="POR QUE NOS ESCOLHER"
-              description="A união de liderança institucional na OAB, técnica apurada, atendimento humanizado e combatividade intransigente."
+              description="A união de combatividade jurídica, postura ética, atenção meticulosa a cada detalhe e dedicação humanizada."
             >
-              O que diferencia a advocacia do{" "}
-              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#8e7a5e] via-[#c5b293] to-[#dfcfb2]">
-                Dr. Alexandre Abreu Lúcio?
+              O que diferencia a advocacia da{" "}
+              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#7a0812] via-[#b81424] to-[#e11d48]">
+                Dra. Ângela Maria Gonçalves Rabelo?
               </span>
             </Heading>
 
@@ -1057,46 +1081,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-slate-200 bg-[#faf8f5] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#c5b293] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-slate-200 bg-[#f9fafb] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b81424] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c5b293]/30 bg-[#fbf9f4] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#8e7a5e]">
-                      <Compass size={14} /> Rigor Técnico & Autoridade
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b81424]/30 bg-[#fff1f2] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#b81424]">
+                      <Compass size={14} /> Rigor Técnico & Ética Exemplar
                     </span>
-                    <span className="text-xs font-semibold text-[#8e7a5e]">
-                      5,0 ★ Google (39)
+                    <span className="text-xs font-semibold text-[#b81424]">
+                      5,0 ★ Google (35)
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-slate-900 sm:text-[1.75rem]">
-                    Liderança Institucional e Defesa Incansável
+                    Atuação Combina Firmeza Jurídica e Respeito
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
-                    Como Conselheiro Subseccional da OAB (2025/2027) e membro da Comissão de Defesa das Prerrogativas da OAB/MG, o Dr. Alexandre traz para cada processo uma postura firme, independente e respeitada perante todos os juizados, varas e tribunais do país.
+                    O trabalho da Dra. Ângela se destaca pela combatividade técnica e pelo respeito absoluto à dignidade do constituinte. Seja defendendo a liberdade em matéria penal ou resguardando patrimônio em questões civis e sucessórias, cada processo conta com estratégia sólida e dedicação máxima.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-slate-700">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8e7a5e]" />
-                      <span>Comunicação direta, transparente e sem rodeios com o titular</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b81424]" />
+                      <span>Comunicação direta, acessível e sem termos jurídicos indecifráveis</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8e7a5e]" />
-                      <span>Acompanhamento constante com atualizações claras no WhatsApp</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b81424]" />
+                      <span>Acompanhamento constante com atualizações claras sobre o processo</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8e7a5e]" />
-                      <span>Honorários justos, contratuais e alinhados à tabela ética da OAB</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b81424]" />
+                      <span>Transparência total em contratos de honorários e etapas do serviço</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-slate-200 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Alexandre! Gostaria de conversar com você sobre a minha situação jurídica."
+                      "Olá, Dra. Ângela! Gostaria de conversar com você sobre a minha situação jurídica."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-slate-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#c5b293] hover:bg-[#c5b293] hover:text-[#090b0e]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-slate-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#b81424] hover:bg-[#b81424] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Conversar no WhatsApp
@@ -1112,46 +1136,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-slate-200 bg-[#faf8f5] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#c5b293] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-slate-200 bg-[#f9fafb] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b81424] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c5b293]/30 bg-[#fbf9f4] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#8e7a5e]">
-                      <HeartHandshake size={14} /> Atendimento Humanizado & IBDFAM
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b81424]/30 bg-[#fff1f2] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#b81424]">
+                      <HeartHandshake size={14} /> Atendimento Humanizado & Atenção aos Detalhes
                     </span>
-                    <span className="text-xs font-semibold text-[#8e7a5e]">
-                      Discrição & Sensibilidade
+                    <span className="text-xs font-semibold text-[#b81424]">
+                      Paciência & Discrição
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-slate-900 sm:text-[1.75rem]">
-                    Dedicação Pessoal a Cada Caso e Família
+                    Escuta Atenta e Cuidado Pessoal em Cada Demanda
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
-                    O seu processo não é um número. Nas questões mais sensíveis da vida — como a realização de um inventário após o luto, um divórcio ou a busca por uma aposentadoria —, você encontra acolhimento empático aliado à solidez do Direito de Família contemporâneo.
+                    O seu processo não é apenas um número de protocolo. Em momentos de fragilidade — como um divórcio, partilha de herança após a perda de um familiar ou uma situação criminal delicada —, você encontra acolhimento empático, paciência para esclarecer todas as dúvidas e firmeza profissional.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-slate-700">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8e7a5e]" />
-                      <span>Membro do IBDFAM (Instituto Brasileiro de Direito de Família)</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b81424]" />
+                      <span>Avaliação minuciosa de cada documento e circunstância do caso</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8e7a5e]" />
-                      <span>Sede estruturada na Praça Dr. Isauro Epifânio em Pitangui</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b81424]" />
+                      <span>Sede estruturada na Praça Levy Vitói de Freitas, 28 - Centro de Cláudio</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#8e7a5e]" />
-                      <span>Atuação forte perante varas cíveis, trabalhistas, federais e cartórios</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b81424]" />
+                      <span>Atuação perante varas cíveis, criminais, cartórios e instâncias recursais</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-slate-200 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Alexandre! Gostaria de agendar um atendimento para o meu caso."
+                      "Olá, Dra. Ângela! Gostaria de agendar um atendimento para o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-slate-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#c5b293] hover:bg-[#c5b293] hover:text-[#090b0e]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-slate-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#b81424] hover:bg-[#b81424] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Agendar Atendimento
@@ -1164,8 +1188,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 5: MÉTODO EM 3 ETAPAS (Deep Obsidian Noir) */}
-        <section className="relative overflow-hidden border-b border-slate-800 bg-[#090b0e] py-20 text-white sm:py-24 lg:py-28">
+        {/* DOBRA 5: MÉTODO EM 3 ETAPAS (Obsidian Charcoal) */}
+        <section className="relative overflow-hidden border-b border-slate-800 bg-[#0a0d12] py-20 text-white sm:py-24 lg:py-28">
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
@@ -1174,15 +1198,15 @@ export default function Home() {
                 description="Um método transparente, estratégico e focado na proteção dos seus direitos e do seu patrimônio."
               >
                 Três etapas claras para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#fbf9f4] to-[#dfcfb2]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#fff1f2] to-[#fda4af]">
                   conduzir sua causa com segurança e tranquilidade.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-slate-800 bg-[#0e1217] p-6 font-serif text-base italic leading-7 text-slate-200 shadow-md">
-                &ldquo;Nosso compromisso é desmistificar o direito e entregar uma advocacia de resultado, pautada na verdade, na ética e na defesa incansável de quem confia em nosso trabalho.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#dfcfb2]">
-                  — Dr. Alexandre Abreu Lúcio &bull; OAB/MG 122.827
+              <blockquote className="mt-8 rounded-xl border border-slate-800 bg-[#0e1218] p-6 font-serif text-base italic leading-7 text-slate-200 shadow-md">
+                &ldquo;Nosso compromisso é ouvir você com atenção, analisar minuciosamente os fatos e entregar uma advocacia combativa, pautada na ética, na verdade e no rigor técnico.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#fda4af]">
+                  — Dra. Ângela Maria Gonçalves Rabelo &bull; Advogada
                 </footer>
               </blockquote>
             </div>
@@ -1197,18 +1221,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Atendimento Inicial & Diagnóstico Estratégico",
-                  "Contato direto pelo WhatsApp ou presencialmente em nossa sede na Praça Dr. Isauro Epifânio em Pitangui. Avaliamos detalhadamente seus documentos e fatos com sigilo profissional absoluto.",
+                  "Acolhimento Inicial & Diagnóstico Jurídico",
+                  "Contato direto pelo WhatsApp ou presencialmente em nossa sede na Praça Levy Vitói de Freitas, 28 em Cláudio. Examinamos detalhadamente seus documentos e fatos com sigilo profissional rigoroso.",
                 ],
                 [
                   "02",
                   "Estratégia Jurídica & Ação Resolutiva",
-                  "Planejamos a melhor rota jurídica (seja inventário em cartório, divórcio, requerimento no INSS, ação civil ou trabalhista), atuando com rapidez e precisão técnica perante as instâncias competentes.",
+                  "Definimos o plano de ação mais seguro e célere (seja inventário em cartório, divórcio, defesa criminal urgente, usucapião ou cobrança civil), agindo com precisão perante as autoridades competentes.",
                 ],
                 [
                   "03",
-                  "Acompanhamento Transparente & Informação Direta",
-                  "Você não fica no escuro. O Dr. Alexandre mantém você informado sobre cada andamento e decisão diretamente no seu celular, com explicações objetivas e fáceis de compreender.",
+                  "Acompanhamento Próximo & Atualização Contínua",
+                  "Você não fica com dúvidas. A Dra. Ângela mantém você informado sobre cada passo e andamento processual diretamente no seu celular, com explicações claras e acessíveis.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1216,7 +1240,7 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#dfcfb2]">
+                  <span className="font-serif text-2xl font-semibold text-[#fda4af]">
                     {number}
                   </span>
                   <div>
@@ -1231,21 +1255,21 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 6: AVALIAÇÕES GOOGLE 5.0 (Silk Surface - Depoimentos Reais) */}
+        {/* DOBRA 6: AVALIAÇÕES GOOGLE 5.0 (Silk Surface - Depoimentos Reais dos Clientes) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-b border-slate-200 bg-[#faf8f5] py-20 text-slate-900 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-slate-200 bg-[#f9fafb] py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 theme="light"
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Veja depoimentos reais e espontâneos de clientes atendidos pelo Dr. Alexandre Abreu Lúcio em Pitangui, Minas Gerais e em todo o Brasil."
+                description="Veja relatos reais e espontâneos de clientes atendidos pela Dra. Ângela Maria Gonçalves Rabelo em Cláudio, Minas Gerais e em todo o Brasil."
               >
-                Avaliado com nota máxima 5,0 ★ em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#8e7a5e] via-[#c5b293] to-[#dfcfb2]">
-                  39 avaliações no Google.
+                Avaliada com nota máxima 5,0 ★ em{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#7a0812] via-[#b81424] to-[#e11d48]">
+                  35 avaliações no Google.
                 </span>
               </Heading>
 
@@ -1259,17 +1283,17 @@ export default function Home() {
                     <span className="font-serif text-2xl font-bold text-slate-900">
                       5,0
                     </span>
-                    <div className="flex text-[#dfcfb2]">
+                    <div className="flex text-[#b81424]">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={15} className="fill-[#dfcfb2]" />
+                        <Star key={i} size={15} className="fill-[#b81424]" />
                       ))}
                     </div>
                   </div>
                   <p className="text-xs font-semibold text-slate-900">
-                    Dr. Alexandre Abreu Lúcio — Advocacia
+                    Dra. Ângela Maria Gonçalves Rabelo
                   </p>
                   <p className="text-[11px] text-slate-500">
-                    39 avaliações 5 estrelas no Google Meu Negócio
+                    35 avaliações 5 estrelas no Google Meu Negócio
                   </p>
                 </div>
               </div>
@@ -1286,16 +1310,16 @@ export default function Home() {
                 <motion.article
                   key={review.name}
                   variants={reveal}
-                  className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#c5b293] hover:shadow-md"
+                  className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#b81424] hover:shadow-md"
                 >
                   <div>
                     <div className="flex items-center justify-between">
-                      <div className="flex text-[#dfcfb2]">
+                      <div className="flex text-[#b81424]">
                         {[...Array(review.rating)].map((_, i) => (
-                          <Star key={i} size={14} className="fill-[#dfcfb2]" />
+                          <Star key={i} size={14} className="fill-[#b81424]" />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#c5b293]/30 bg-[#fbf9f4] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#8e7a5e]">
+                      <span className="rounded-md border border-[#b81424]/20 bg-[#fff1f2] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#b81424]">
                         Google Verificado
                       </span>
                     </div>
@@ -1309,8 +1333,8 @@ export default function Home() {
                     </p>
 
                     {review.reply && (
-                      <div className="mt-3 rounded-lg border-l-2 border-[#c5b293] bg-[#fbf9f4] p-2.5 text-[11px] leading-5 text-slate-700">
-                        <p className="font-semibold text-[#8e7a5e]">Resposta do Dr. Alexandre:</p>
+                      <div className="mt-3 rounded-lg border-l-2 border-[#b81424] bg-[#fff1f2]/60 p-2.5 text-[11px] leading-5 text-slate-700">
+                        <p className="font-semibold text-[#b81424]">Resposta da Dra. Ângela:</p>
                         <p className="italic">{review.reply}</p>
                       </div>
                     )}
@@ -1334,7 +1358,7 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm transition-all hover:border-[#c5b293] hover:text-[#8e7a5e]"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm transition-all hover:border-[#b81424] hover:text-[#b81424]"
               >
                 <GoogleIcon size={16} /> Ver avaliações no Google <ArrowUpRight size={14} />
               </a>
@@ -1342,22 +1366,22 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 7: PERGUNTAS FREQUENTES / FAQ (Deep Obsidian Noir) */}
+        {/* DOBRA 7: PERGUNTAS FREQUENTES / FAQ (Obsidian Charcoal) */}
         <section
           id="faq"
-          className="scroll-mt-24 border-b border-slate-800 bg-[#090b0e] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-slate-800 bg-[#0a0d12] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-4xl px-5 sm:px-8">
             <div className="text-center">
               <p className="eyebrow-light justify-center">DÚVIDAS FREQUENTES</p>
               <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.15rem]">
                 Respostas diretas e esclarecedoras sobre os{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#fbf9f4] to-[#dfcfb2]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#fff1f2] to-[#fda4af]">
                   seus direitos e nosso atendimento.
                 </span>
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-slate-400">
-                Transparência total desde o primeiro contato. Se você tiver outra dúvida sobre seu caso, fale agora mesmo com o Dr. Alexandre no WhatsApp.
+                Transparência total desde o primeiro contato. Se você tiver outra dúvida sobre seu caso, fale agora mesmo com a Dra. Ângela no WhatsApp.
               </p>
             </div>
 
@@ -1367,7 +1391,7 @@ export default function Home() {
                 return (
                   <div
                     key={faq.q}
-                    className="overflow-hidden rounded-xl border border-slate-800 bg-[#0e1217] transition-colors hover:border-slate-700"
+                    className="overflow-hidden rounded-xl border border-slate-800 bg-[#0e1218] transition-colors hover:border-slate-700"
                   >
                     <button
                       type="button"
@@ -1377,7 +1401,7 @@ export default function Home() {
                       <span>{faq.q}</span>
                       <ChevronDown
                         size={18}
-                        className={`shrink-0 text-[#dfcfb2] transition-transform duration-200 ${
+                        className={`shrink-0 text-[#fda4af] transition-transform duration-200 ${
                           isOpen ? "rotate-180" : ""
                         }`}
                       />
@@ -1399,11 +1423,11 @@ export default function Home() {
               <div className="mt-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Alexandre! Gostaria de tirar uma dúvida jurídica com você."
+                    "Olá, Dra. Ângela! Gostaria de tirar uma dúvida jurídica com você."
                   )}
                   target="_blank"
                   size="md"
-                  variant="gold"
+                  variant="ruby"
                 >
                   <WhatsAppIcon size={16} /> Enviar Mensagem no WhatsApp
                 </GlowingButton>
@@ -1421,11 +1445,11 @@ export default function Home() {
             <div>
               <Heading
                 theme="light"
-                eyebrow="CONTATO & SEDE EM PITANGUI - MG"
-                description="Converse diretamente com o Dr. Alexandre Abreu Lúcio pelo WhatsApp para acolhimento imediato, sigilo e rigor técnico."
+                eyebrow="CONTATO & SEDE EM CLÁUDIO - MG"
+                description="Converse diretamente com a Dra. Ângela Maria Gonçalves Rabelo pelo WhatsApp para acolhimento imediato, sigilo e rigor técnico."
               >
                 Prontidão total para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#8e7a5e] via-[#c5b293] to-[#dfcfb2]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#7a0812] via-[#b81424] to-[#e11d48]">
                   orientar você e defender seus interesses com responsabilidade.
                 </span>
               </Heading>
@@ -1433,11 +1457,11 @@ export default function Home() {
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Alexandre! Gostaria de agendar um atendimento com você."
+                    "Olá, Dra. Ângela! Gostaria de agendar um atendimento com você."
                   )}
                   target="_blank"
                   size="lg"
-                  variant="gold"
+                  variant="ruby"
                   className="rounded-lg shadow-md"
                 >
                   <WhatsAppIcon size={17} /> Falar no WhatsApp Agora
@@ -1452,48 +1476,48 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#8e7a5e]"
+                    className="mt-0.5 shrink-0 text-[#b81424]"
                   />
                   <div>
                     <p className="font-semibold text-slate-900">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#8e7a5e] font-bold">
-                      Aberto &bull; Segunda a Sexta: 08:30 às 18:30
+                    <p className="mt-0.5 text-[#b81424] font-bold">
+                      Aberto &bull; Segunda a Sexta: 08:30 às 18:00
                     </p>
                     <p className="text-[11px] text-slate-500">
-                      Atendimento presencial em nossa sede e suporte online contínuo
+                      Plantão 24h para prisões em flagrante e urgências criminais
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#8e7a5e]" />
+                  <Phone size={16} className="shrink-0 text-[#b81424]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-slate-900 transition-colors hover:text-[#8e7a5e]"
+                    className="font-medium text-slate-900 transition-colors hover:text-[#b81424]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#8e7a5e]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#b81424]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#8e7a5e] text-slate-900 font-medium"
+                    className="transition-colors hover:text-[#b81424] text-slate-900 font-medium"
                   >
-                    {INSTAGRAM_HANDLE} (Instagram Oficial &bull; 3.803 seguidores)
+                    {INSTAGRAM_HANDLE} (Instagram Oficial &bull; 1.450 seguidores)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#8e7a5e]" />
+                  <Mail size={16} className="shrink-0 text-[#b81424]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#8e7a5e] text-slate-900 font-medium"
+                    className="transition-colors hover:text-[#b81424] text-slate-900 font-medium"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1502,20 +1526,20 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#8e7a5e]"
+                    className="mt-0.5 shrink-0 text-[#b81424]"
                   />
                   <div>
                     <a
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-slate-900 font-medium hover:text-[#8e7a5e] transition-colors"
+                      className="text-slate-900 font-medium hover:text-[#b81424] transition-colors"
                     >
                       {ADDRESS_TEXT}
                     </a>
                     <br />
                     <span className="text-[11px] text-slate-500">
-                      Sede em Pitangui - MG e assessoria jurídica digital em todo o Brasil
+                      Sede no Centro de Cláudio - MG e assessoria jurídica digital em todo o Brasil
                     </span>
                   </div>
                 </div>
@@ -1523,41 +1547,41 @@ export default function Home() {
             </div>
 
             {/* Brand Presentation Card */}
-            <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-[#faf8f5] p-7 shadow-lg sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#8e7a5e] via-[#c5b293] to-[#090b0e]" />
+            <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-[#f9fafb] p-7 shadow-lg sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#7a0812] via-[#b81424] to-[#0a0d12]" />
 
-              <div className="flex items-center gap-4">
-                <div className="relative size-16 shrink-0">
+              <div className="flex items-center gap-3">
+                <div className="relative size-11 sm:size-12 shrink-0">
                   <Image
                     src={LOGO_SYMBOL_SRC}
-                    alt="Monograma AL - Dr. Alexandre Abreu Lúcio"
+                    alt="Monograma AM - Dra. Ângela Maria Gonçalves Rabelo"
                     fill
                     unoptimized
                     className="object-contain"
                   />
                 </div>
                 <div>
-                  <p className="font-cinzel text-[14px] font-bold uppercase tracking-[0.14em] text-[#0e1217]">
-                    DR. ALEXANDRE ABREU LÚCIO
+                  <p className="font-cinzel text-[12.5px] sm:text-[13px] font-bold uppercase tracking-[0.13em] text-[#0a0d12]">
+                    DRA. ÂNGELA MARIA GONÇALVES RABELO
                   </p>
-                  <p className="text-[10px] font-bold tracking-[0.2em] text-[#8e7a5e] uppercase mt-0.5">
-                    ADVOCACIA &bull; OAB/MG 122.827
+                  <p className="text-[8.5px] sm:text-[9px] font-bold tracking-[0.18em] text-[#b81424] uppercase mt-0.5">
+                    ADVOCACIA &bull; CONSULTORIA &bull; ASSESSORIA JURÍDICA
                   </p>
                 </div>
               </div>
 
-              {/* Photo Presentation - Dr. Alexandre */}
+              {/* Photo Presentation - Dra. Ângela */}
               <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-100 shadow-xs">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dr. Alexandre Abreu Lúcio em seu escritório em Pitangui"
+                  alt="Dra. Ângela Maria Gonçalves Rabelo em seu escritório em Cláudio - MG"
                   fill
                   unoptimized
                   className="object-cover object-top"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 text-white">
                   <p className="text-xs font-semibold">Defesa intransigente dos seus direitos</p>
-                  <p className="text-[10px] text-slate-200">Pitangui · Centro-Oeste Mineiro & Atendimento Nacional</p>
+                  <p className="text-[10px] text-slate-200">Cláudio · Centro-Oeste Mineiro & Atendimento Nacional</p>
                 </div>
               </div>
 
@@ -1566,38 +1590,42 @@ export default function Home() {
                   {FIRM_NAME}
                 </strong>
                 <br />
-                {LAWYER_NAME} &bull; {LAWYER_OAB}
+                {LAWYER_NAME} &bull; {LAWYER_TITLE}
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
               <div className="mt-6 rounded-lg border border-slate-200 bg-white p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#8e7a5e]">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#b81424]">
                   Atendimento & Horários
                 </p>
                 <div className="grid grid-cols-2 gap-y-1.5 text-slate-700">
                   <span>Segunda a Sexta</span>
                   <span className="text-right font-medium text-slate-900 font-semibold">
-                    08:30 às 18:30
+                    08:30 às 18:00
+                  </span>
+                  <span>Plantão Penal / Prisões</span>
+                  <span className="text-right font-medium text-[#b81424] font-bold">
+                    Plantão Urgente 24h
                   </span>
                   <span>Atendimento Presencial</span>
                   <span className="text-right font-medium text-slate-600">
-                    Sede em Pitangui - São Francisco
+                    Sede no Centro de Cláudio
                   </span>
                   <span>Atendimento Online</span>
-                  <span className="text-right text-[#8e7a5e] font-bold">Todo o Brasil</span>
+                  <span className="text-right text-[#b81424] font-bold">Todo o Brasil</span>
                 </div>
               </div>
 
               <div className="mt-7 flex flex-col gap-3">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Alexandre! Gostaria de agendar um atendimento com você."
+                    "Olá, Dra. Ângela! Gostaria de agendar um atendimento com você."
                   )}
                   target="_blank"
                   size="md"
-                  variant="gold"
+                  variant="ruby"
                   className="w-full justify-center"
                 >
                   <WhatsAppIcon size={16} /> Iniciar Conversa no WhatsApp
@@ -1607,24 +1635,24 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 9: PRÉ-FOOTER BANNER (Deep Obsidian Noir) */}
-        <section className="border-t border-slate-800 bg-[#0e1217] px-5 py-14 text-white shadow-xl sm:px-8 sm:py-16 lg:px-12">
+        {/* DOBRA 9: PRÉ-FOOTER BANNER (Obsidian Charcoal com Destaque Ruby) */}
+        <section className="border-t border-slate-800 bg-[#0e1218] px-5 py-14 text-white shadow-xl sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
             <div>
               <p className="eyebrow-light">
-                <Sparkles size={13} className="text-[#dfcfb2]" /> ESCRITÓRIO DE ADVOCACIA - DR. ALEXANDRE ABREU LÚCIO
+                <Sparkles size={13} className="text-[#fda4af]" /> DRA. ÂNGELA MARIA GONÇALVES RABELO — ADVOCACIA
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Pronto para analisar o seu caso e defender seus direitos com técnica impecável e clareza.
+                Pronta para analisar o seu caso e defender seus direitos com técnica impecável e clareza.
               </h2>
             </div>
             <GlowingButton
               href={getWhatsAppUrl(
-                "Olá, Dr. Alexandre! Preciso de orientação jurídica para o meu caso."
+                "Olá, Dra. Ângela! Preciso de orientação jurídica para o meu caso."
               )}
               target="_blank"
               size="lg"
-              variant="gold"
+              variant="ruby"
               className="rounded-lg shadow-lg whitespace-nowrap"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp Agora
@@ -1632,37 +1660,37 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 10: RODAPÉ INSTITUCIONAL (Deep Obsidian Noir) */}
-        <footer className="border-t border-slate-800 bg-[#090b0e] px-5 py-14 text-slate-400 sm:px-8 lg:px-12">
+        {/* DOBRA 10: RODAPÉ INSTITUCIONAL (Obsidian Charcoal) */}
+        <footer className="border-t border-slate-800 bg-[#0a0d12] px-5 py-14 text-slate-400 sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
             {/* Col 1: Brand */}
             <div className="md:col-span-2">
               <a
                 href="#inicio"
-                aria-label="Escritório de Advocacia - Dr. Alexandre Abreu Lúcio"
-                className="flex items-center gap-3.5"
+                aria-label="Dra. Ângela Maria Gonçalves Rabelo — Advocacia"
+                className="flex items-center gap-3"
               >
-                <div className="relative size-14 shrink-0">
+                <div className="relative size-10 sm:size-11 shrink-0">
                   <Image
                     src={LOGO_SYMBOL_SRC}
-                    alt="Monograma AL - Dr. Alexandre Abreu Lúcio"
+                    alt="Monograma AM - Dra. Ângela Maria Gonçalves Rabelo"
                     fill
                     unoptimized
                     className="object-contain"
                   />
                 </div>
                 <div>
-                  <p className="font-cinzel text-lg font-bold tracking-[0.14em] text-white">
-                    DR. ALEXANDRE ABREU LÚCIO
+                  <p className="font-cinzel text-[14px] sm:text-[15px] font-bold tracking-[0.13em] text-white">
+                    DRA. ÂNGELA MARIA GONÇALVES RABELO
                   </p>
-                  <p className="text-[10px] font-semibold tracking-[0.22em] text-[#dfcfb2] uppercase mt-0.5">
-                    ADVOCACIA &bull; OAB/MG 122.827
+                  <p className="text-[8.5px] sm:text-[9px] font-semibold tracking-[0.18em] text-[#fda4af] uppercase mt-0.5">
+                    ADVOCACIA &bull; CONSULTORIA &bull; ASSESSORIA JURÍDICA
                   </p>
                 </div>
               </a>
 
               <p className="mt-4 max-w-md text-xs leading-6 text-slate-400">
-                Advocacia de alto padrão com atuação estratégica em Direito de Família (IBDFAM), Sucessões e Inventários, Cível e Contratos, Defesa do Consumidor, Previdenciário (INSS) e Trabalhista. Sede em Pitangui - MG e atendimento digital em todo o território nacional.
+                Advocacia de excelência com atuação estratégica em Direito Penal (Defesas & Prisões 24h), Família (Divórcios, Guarda e Pensão), Inventários, Usucapião, Contratos e Reparação de Danos. Sede em Cláudio - MG e atendimento digital em todo o território nacional.
               </p>
 
               <div className="mt-5 flex flex-wrap items-center gap-3 text-xs">
@@ -1670,17 +1698,17 @@ export default function Home() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-slate-800 bg-[#0e1217] px-3 py-1.5 text-slate-300 transition-colors hover:border-[#dfcfb2] hover:text-white"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-slate-800 bg-[#0e1218] px-3 py-1.5 text-slate-300 transition-colors hover:border-[#fda4af] hover:text-white"
                 >
-                  <InstagramIcon size={14} className="text-[#dfcfb2]" /> Instagram {INSTAGRAM_HANDLE}
+                  <InstagramIcon size={14} className="text-[#fda4af]" /> Instagram {INSTAGRAM_HANDLE}
                 </a>
                 <a
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-slate-800 bg-[#0e1217] px-3 py-1.5 text-slate-300 transition-colors hover:border-[#dfcfb2] hover:text-white"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-slate-800 bg-[#0e1218] px-3 py-1.5 text-slate-300 transition-colors hover:border-[#fda4af] hover:text-white"
                 >
-                  <GoogleIcon size={14} /> Google 5,0 ★ (39 avaliações)
+                  <GoogleIcon size={14} /> Google 5,0 ★ (35 avaliações)
                 </a>
               </div>
             </div>
@@ -1698,7 +1726,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a className="footer-link" href="#sobre">
-                    O Advogado
+                    A Advogada
                   </a>
                 </li>
                 <li>
@@ -1713,7 +1741,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a className="footer-link" href="#avaliacoes">
-                    Avaliações no Google (39)
+                    Avaliações no Google (35)
                   </a>
                 </li>
                 <li>
@@ -1739,10 +1767,10 @@ export default function Home() {
                   <strong className="text-white">Telefone / WhatsApp:</strong>
                   <br />
                   <a
-                    href={getWhatsAppUrl("Olá, Dr. Alexandre! Gostaria de falar com você.")}
+                    href={getWhatsAppUrl("Olá, Dra. Ângela! Gostaria de falar com você.")}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#dfcfb2] hover:underline"
+                    className="text-[#fda4af] hover:underline"
                   >
                     {PHONE_DISPLAY}
                   </a>
@@ -1755,7 +1783,7 @@ export default function Home() {
                 <li>
                   <strong className="text-white">Horário de Funcionamento:</strong>
                   <br />
-                  Segunda a Sexta: 08:30 às 18:30
+                  Segunda a Sexta: 08:30 às 18:00
                 </li>
                 <li>
                   <strong className="text-white">E-mail:</strong>
@@ -1765,9 +1793,9 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <strong className="text-white">Qualificações:</strong>
+                  <strong className="text-white">Plantão Emergencial:</strong>
                   <br />
-                  OAB/MG 122.827 &bull; Conselheiro OAB 25/27 &bull; Membro IBDFAM
+                  24h para prisões e flagrantes
                 </li>
               </ul>
             </div>
@@ -1775,10 +1803,10 @@ export default function Home() {
 
           <div className="mx-auto mt-12 max-w-7xl border-t border-slate-800/80 pt-6 text-center text-[11px] text-slate-500">
             <p>
-              © {new Date().getFullYear()} Escritório de Advocacia - Dr. Alexandre Abreu Lúcio &bull; OAB/MG 122.827. Todos os direitos reservados.
+              © {new Date().getFullYear()} {FIRM_NAME}. Todos os direitos reservados.
             </p>
             <p className="mt-1 text-[10px]">
-              Praça Dr. Isauro Epifânio, 141 - bairro São Francisco, Pitangui - MG, 35650-000 · Advocacia em estrita conformidade com o Código de Ética e Disciplina da OAB.
+              Praça Levy Vitói de Freitas, n° 28 - Sl 303 - Centro, Cláudio - MG, 35530-000 · Advocacia em estrita conformidade com o Código de Ética e Disciplina da OAB.
             </p>
           </div>
         </footer>
@@ -1790,11 +1818,11 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dr. Alexandre! Gostaria de um atendimento jurídico pelo WhatsApp."
+              "Olá, Dra. Ângela! Gostaria de um atendimento jurídico pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com o Dr. Alexandre Abreu Lúcio"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Ângela Maria Gonçalves Rabelo"
             className="group flex items-center gap-2.5 rounded-full border border-[#25D366]/80 bg-gradient-to-r from-[#0d331a] via-[#128C7E] to-[#075E54] px-4 py-3 text-xs font-bold text-white shadow-[0_8px_30px_rgba(37,211,102,0.45)] transition-all hover:scale-105 hover:brightness-110 active:scale-95"
           >
             <span className="relative flex size-3">
@@ -1803,7 +1831,7 @@ export default function Home() {
             </span>
             <WhatsAppIcon size={18} className="text-white" />
             <span className="hidden sm:inline">
-              <span className="text-white font-bold">Falar no WhatsApp</span> &bull; Dr. Alexandre
+              <span className="text-white font-bold">Plantão & Atendimento</span> &bull; Dra. Ângela
             </span>
             <span className="sm:hidden font-bold">WhatsApp</span>
           </a>
@@ -1828,31 +1856,31 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-slate-700 bg-[#0e1217] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-white"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-slate-700 bg-[#0e1218] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-white"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-slate-700 bg-slate-800 text-white transition-colors hover:border-[#dfcfb2] cursor-pointer"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-slate-700 bg-slate-800 text-white transition-colors hover:border-[#fda4af] cursor-pointer"
                 >
                   <X size={18} />
                 </button>
 
                 <div className="flex items-center gap-3 pr-12">
-                  <div className="relative size-12 shrink-0 overflow-hidden rounded-lg border border-slate-700 bg-[#090b0e] p-1 shadow-xs">
+                  <div className="relative size-12 shrink-0 overflow-hidden rounded-lg border border-slate-700 bg-[#0a0d12] p-1 shadow-xs">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Monograma AL - Dr. Alexandre Abreu Lúcio"
+                      alt="Monograma AM - Dra. Ângela Maria Gonçalves Rabelo"
                       fill
                       sizes="48px"
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <p className="eyebrow-light">DR. ALEXANDRE ABREU LÚCIO</p>
-                    <p className="text-[10px] font-semibold tracking-wider text-[#dfcfb2] uppercase">
-                      ADVOCACIA &bull; OAB/MG 122.827
+                    <p className="eyebrow-light">DRA. ÂNGELA MARIA GONÇALVES RABELO</p>
+                    <p className="text-[10px] font-semibold tracking-wider text-[#fda4af] uppercase">
+                      ADVOCACIA &bull; CONSULTORIA &bull; ASSESSORIA JURÍDICA
                     </p>
                   </div>
                 </div>
@@ -1869,7 +1897,7 @@ export default function Home() {
                 </p>
 
                 <div className="mt-6 border-t border-slate-800 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfcfb2]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#fda4af]">
                     Atuação e Procedimentos Adotados pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
@@ -1878,7 +1906,7 @@ export default function Home() {
                         key={topic}
                         className="flex items-center gap-3 text-sm text-slate-300"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#dfcfb2]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#b81424]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1890,7 +1918,7 @@ export default function Home() {
                     href={getWhatsAppUrl(activeArea.whatsAppText)}
                     target="_blank"
                     size="md"
-                    variant="gold"
+                    variant="ruby"
                     className="rounded-lg shadow-md"
                   >
                     <WhatsAppIcon size={16} /> Consultar sobre esta demanda
