@@ -1,6 +1,7 @@
 Add-Type -AssemblyName System.Drawing
 
 $logoPath = "public\logo.png"
-$photoPath = "public\romulo-marini.jpg"
+$photoHeroPath = "public\hero-advogados.jpg"
+$photoOfficePath = "public\escritorio-recepcao.jpg"
 
-Write-Host "Rômulo Marini Advocacia assets are already generated and active in public/ and app/"
+Write-Host "Nunes & Mota Advogados Associados assets are active in public/ and app/"

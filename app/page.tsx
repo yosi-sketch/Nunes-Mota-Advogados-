@@ -27,46 +27,46 @@ import {
   Gavel,
   Coins,
   BadgeCheck,
-  Car,
-  Compass,
+  Award,
+  Accessibility,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5537984142250";
-const PHONE_DISPLAY = "(37) 98414-2250";
-const EMAIL_CONTACT = "romulomarini1@hotmail.com";
-const INSTAGRAM_URL = "https://www.instagram.com/romulo.marini/";
-const INSTAGRAM_HANDLE = "@romulo.marini";
-const BENTO_URL = "https://bento.me/romulomarini";
+const WHATSAPP_NUMBER = "5538999480028";
+const PHONE_DISPLAY = "(38) 99948-0028";
+const EMAIL_CONTACT = "contato@nunesemotaadv.com.br";
+const INSTAGRAM_URL = "https://www.instagram.com/nunesemotaadv/";
+const INSTAGRAM_HANDLE = "@nunesemotaadv";
 
-const FIRM_NAME = "Rômulo Marini Advocacia";
-const FIRM_SHORT_NAME = "Rômulo Marini Advocacia";
+const FIRM_NAME = "Nunes & Mota Advogados Associados";
+const FIRM_SHORT_NAME = "Nunes & Mota Advogados";
 const FIRM_SLOGAN =
-  "Excelência jurídica, ética inegociável e dedicação exclusiva para proteger você, sua família e seu patrimônio.";
-const LAWYER_NAME = "Dr. Rômulo Marini";
-const LAWYER_TITLE = "Advogado em Cláudio - MG | Inventários, Divórcio, Pensão e Trânsito";
+  "Há mais de 7 anos prestando uma advocacia combativa, ética e altamente resolutiva para proteger seus direitos, seu trabalho e seu patrimônio.";
+const LAWYERS_NAMES = "Dra. Misley Nunes & Dr. Mota";
+const LAWYERS_TITLE =
+  "Advogados em Januária - MG | Trabalhista, Cível, Consumidor, Família & Previdenciário";
 
 const ADDRESS_TEXT =
-  "Av. Pres. Tancredo Neves, 409 - Centro, Cláudio - MG, 35530-000";
+  "Av. Cônego Ramiro Leite, 20B - Centro, Januária - MG, 39480-000";
 const REGION_TEXT =
-  "Cláudio · Centro-Oeste Mineiro & Atendimento Digital em Todo o Brasil";
+  "Januária · Norte de Minas Gerais & Atendimento Digital em Todo o Brasil";
 
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=R%C3%B4mulo+Marini+Advocacia%0ACl%C3%A1udio+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Nunes+%26+Mota+Advogados+Associados%0AJanu%C3%A1ria+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Av.+Pres.+Tancredo+Neves%2C+409+-+Cl%C3%A1udio%2C+MG%2C+35530-000";
+  "https://www.google.com/maps/search/?api=1&query=Av.+C%C3%B4nego+Ramiro+Leite%2C+20B+-+Centro%2C+Janu%C3%A1ria+-+MG%2C+39480-000";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/hero-advogado.jpg";
-const FOTO_SOBRE_SRC = "/sobre-advogado.jpg";
+const FOTO_HERO_SRC = "/hero-advogados.jpg";
+const FOTO_ESCRITORIO_SRC = "/escritorio-recepcao.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dr. Rômulo Marini! Gostaria de agendar uma consulta jurídica e conversar sobre o meu caso.";
+    "Olá, Dra. Misley Nunes e Dr. Mota! Gostaria de agendar uma consulta jurídica e conversar sobre o meu caso.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -192,366 +192,366 @@ export default function Home() {
 
   const closeMenu = () => setIsMenuOpen(false);
 
-  // Pilares Oficiais de Atuação de Rômulo Marini Advocacia
+  // Pilares Oficiais de Atuação de Nunes & Mota Advogados Associados
   const areasAtuacao = [
     {
-      id: "inventarios-sucessoes",
-      icon: Scale,
-      title: "Inventários & Sucessões",
+      id: "direito-trabalhista",
+      icon: Briefcase,
+      title: "Direito Trabalhista",
       shortDesc:
-        "Partilha célere de herança, inventário extrajudicial em cartório e processos judiciais com segurança, discrição e preservação do patrimônio familiar.",
+        "Referência em causas trabalhistas no Norte de Minas. Defesa intransigente dos direitos do trabalhador com exatidão em cálculos e máxima agilidade processual.",
       bullets: [
-        "Inventário extrajudicial em cartório rápido, sem litígio desnecessário",
-        "Inventários judiciais contenciosos e consensuais com rigor técnico",
-        "Partilha amigável de imóveis, contas bancárias e cotas empresariais",
-        "Planejamento sucessório preventivo para proteção e redução de custos",
+        "Rescisão indireta e reversão de justa causa indevida",
+        "Cobrança rigorosa de horas extras, intervalos e adicional noturno",
+        "Adicionais de insalubridade, periculosidade e desvio de função",
+        "Indenizações por acidente de trabalho, doenças ocupacionais e assédio",
       ],
-      tag: "Sucessões",
-      badge: "Agilidade & Partilha",
+      tag: "Trabalhista",
+      badge: "Destaque Regional",
       whatsappMsg:
-        "Olá, Dr. Rômulo Marini! Preciso de orientação jurídica especializada sobre Inventário e Partilha de Bens.",
+        "Olá, Dra. Misley Nunes e Dr. Mota! Preciso de orientação jurídica especializada sobre causa trabalhista e meus direitos.",
     },
     {
-      id: "divorcio-familia",
-      icon: Users,
-      title: "Divórcio & Direito de Família",
+      id: "direito-civel",
+      icon: Scale,
+      title: "Direito Cível & Contratos",
       shortDesc:
-        "Acolhimento humanizado, mediação e condução firme em divórcios consensuais e litigiosos, garantindo a divisão justa e a tranquilidade das partes.",
+        "Solidez jurídica na elaboração e revisão de contratos, reparações de danos materiais e morais, cobranças e resolução estratégica de conflitos patrimoniais.",
       bullets: [
-        "Divórcio consensual em cartório homologado com máxima brevidade",
-        "Divórcio litigioso com defesa vigorosa dos seus direitos e bens",
-        "Dissolução de união estável e reconhecimento de direitos matrimoniais",
-        "Partilha criteriosa do patrimônio construído durante a convivência",
+        "Elaboração, análise e blindagem de contratos civis e imobiliários",
+        "Ações indenizatórias por danos morais, materiais e descumprimento de acordos",
+        "Cobrança judicial e extrajudicial de créditos e execução de títulos",
+        "Defesa de propriedade, posse e disputas contratuais complexas",
+      ],
+      tag: "Cível",
+      badge: "Segurança Contratual",
+      whatsappMsg:
+        "Olá, Dra. Misley Nunes e Dr. Mota! Gostaria de consultoria jurídica sobre Direito Cível / Contratos / Indenização.",
+    },
+    {
+      id: "direito-consumidor",
+      icon: Shield,
+      title: "Direito do Consumidor",
+      shortDesc:
+        "Combate firme a abusos de bancos, companhias aéreas, planos de saúde e fornecedores, restabelecendo seu crédito e exigindo indenizações justas.",
+      bullets: [
+        "Limpeza de nome e indenização por negativação indevida no SPC/Serasa",
+        "Golpes do Pix, fraudes bancárias, clonagem de cartão e empréstimos consignados não autorizados",
+        "Cancelamento de compras, cobranças indevidas e vícios ocultos em produtos/serviços",
+        "Ações contra abusos de empresas de telefonia, concessionárias de energia e planos de saúde",
+      ],
+      tag: "Consumidor",
+      badge: "Defesa dos Seus Direitos",
+      whatsappMsg:
+        "Olá, Dra. Misley Nunes e Dr. Mota! Preciso de ajuda com um problema de Direito do Consumidor / Abuso Bancário.",
+    },
+    {
+      id: "familia-sucessoes",
+      icon: Users,
+      title: "Família & Sucessões",
+      shortDesc:
+        "Condução sensível, técnica e segura em inventários em cartório, partilha de herança, divórcios consensuais e litigiosos e ações de pensão alimentícia.",
+      bullets: [
+        "Inventário extrajudicial em cartório rápido, sem desgaste e econômico",
+        "Inventários judiciais e partilhas amigáveis ou contenciosas de bens",
+        "Divórcio consensual e litigioso com proteção patrimonial justa",
+        "Fixação, revisão e execução urgente de pensão alimentícia e guarda",
       ],
       tag: "Família",
-      badge: "Acolhimento & Resolução",
+      badge: "Acolhimento & Sucessões",
       whatsappMsg:
-        "Olá, Dr. Rômulo Marini! Gostaria de consultoria sobre Divórcio e Partilha de Patrimônio.",
+        "Olá, Dra. Misley Nunes e Dr. Mota! Preciso de orientação sobre Inventário / Partilha de Bens / Divórcio.",
     },
     {
-      id: "pensao-guarda",
-      icon: HeartHandshake,
-      title: "Pensão Alimentícia & Guarda",
-      shortDesc:
-        "Defesa intransigente dos direitos e do bem-estar dos filhos e familiares, fixando valores justos e exigindo o cumprimento integral da lei.",
-      bullets: [
-        "Ação de fixação, revisão e exoneração justa de pensão alimentícia",
-        "Execução urgente de alimentos em atraso sob pena de prisão e penhora",
-        "Guarda compartilhada e unilateral visando o melhor interesse dos filhos",
-        "Regulamentação de regime de convivência e proteção do vínculo afetivo",
-      ],
-      tag: "Alimentos",
-      badge: "Segurança Familiar",
-      whatsappMsg:
-        "Olá, Dr. Rômulo Marini! Preciso de orientação jurídica sobre Pensão Alimentícia e Guarda.",
-    },
-    {
-      id: "direito-transito",
-      icon: Car,
-      title: "Direito de Trânsito & Defesa de CNH",
-      shortDesc:
-        "Atuação especializada contra suspensão e cassação da CNH, multas indevidas, Lei Seca e processos administrativos no DETRAN, JARI e Justiça.",
-      bullets: [
-        "Defesa técnica e recursos contra processo de Suspensão do Direito de Dirigir",
-        "Recursos contra Cassação da CNH e desbloqueio de prontuário",
-        "Defesa administrativa e judicial contra autos de infração da Lei Seca / Bafômetro",
-        "Ações judiciais anulatórias de multas abusivas e irregularidades de órgãos de trânsito",
-      ],
-      tag: "Trânsito",
-      badge: "Proteção da CNH",
-      whatsappMsg:
-        "Olá, Dr. Rômulo Marini! Recebi uma autuação / processo de suspensão da minha CNH e preciso de defesa especializada.",
-    },
-    {
-      id: "direito-civil-contratos",
+      id: "direito-previdenciario",
       icon: FileText,
-      title: "Direito Civil & Contratos",
+      title: "Direito Previdenciário (INSS)",
       shortDesc:
-        "Segurança jurídica em negócios civis, elaboração minuciosa de contratos, cobranças e ações indenizatórias por danos morais e materiais.",
+        "Planejamento previdenciário e atuação combativa contra indeferimentos do INSS, garantindo a concessão do melhor benefício para sua aposentadoria.",
       bullets: [
-        "Elaboração, análise e revisão criteriosa de contratos civis e imobiliários",
-        "Cobrança judicial e extrajudicial de títulos, dívidas e créditos em aberto",
-        "Ações de reparação civil por danos morais, materiais e descumprimento de acordos",
-        "Resolução de conflitos patrimoniais, posse e propriedade com solidez",
+        "Concessão de Aposentadoria por Idade, Tempo de Contribuição e Especial",
+        "Auxílio-Doença, Aposentadoria por Invalidez e Auxílio-Acidente",
+        "Benefício de Prestação Continuada (BPC / LOAS) para idosos e PCDs",
+        "Revisão de benefícios e recursos administrativos e judiciais contra o INSS",
       ],
-      tag: "Contratual",
-      badge: "Blindagem Legal",
+      tag: "Previdenciário",
+      badge: "Benefícios do INSS",
       whatsappMsg:
-        "Olá, Dr. Rômulo Marini! Preciso de assessoria em Direito Civil / Elaboração de Contratos / Ação Indenizatória.",
+        "Olá, Dra. Misley Nunes e Dr. Mota! Gostaria de consultoria sobre Benefício do INSS / Aposentadoria / BPC LOAS.",
     },
     {
       id: "consultoria-estrategica",
       icon: Gavel,
-      title: "Consultoria & Atendimento Estratégico",
+      title: "Assessoria & Atendimento Estratégico",
       shortDesc:
-        "Atendimento consultivo e contencioso claro, objetivo e honesto, avaliando caminhos preventivos e soluções jurídicas eficazes.",
+        "Atendimento personalizado presencial em Januária ou 100% digital em todo o Brasil. Diagnóstico honesto e plano de ação transparente desde o primeiro contato.",
       bullets: [
-        "Diagnóstico jurídico honesto e realista sobre as chances e riscos do seu caso",
-        "Atendimento acolhedor presencial em Cláudio - MG ou digital para todo o país",
-        "Negociação extrajudicial qualificada para conciliações rápidas e vantajosas",
-        "Acompanhamento pessoal e direto pelo Dr. Rômulo Marini em cada fase",
+        "Diagnóstico jurídico realista e transparente sobre chances e prazos",
+        "Atendimento acolhedor na sede moderna em Januária ou por videochamada",
+        "Negociações qualificadas para acordos extrajudiciais rápidos e vantajosos",
+        "Acompanhamento direto e próximo pelos sócios em todas as fases do processo",
       ],
       tag: "Consultoria",
       badge: "Transparência Total",
       whatsappMsg:
-        "Olá, Dr. Rômulo Marini! Gostaria de agendar uma consulta para avaliar minha situação jurídica.",
+        "Olá, Dra. Misley Nunes e Dr. Mota! Gostaria de agendar uma consulta para avaliar minha situação jurídica.",
     },
   ];
 
-  // Avaliações Reais do Google Meu Negócio (Nota 5,0 ★ em 26 avaliações reais)
+  // Avaliações Reais do Google Meu Negócio de Nunes & Mota Advogados Associados (Nota 5,0 ★ em 25 avaliações)
   const depoimentosGoogle = [
     {
-      author: "Gilsimar Vaz",
+      author: "Paloma Feletto",
       detail: "1 avaliação no Google",
       stars: 5,
-      date: "2 anos atrás · Avaliação verificada no Google",
+      date: "Avaliação verificada no Google",
       quote:
-        "Excelente Profissional, um ambiente aconchegante, atendimento bom e eficiente, de fácil localização.",
-      highlight: "Ambiente aconchegante, atendimento eficiente e de fácil localização",
+        "Uma excelente profissional, resolveu meus problemas trabalhistas com exatidão! Sem contar que tem uma equipe maravilhosa, altamente qualificados... A melhor advogada para causas trabalhistas do Norte de Minas Gerais! Gratidão Dra. Misley♥️",
+      highlight: "A melhor advogada para causas trabalhistas do Norte de Minas Gerais",
       ownerReply:
-        "É ótimo saber que você teve uma experiência positiva com nosso escritório de advocacia. Estamos aqui para oferecer a melhor orientação legal possível!",
+        "Muito Obrigada Paloma. Nós agradecemos pela confiança e pelo feedback! Deus abençoe!!",
     },
     {
-      author: "Silvinho Camargo",
-      detail: "11 avaliações no Google",
-      stars: 5,
-      date: "2 anos atrás · Avaliação verificada no Google",
-      quote:
-        "Um dos melhores profissionais que conheço, nos atendeu com profissionalismo e total ética além de seu excelente conhecimento sobre direito. Eu recomendo.",
-      highlight: "Profissionalismo, total ética e excelente conhecimento sobre direito",
-      ownerReply:
-        "Obrigado por compartilhar sua experiência! Estamos aqui para oferecer segurança jurídica e soluções legais eficientes. Conte sempre conosco!",
-    },
-    {
-      author: "Verena Pereira",
+      author: "Grazielly Carvalho",
       detail: "5 avaliações no Google",
       stars: 5,
-      date: "2 anos atrás · Avaliação verificada no Google",
+      date: "Avaliação verificada no Google",
       quote:
-        "Profissional excelente, altamente capacitado e dedicado, oferecendo soluções jurídicas eficazes e personalizadas. Recomendo fortemente para quem busca competência e compromisso.",
-      highlight: "Altamente capacitado, dedicado e com soluções jurídicas eficazes",
+        "Ótimos profissionais! São super atenciosos e competentes! 👏🏽😍",
+      highlight: "Super atenciosos e competentes",
       ownerReply:
-        "Obrigado pela avaliação positiva! Estamos felizes em saber que nossa consultoria jurídica atendeu às suas expectativas. Estamos à disposição para futuras consultas!",
+        "Gratidão!! Temos uma equipe dedicada com prioridade direcionada aos nossos clientes!!",
     },
     {
-      author: "Anderson Lopes Morais",
-      detail: "4 avaliações no Google",
-      stars: 5,
-      date: "2 anos atrás · Avaliação verificada no Google",
-      quote:
-        "Escritório de excelência no atendimento. Um profissional claro nas posições consultivas e contenciosas. Super recomendo. Abraços Dr. Rômulo e obrigado pelo serviços prestados.",
-      highlight: "Profissional claro nas posições consultivas e contenciosas",
-      ownerReply:
-        "Agradecemos por compartilhar sua experiência positiva com nosso escritório. Estamos aqui para ajudar com qualquer questão jurídica que você tenha!",
-    },
-    {
-      author: "Renato Filizzola",
-      detail: "4 avaliações no Google",
-      stars: 5,
-      date: "2 anos atrás · Avaliação verificada no Google",
-      quote:
-        "O melhor de Minas e uns dos melhores do Brasil!!!",
-      highlight: "Reconhecimento de excelência e máxima confiança do cliente",
-      ownerReply:
-        "Obrigado pela avaliação positiva! Ficamos felizes em saber que você ficou satisfeito com nossa consultoria jurídica. Estamos à disposição!",
-    },
-    {
-      author: "Bernadete Sousa",
+      author: "Irene Macieldasilva",
       detail: "1 avaliação no Google",
       stars: 5,
-      date: "1 ano atrás · Avaliação verificada no Google",
+      date: "Avaliação verificada no Google",
       quote:
-        "Profissional super atencioso, honesto, competente, diferenciado. Valor justo. Super recomendo.",
-      highlight: "Super atencioso, honesto, competente, diferenciado e valor justo",
-    },
-    {
-      author: "Augusto Santos",
-      detail: "4 avaliações no Google",
-      stars: 5,
-      date: "2 anos atrás · Avaliação verificada no Google",
-      quote:
-        "Bom profissional atento a detalhes e ágil na execução das atividades relacionadas aos processos.",
-      highlight: "Atento a detalhes e ágil na execução dos processos",
+        "Profissionais excelente, super recomendo, consegui resolver meu problema, muito obrigado, gratidão 🙏👏🙏👏👏",
+      highlight: "Consegui resolver meu problema, super recomendo",
       ownerReply:
-        "Obrigado pela avaliação! Sua satisfação com nossos serviços de direito de família é nossa maior recompensa. Conte conosco sempre!",
+        "Nós agradecemos pela confiança! Deus abençoe!!",
     },
     {
-      author: "Ivan Colares",
+      author: "Lays Santos",
+      detail: "7 avaliações · 9 fotos no Google",
+      stars: 5,
+      date: "Avaliação verificada no Google",
+      quote:
+        "Ambiente moderno, sofisticado e aconchegante para atender os clientes. Possui acesso com rampa para pessoas com mobilidade reduzida. Parabéns e muito sucesso pra vcs. Amei desenvolver esse projeto ❤️",
+      highlight: "Ambiente moderno, sofisticado, aconchegante e com rampa de acessibilidade",
+      ownerReply:
+        "Sempre em busca do melhor acolhimento àqueles que dependem do nosso trabalho! Gratidão!!",
+    },
+    {
+      author: "Larissa Lopes Guedes",
+      detail: "6 avaliações · 2 fotos no Google",
+      stars: 5,
+      date: "Avaliação verificada no Google",
+      quote:
+        "Equipe altamente qualificada. Profissionais que atendem com seriedade e compromisso, sempre a disposição do cliente! Extremamente satisfeita.",
+      highlight: "Equipe altamente qualificada, seriedade e compromisso",
+      ownerReply:
+        "Gratidão!! Sempre à disposição!",
+    },
+    {
+      author: "Érica Oliveira",
+      detail: "12 avaliações · 1 foto no Google",
+      stars: 5,
+      date: "Avaliação verificada no Google",
+      quote:
+        "Excelente atendimento, conseguiram resolver o meu problema com muita agilidade e rapidez.",
+      highlight: "Excelente atendimento, agilidade e rapidez",
+      ownerReply:
+        "Obrigada pela confiança! Sempre à disposição.",
+    },
+    {
+      author: "Gabrielly Melo",
       detail: "2 avaliações no Google",
       stars: 5,
-      date: "2 anos atrás · Avaliação verificada no Google",
+      date: "Avaliação verificada no Google",
       quote:
-        "Excelente advogado, competente total.",
-      highlight: "Competência total e segurança em direito de trânsito",
+        "Advogados excelentes e recepcionistas muito prestativas. Advocacia exemplar 👏🏼👏🏼👏🏼👏🏼",
+      highlight: "Advogados excelentes e advocacia exemplar",
       ownerReply:
-        "Agradecemos sua confiança em nossos serviços de direito de trânsito. Estamos aqui para garantir seus direitos!",
+        "Muito obrigada pelo feedback!",
     },
     {
-      author: "Di coco Silva",
+      author: "Mariane Souza",
+      detail: "2 avaliações no Google",
+      stars: 5,
+      date: "Avaliação verificada no Google",
+      quote:
+        "Ótimos profissionais, atenciosos e competentes eu recomendo os seus serviços 👏👏👏👏👏👏💯😍",
+      highlight: "Profissionais atenciosos, competentes e recomendados",
+      ownerReply:
+        "Deus abençoe! Sempre à disposição!",
+    },
+    {
+      author: "Amanda Guedes",
+      detail: "3 avaliações no Google",
+      stars: 5,
+      date: "Avaliação verificada no Google",
+      quote:
+        "Escritório excelente com profissionais renomados. Super indico!",
+      highlight: "Escritório excelente com profissionais renomados",
+      ownerReply:
+        "Gratidão!!!",
+    },
+    {
+      author: "Ana Carolina",
       detail: "1 avaliação no Google",
       stars: 5,
-      date: "2 anos atrás · Avaliação verificada no Google",
+      date: "Avaliação verificada no Google",
       quote:
-        "Grande profissional. Sempre tratando seus clientes com carinho e responsabilidade.",
-      highlight: "Tratamento aos clientes com carinho e responsabilidade",
-      ownerReply:
-        "Muito obrigado por sua avaliação! Nossa equipe está comprometida em oferecer soluções jurídicas eficazes.",
+        "Excelente atendimento, agilidade no processo, informações objetivas.",
+      highlight: "Agilidade no processo e informações objetivas",
     },
     {
-      author: "Robson Ferreira Gonçalves",
-      detail: "2 avaliações · 1 foto no Google",
+      author: "Bruno Oliveira Mota",
+      detail: "Local Guide · 20 avaliações · 18 fotos no Google",
       stars: 5,
-      date: "2 anos atrás · Avaliação verificada no Google",
+      date: "Avaliação verificada no Google",
       quote:
-        "Profissional experiente e competente !",
-      highlight: "Profissional experiente, competente e atencioso",
-      ownerReply:
-        "Obrigado pela avaliação positiva! Ficamos felizes em saber que você ficou satisfeito com nossa consultoria jurídica.",
+        "Profissionais capacitados, problema resolvido. Recomendo.",
+      highlight: "Profissionais capacitados e problema resolvido",
     },
     {
-      author: "Romeu Mori",
-      detail: "Local Guide · 9 avaliações · 118 fotos no Google",
+      author: "Zezinha Guedes",
+      detail: "1 avaliação no Google",
       stars: 5,
-      date: "2 anos atrás · Avaliação verificada no Google",
+      date: "Avaliação verificada no Google",
       quote:
-        "Profissional exemplar.",
-      highlight: "Reconhecimento por Local Guide como profissional exemplar",
+        "Advogados super dedicados e atenciosos. Resolveu meu problema!!",
+      highlight: "Super dedicados, atenciosos e problema resolvido",
       ownerReply:
-        "Obrigado pelo feedback positivo Romeu. Ficamos felizes em saber que nosso trabalho de consultoria atendeu suas expectativas.",
-    },
-    {
-      author: "Adelia Colares",
-      detail: "Local Guide · 12 avaliações · 26 fotos no Google",
-      stars: 5,
-      date: "2 anos atrás · Avaliação verificada no Google",
-      quote:
-        "O melhor!!!!! Super recomendo Dr. Rômulo Marini.",
-      highlight: "Satisfação absoluta e recomendação entusiasmada",
+        "Muito Obrigada!! Nós agradecemos pela confiança! Deus abençoe!!",
     },
   ];
 
-  // Diferenciais Competitivos
+  // Diferenciais Competitivos de Nunes & Mota Advogados
   const diferenciais = [
     {
-      icon: HeartHandshake,
-      title: "Ambiente Aconchegante & Acolhedor",
+      icon: Award,
+      title: "Mais de 7 Anos de Tradição e Excelência",
       description:
-        "Como destacam nossos clientes: você é recebido em um espaço confortável, de fácil localização no Centro de Cláudio, com atendimento humanizado, atencioso e individualizado.",
+        "Uma trajetória sólida de mais de 7 anos construída com ética, rigor técnico inegociável e defesa incansável dos direitos de nossos clientes em Januária, MG e em todo o país.",
+    },
+    {
+      icon: Accessibility,
+      title: "Sede Moderna, Confortável & Acessível",
+      description:
+        "Estrutura de ponta na Av. Cônego Ramiro Leite, 20B - Centro, com salas privativas climatizadas e rampa de acesso exclusiva para pessoas com mobilidade reduzida.",
+    },
+    {
+      icon: HeartHandshake,
+      title: "Atendimento Humanizado & Ágil",
+      description:
+        "Comunicação direta, transparente e descomplicada. Nossa equipe trata cada causa com empatia, mantendo você sempre informado sobre cada andamento do seu processo.",
     },
     {
       icon: Shield,
-      title: "Clareza Consultiva & Contenciosa",
+      title: "Exatidão Técnica & Alta Resolutividade",
       description:
-        "Comunicação direta, transparente e descomplicada. Esclarecemos cada etapa com rigor técnico, honestidade sobre os caminhos viáveis e sem falsas promessas.",
-    },
-    {
-      icon: Clock,
-      title: "Agilidade & Atenção Minuciosa",
-      description:
-        "Atuação ágil e atenta aos mínimos detalhes processuais, evitando entraves burocráticos e acelerando inventários, partilhas, defesas de CNH e divórcios.",
+        "Especialização comprovada em Direito Trabalhista, Cível, Consumidor e Família. Foco em soluções práticas, cálculos precisos e resultados consistentes.",
     },
     {
       icon: Coins,
-      title: "Valores Justos & Conduta Ética",
+      title: "Contratos Transparentes & Honorários Claros",
       description:
-        "Honorários proporcionais, éticos e alinhados às diretrizes da OAB. Contratos de honorários transparentes, sem qualquer custo oculto ou cobrança inesperada.",
-    },
-    {
-      icon: Gavel,
-      title: "Atuação Especializada e Focada",
-      description:
-        "Foco consolidado nas demandas que mais impactam sua vida: Inventários, Divórcios, Pensão Alimentícia, Direito de Família e Direito de Trânsito.",
+        "Honorários éticos, proporcionais e rigorosamente alinhados ao Código de Ética da OAB, sem letras miúdas ou custos inesperados para o cliente.",
     },
     {
       icon: Star,
-      title: "Nota Máxima 5,0 ★ no Google",
+      title: "Nota Máxima 5,0 ★ Unânime no Google",
       description:
-        "Unanimidade de satisfação em 26 avaliações de clientes reais, consolidando o escritório como referência máxima de advocacia em Cláudio e região.",
+        "Reconhecimento unânime de nossos clientes em 25 avaliações 5 estrelas no Google Meu Negócio, atestando a confiança e o prestígio de nossa advocacia.",
     },
   ];
 
   // Situações comuns (Diagnóstico Rápido)
   const situacoesDiagnostico = [
     {
-      pergunta: "Precisa realizar o inventário e destravar a partilha de bens da família?",
+      pergunta: "Teve seus direitos desrespeitados no trabalho ou sofreu demissão irregular?",
       orientacao:
-        "A perda de um ente querido não deve virar um conflito infindável. O Dr. Rômulo Marini atua com inventários em cartório (rápidos e econômicos) e judiciais, assegurando uma divisão justa e desimpedida do patrimônio.",
-      cta: "Quero Orientação em Inventário",
-      area: "Inventários & Sucessões",
+        "A Dra. Misley Nunes e equipe atuam com exatidão no cálculo de rescisões, horas extras, adicionais de insalubridade/periculosidade, acidentes de trabalho e reversão de justas causas abusivas.",
+      cta: "Analisar Meu Caso Trabalhista",
+      area: "Direito Trabalhista",
     },
     {
-      pergunta: "Está passando por um divórcio ou precisa formalizar a separação?",
+      pergunta: "Está sendo lesado por bancos, cobranças indevidas ou negativação no SPC?",
       orientacao:
-        "Seja consensual ou litigioso, conduzimos o divórcio com discrição, serenidade e firmeza técnica para proteger seus interesses e os direitos patrimoniais construídos ao longo da vida.",
-      cta: "Consultar sobre Divórcio",
-      area: "Divórcio & Direito de Família",
+        "Defendemos o consumidor contra fraudes bancárias, juros abusivos, golpes do Pix e negativações ilegais, buscando a exclusão imediata do nome dos cadastros de inadimplentes e indenização por danos morais.",
+      cta: "Limpar Nome / Exigir Indenização",
+      area: "Direito do Consumidor",
     },
     {
-      pergunta: "Precisa definir, revisar ou cobrar pensão alimentícia e guarda?",
+      pergunta: "Precisa realizar o inventário de bens da família ou formalizar um divórcio?",
       orientacao:
-        "O bem-estar e o sustento digno dos filhos são prioridades absolutas. Atuamos na fixação do valor devido, na revisão de valores desproporcionais e na execução imediata de pensões em atraso.",
-      cta: "Resolver Questão de Pensão",
-      area: "Pensão Alimentícia & Guarda",
+        "Atuamos em inventários extrajudiciais em cartório (rápidos e menos onerosos) e judiciais, além de divórcios consensuais e litigiosos, garantindo uma divisão justa e a preservação do patrimônio familiar.",
+      cta: "Orientação em Inventário & Família",
+      area: "Família & Sucessões",
     },
     {
-      pergunta: "Sua CNH está em risco de suspensão, cassação ou recebeu multa indevida?",
+      pergunta: "Teve benefício previdenciário negado pelo INSS ou planeja sua aposentadoria?",
       orientacao:
-        "Processos administrativos do DETRAN possuem prazos rígidos e falhas técnicas que podem anular penalidades. Defendemos seu direito de dirigir com teses jurídicas sólidas e fundamentadas.",
-      cta: "Proteger Minha CNH / Recorrer",
-      area: "Direito de Trânsito & CNH",
+        "Analisamos seu tempo de contribuição, laudos médicos e histórico laboral para ingressar com pedidos administrativos e ações judiciais para concessão de aposentadorias, auxílio-doença e BPC/LOAS.",
+      cta: "Consultar Benefício do INSS",
+      area: "Direito Previdenciário",
     },
   ];
 
   // FAQ
   const faqs = [
     {
-      question: "Como funciona a primeira consulta jurídica com o Dr. Rômulo Marini?",
+      question: "Como funciona a primeira consulta jurídica com Nunes & Mota Advogados?",
       answer:
-        "A consulta inicial é um atendimento atencioso e privativo, realizado em nosso escritório no Centro de Cláudio - MG ou por videochamada/WhatsApp. Analisamos detalhadamente seus documentos e a história do seu caso para fornecer um diagnóstico jurídico claro, honesto e indicar a estratégia mais vantajosa.",
+        "A consulta inicial é um atendimento privativo, atencioso e detalhado. Pode ser realizado presencialmente em nossa sede no Centro de Januária - MG ou por chamada de vídeo/WhatsApp para qualquer região do Brasil. Analisamos sua documentação e explicamos com clareza a viabilidade e os melhores caminhos para o seu caso.",
     },
     {
-      question: "Qual a diferença entre inventário em cartório e inventário judicial?",
+      question: "Quais documentos devo separar para uma causa trabalhista?",
       answer:
-        "Quando todos os herdeiros são maiores de idade, capazes e estão de acordo com a partilha dos bens, o inventário pode ser realizado de forma extrajudicial diretamente no cartório de notas, concluindo-se em poucas semanas. Caso haja divergência ou herdeiros menores, o processo é conduzido pela via judicial com o mesmo rigor e zelo.",
+        "Para uma análise completa, é recomendável reunir: Carteira de Trabalho (física ou digital), holerites/contracheques, extrato analítico do FGTS, termo de rescisão (se já tiver sido desligado), comprovantes de mensagens ou e-mails e eventuais atestados médicos em caso de acidente ou doença do trabalho.",
     },
     {
-      question: "O que fazer se a pensão alimentícia estiver atrasada?",
+      question: "O escritório atende apenas em Januária - MG ou em outras regiões?",
       answer:
-        "A lei prevê mecanismos enérgicos para a cobrança de pensão alimentícia. É possível ingressar com a Ação de Execução de Alimentos pelo rito da prisão civil (para as últimas 3 parcelas em atraso) ou pelo rito da penhora de bens, veículos e contas bancárias, garantindo o recebimento rápido do valor devido.",
+        "Atendemos presencialmente toda a região de Januária e Norte de Minas Gerais, e de forma 100% digital em todo o Brasil. Através do processo eletrônico (PJe), atuamos perante os Tribunais Regionais do Trabalho, Tribunais de Justiça e Tribunais Superiores com máxima segurança e agilidade.",
     },
     {
-      question: "Como recorrer de um processo de suspensão ou cassação da CNH?",
+      question: "O que fazer em caso de golpe financeiro ou cobrança indevida de bancos?",
       answer:
-        "Após receber a notificação do DETRAN, apresentamos uma defesa prévia e, se necessário, recursos junto à JARI e ao CETRAN. Analisamos possíveis vícios no auto de infração, falhas de aferição ou nulidades procedimentais para buscar o cancelamento da penalidade e preservar sua habilitação.",
+        "Guarde todos os comprovantes, extratos bancários, prints de conversas e faça imediatamente o Boletim de Ocorrência. Em seguida, acione nosso escritório para ingressarmos com as medidas judiciais urgentes contra a instituição bancária responsável para bloqueio, restituição dos valores e reparação de danos morais.",
     },
     {
-      question: "Posso ser atendido mesmo não morando em Cláudio - MG?",
+      question: "O escritório possui acessibilidade para pessoas com deficiência ou mobilidade reduzida?",
       answer:
-        "Sim! Graças aos processos eletrônicos e às ferramentas digitais modernas, atendemos clientes de municípios vizinhos (Divinópolis, Itapecerica, Carmo do Cajuru, Oliveira) e de todo o Brasil com total agilidade, segurança documental e acompanhamento próximo via WhatsApp.",
+        "Sim! Nosso escritório na Av. Cônego Ramiro Leite, 20B foi planejado para acolher a todos com conforto e dignidade, contando com rampa de acesso externa para cadeirantes e pessoas com mobilidade reduzida, corredores amplos e recepção moderna.",
     },
     {
-      question: "Como são definidos os honorários advocatícios?",
+      question: "Como são combinados os honorários advocatícios?",
       answer:
-        "Nossos valores são pautados pela ética, moderação e conformidade com a tabela da OAB/MG. O contrato de prestação de serviços estabelece de forma límpida as condições de pagamento e as fases de atuação, garantindo que você tenha plena previsibilidade e justiça em cada investimento.",
+        "Nossos contratos de honorários são 100% transparentes, éticos e pautados pelas diretrizes da Ordem dos Advogados do Brasil (OAB). Em muitas demandas (como causas trabalhistas), trabalhamos com condições facilitadas no êxito da causa, sem surpresas nem custos ocultos.",
     },
   ];
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="relative min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-[#d4af37] selection:text-[#040812]">
+      <div className="relative min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-[#16365b] selection:text-white">
         {/* ========================================================================= */}
         {/* 1. TOP NOTICE / PRE-HEADER                                               */}
         {/* ========================================================================= */}
-        <div className="border-b border-[#1b2945] bg-gradient-to-r from-[#040812] via-[#070d1a] to-[#0c1527] px-4 py-2 text-white">
-          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 text-xs">
+        <div className="border-b border-[#1a3a5c] bg-gradient-to-r from-[#050e18] via-[#081626] to-[#0d2035] px-4 py-2 text-white">
+          <div className="mx-auto flex w-full max-w-[1600px] flex-wrap items-center justify-between gap-2 px-4 sm:px-6 lg:px-8 xl:px-12 text-xs">
             <div className="flex items-center gap-2 font-medium">
-              <span className="flex size-2 rounded-full bg-[#f5d77f] animate-pulse" />
-              <span className="text-[#f5d77f] font-semibold">
-                Rômulo Marini Advocacia &bull; Cláudio - MG
+              <span className="flex size-2 rounded-full bg-[#cbd5e1] animate-pulse" />
+              <span className="text-[#f1f5f9] font-semibold">
+                Nunes &amp; Mota Advogados Associados &bull; Januária - MG
               </span>
               <span className="hidden sm:inline text-slate-400">|</span>
               <span className="hidden sm:inline text-slate-300">
-                Inventários &bull; Divórcio &bull; Pensão Alimentícia &bull; Direito de Trânsito
+                ⚖️ Há Mais de 7 Anos &bull; Trabalhista &bull; Cível &bull; Consumidor
               </span>
             </div>
 
@@ -572,14 +572,14 @@ export default function Home() {
                   ))}
                 </div>
                 <span className="font-bold text-white">5,0 ★</span>
-                <span className="text-slate-300">(26 avaliações no Google)</span>
+                <span className="text-slate-300">(25 avaliações no Google)</span>
               </a>
 
               <a
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:flex items-center gap-1 font-semibold text-[#f5d77f] hover:underline"
+                className="hidden md:flex items-center gap-1 font-semibold text-[#cbd5e1] hover:text-white transition-colors"
               >
                 <WhatsAppIcon size={13} className="text-[#25D366]" />
                 <span>{PHONE_DISPLAY}</span>
@@ -598,44 +598,46 @@ export default function Home() {
               : "border-b border-slate-100 bg-white/90 backdrop-blur-sm"
           }`}
         >
-          <div className="mx-auto flex max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1500px] items-center justify-between px-4 py-3 sm:px-6 lg:px-8 xl:px-10">
-            {/* Logo Left */}
-            <a
-              href="#inicio"
-              aria-label="Rômulo Marini Advocacia - Início"
-              onClick={closeMenu}
-              className="flex shrink-0 items-center gap-3 sm:gap-3.5 transition-opacity hover:opacity-95 mr-4"
-            >
-              <div className="relative size-12 sm:size-13 lg:size-14 shrink-0">
-                <Image
-                  src={LOGO_SYMBOL_SRC}
-                  alt="Rômulo Marini Advocacia"
-                  fill
-                  priority
-                  unoptimized
-                  className="object-contain"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-cinzel text-base sm:text-lg lg:text-xl font-extrabold tracking-[0.14em] text-[#070d1a] leading-tight">
-                  RÔMULO MARINI
-                </span>
-                <span className="text-[9px] sm:text-[10px] lg:text-[11px] font-bold tracking-[0.22em] text-[#a37517] uppercase mt-0.5">
-                  ADVOCACIA &bull; CLÁUDIO - MG
-                </span>
-              </div>
-            </a>
+          <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 py-3 sm:px-6 lg:px-8 xl:px-12">
+            {/* Left: Logo (flex-1) */}
+            <div className="flex flex-1 items-center justify-start min-w-0">
+              <a
+                href="#inicio"
+                aria-label="Nunes & Mota Advogados Associados - Início"
+                onClick={closeMenu}
+                className="flex shrink-0 items-center gap-3 transition-opacity hover:opacity-95"
+              >
+                <div className="relative size-10 sm:size-11 lg:size-12 shrink-0">
+                  <Image
+                    src={LOGO_SYMBOL_SRC}
+                    alt="Nunes & Mota Advogados Associados"
+                    fill
+                    priority
+                    unoptimized
+                    className="object-contain"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-cinzel text-sm sm:text-base lg:text-lg font-extrabold tracking-[0.14em] text-[#081626] leading-tight whitespace-nowrap">
+                    NUNES &amp; MOTA
+                  </span>
+                  <span className="text-[8px] sm:text-[9px] lg:text-[10px] font-bold tracking-[0.2em] text-[#1a406c] uppercase mt-0.5 whitespace-nowrap">
+                    ADVOGADOS ASSOCIADOS &bull; JANUÁRIA - MG
+                  </span>
+                </div>
+              </a>
+            </div>
 
-            {/* Desktop Navigation Menu (Center) */}
+            {/* Center: Tópicos Rigorosamente Centralizados (flex-none) */}
             <nav
               aria-label="Navegação principal"
-              className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8 whitespace-nowrap text-[11px] xl:text-xs font-semibold tracking-[0.08em] xl:tracking-[0.1em] ml-auto mr-6 xl:mr-10"
+              className="hidden lg:flex flex-none items-center justify-center gap-4 xl:gap-6 2xl:gap-8 whitespace-nowrap text-[11px] xl:text-xs font-semibold tracking-[0.08em] px-4"
             >
               <a className="nav-link" href="#atuacao">
                 Áreas de Atuação
               </a>
               <a className="nav-link" href="#sobre">
-                O Advogado
+                O Escritório
               </a>
               <a className="nav-link hidden xl:inline-block" href="#diferenciais">
                 Diferenciais
@@ -651,30 +653,32 @@ export default function Home() {
               </a>
             </nav>
 
-            {/* Right Action: Header Button */}
-            <div className="hidden lg:flex items-center shrink-0">
-              <GlowingButton
-                variant="gold"
-                size="sm"
-                href={getWhatsAppUrl()}
-                target="_blank"
-                className="shadow-sm whitespace-nowrap"
-              >
-                <WhatsAppIcon size={14} className="text-[#040812]" />
-                <span>Consulta no WhatsApp</span>
-              </GlowingButton>
-            </div>
+            {/* Right: Botão CTA & Mobile Toggle (flex-1) */}
+            <div className="flex flex-1 items-center justify-end">
+              <div className="hidden lg:flex items-center shrink-0">
+                <GlowingButton
+                  variant="silver"
+                  size="sm"
+                  href={getWhatsAppUrl()}
+                  target="_blank"
+                  className="shadow-sm whitespace-nowrap"
+                >
+                  <WhatsAppIcon size={14} className="text-[#050e18]" />
+                  <span>Consulta no WhatsApp</span>
+                </GlowingButton>
+              </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              type="button"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100 lg:hidden"
-              aria-label="Abrir menu de navegação"
-              aria-expanded={isMenuOpen}
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+              {/* Mobile Menu Button */}
+              <button
+                type="button"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100 lg:hidden"
+                aria-label="Abrir menu de navegação"
+                aria-expanded={isMenuOpen}
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
 
           {/* Mobile Drawer */}
@@ -688,71 +692,71 @@ export default function Home() {
               >
                 <div className="flex flex-col gap-3.5 text-sm font-semibold tracking-wide">
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#a37517]"
+                    className="py-1.5 text-slate-800 hover:text-[#215187]"
                     href="#inicio"
                     onClick={closeMenu}
                   >
                     Início
                   </a>
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#a37517]"
+                    className="py-1.5 text-slate-800 hover:text-[#215187]"
                     href="#atuacao"
                     onClick={closeMenu}
                   >
                     Áreas de Atuação
                   </a>
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#a37517]"
+                    className="py-1.5 text-slate-800 hover:text-[#215187]"
                     href="#sobre"
                     onClick={closeMenu}
                   >
-                    Sobre o Dr. Rômulo Marini
+                    Sobre o Escritório &amp; Sócios
                   </a>
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#a37517]"
+                    className="py-1.5 text-slate-800 hover:text-[#215187]"
                     href="#diferenciais"
                     onClick={closeMenu}
                   >
                     Nossos Diferenciais
                   </a>
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#a37517]"
+                    className="py-1.5 text-slate-800 hover:text-[#215187]"
                     href="#avaliacoes"
                     onClick={closeMenu}
                   >
                     Avaliações no Google (5.0 ★)
                   </a>
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#a37517]"
+                    className="py-1.5 text-slate-800 hover:text-[#215187]"
                     href="#faq"
                     onClick={closeMenu}
                   >
                     Perguntas Frequentes
                   </a>
                   <a
-                    className="py-1.5 text-slate-800 hover:text-[#a37517]"
+                    className="py-1.5 text-slate-800 hover:text-[#215187]"
                     href="#contato"
                     onClick={closeMenu}
                   >
-                    Sede em Cláudio - MG &amp; Contato
+                    Sede em Januária - MG &amp; Contato
                   </a>
 
                   <div className="pt-3 border-t border-slate-100 flex flex-col gap-2.5">
                     <GlowingButton
-                      variant="gold"
+                      variant="silver"
                       size="md"
                       href={getWhatsAppUrl()}
                       target="_blank"
                       className="w-full justify-center"
                     >
-                      <WhatsAppIcon size={16} className="text-[#040812]" />
+                      <WhatsAppIcon size={16} className="text-[#050e18]" />
                       <span>Falar no WhatsApp</span>
                     </GlowingButton>
                     <a
                       href={`tel:${WHATSAPP_NUMBER}`}
                       className="flex items-center justify-center gap-2 rounded-lg border border-slate-200 py-3 text-xs font-bold text-slate-700 hover:bg-slate-50"
                     >
-                      <Phone size={14} className="text-[#a37517]" />
+                      <Phone size={14} className="text-[#215187]" />
                       <span>Ligar: {PHONE_DISPLAY}</span>
                     </a>
                   </div>
@@ -767,12 +771,12 @@ export default function Home() {
         {/* ========================================================================= */}
         <section
           id="inicio"
-          className="relative overflow-hidden bg-gradient-to-b from-[#040812] via-[#070d1a] to-[#0c1527] text-white py-14 sm:py-20 lg:py-24"
+          className="relative overflow-hidden bg-gradient-to-b from-[#07192f] via-[#0c2440] to-[#081a2e] text-white py-14 sm:py-20 lg:py-24"
         >
-          {/* Subtle Ambient Decorative Lights */}
-          <div className="pointer-events-none absolute -top-40 -left-40 size-96 rounded-full bg-[#d4af37]/15 blur-3xl" />
-          <div className="pointer-events-none absolute top-1/2 -right-40 size-96 rounded-full bg-[#1b3964]/40 blur-3xl" />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#f5d77f_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
+          {/* Luminous Ambient Glow (Backlight for maximum text clarity) */}
+          <div className="pointer-events-none absolute -top-24 left-0 size-[650px] rounded-full bg-[#1b436d]/45 blur-[130px]" />
+          <div className="pointer-events-none absolute top-1/3 -left-20 size-[500px] rounded-full bg-[#163a61]/35 blur-[120px]" />
+          <div className="pointer-events-none absolute top-1/2 -right-40 size-96 rounded-full bg-[#1a406c]/40 blur-3xl" />
 
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
@@ -785,57 +789,76 @@ export default function Home() {
               >
                 {/* Eyebrow Badge */}
                 <motion.div variants={fadeInUp} className="mb-4">
-                  <div className="inline-flex items-center gap-2.5 rounded-full border border-[#d4af37]/40 bg-[#040812]/80 px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#f5d77f] shadow-sm backdrop-blur-md">
-                    <Scale size={14} className="text-[#f5d77f]" />
-                    <span>Rômulo Marini Advocacia &bull; Cláudio - MG</span>
+                  <div className="inline-flex items-center gap-2.5 rounded-full border border-white/40 bg-white/10 px-4 py-2 text-xs font-bold tracking-[0.16em] uppercase text-white shadow-lg backdrop-blur-md">
+                    <Scale size={14} className="text-[#38bdf8]" />
+                    <span>Nunes &amp; Mota Advogados &bull; Há mais de 7 Anos</span>
                   </div>
                 </motion.div>
 
                 {/* H1 Headline */}
                 <motion.h1
                   variants={fadeInUp}
-                  className="font-cinzel text-3xl font-extrabold leading-[1.18] tracking-tight sm:text-4xl md:text-5xl text-white"
+                  className="font-cinzel text-3xl font-extrabold leading-[1.18] tracking-tight sm:text-4xl md:text-5xl lg:text-[3.25rem] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]"
                 >
-                  Segurança jurídica, excelência técnica e{" "}
-                  <span className="text-gradient-gold">dedicação exclusiva</span> para proteger seus direitos.
+                  Defesa jurídica estratégica, ética e{" "}
+                  <span className="text-gradient-silver font-black drop-shadow-[0_2px_16px_rgba(255,255,255,0.4)]">
+                    altamente resolutiva
+                  </span>{" "}
+                  para seus direitos.
                 </motion.h1>
 
                 {/* Subtitle */}
                 <motion.p
                   variants={fadeInUp}
-                  className="mt-6 text-base text-slate-300 sm:text-lg sm:leading-relaxed"
+                  className="mt-6 text-base text-slate-100 sm:text-lg sm:leading-relaxed font-normal drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]"
                 >
                   Atuação especializada e combativa em{" "}
-                  <strong className="text-white font-semibold">
-                    Inventários, Divórcio, Pensão Alimentícia e Direito de Trânsito
+                  <strong className="text-white font-bold underline decoration-[#38bdf8]/50 underline-offset-4">
+                    Direito Trabalhista, Cível, Consumidor e Família
                   </strong>
-                  . Atendimento humanizado, ético e resolutivo pelo{" "}
-                  <strong className="text-white font-semibold">
-                    Dr. Rômulo Marini
+                  . Conduzido pela{" "}
+                  <strong className="text-white font-bold">
+                    Dra. Misley Nunes &amp; Dr. Mota
                   </strong>
-                  , com escritório acolhedor no Centro de Cláudio - MG e atendimento digital para clientes em todo o Brasil.
+                  , com escritório moderno e acessível no Centro de Januária - MG e atendimento digital de excelência em todo o Brasil.
                 </motion.p>
 
                 {/* Authority Badges Checklist */}
                 <motion.div
                   variants={fadeInUp}
-                  className="mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2 text-xs sm:text-sm text-slate-200"
+                  className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2 text-xs sm:text-sm text-white"
                 >
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[#f5d77f] shrink-0" />
-                    <span>Nota máxima 5,0 ★ no Google (26 avaliações reais)</span>
+                  <div className="flex items-center gap-2.5 rounded-lg bg-white/5 border border-white/10 px-3 py-2 backdrop-blur-xs">
+                    <div className="flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-[#25D366] border border-emerald-500/30">
+                      <CheckCircle2 size={13} />
+                    </div>
+                    <span className="font-semibold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+                      Nota máxima 5,0 ★ no Google (25 avaliações)
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[#f5d77f] shrink-0" />
-                    <span>Ambiente aconchegante e atendimento ágil</span>
+                  <div className="flex items-center gap-2.5 rounded-lg bg-white/5 border border-white/10 px-3 py-2 backdrop-blur-xs">
+                    <div className="flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-[#25D366] border border-emerald-500/30">
+                      <CheckCircle2 size={13} />
+                    </div>
+                    <span className="font-semibold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+                      Referência regional em causas trabalhistas
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[#f5d77f] shrink-0" />
-                    <span>Clareza nas posições consultivas e contenciosas</span>
+                  <div className="flex items-center gap-2.5 rounded-lg bg-white/5 border border-white/10 px-3 py-2 backdrop-blur-xs">
+                    <div className="flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-[#25D366] border border-emerald-500/30">
+                      <CheckCircle2 size={13} />
+                    </div>
+                    <span className="font-semibold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+                      Ambiente moderno com rampa de acessibilidade
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[#f5d77f] shrink-0" />
-                    <span>Sede na Av. Pres. Tancredo Neves, 409 - Centro</span>
+                  <div className="flex items-center gap-2.5 rounded-lg bg-white/5 border border-white/10 px-3 py-2 backdrop-blur-xs">
+                    <div className="flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-[#25D366] border border-emerald-500/30">
+                      <CheckCircle2 size={13} />
+                    </div>
+                    <span className="font-semibold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+                      Sede na Av. Cônego Ramiro Leite, 20B - Centro
+                    </span>
                   </div>
                 </motion.div>
 
@@ -845,19 +868,19 @@ export default function Home() {
                   className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center"
                 >
                   <GlowingButton
-                    variant="gold"
+                    variant="silver"
                     size="lg"
                     href={getWhatsAppUrl()}
                     target="_blank"
-                    className="shadow-xl"
+                    className="shadow-2xl shadow-black/50"
                   >
-                    <WhatsAppIcon size={18} className="text-[#040812]" />
-                    <span>Falar no WhatsApp com Dr. Rômulo</span>
+                    <WhatsAppIcon size={18} className="text-[#050e18]" />
+                    <span>Falar no WhatsApp com o Escritório</span>
                   </GlowingButton>
 
                   <a
                     href="#atuacao"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-white/5 px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white backdrop-blur-sm transition-all hover:border-[#f5d77f] hover:bg-white/10"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/40 bg-white/10 px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white backdrop-blur-md transition-all hover:border-white hover:bg-white hover:text-[#081626] shadow-lg"
                   >
                     <span>Conhecer Áreas de Atuação</span>
                     <ArrowRight size={14} />
@@ -867,36 +890,36 @@ export default function Home() {
                 {/* Micro Proof Footer */}
                 <motion.div
                   variants={fadeInUp}
-                  className="mt-8 pt-6 border-t border-slate-800/80 flex flex-wrap items-center gap-4 text-xs text-slate-400"
+                  className="mt-8 pt-6 border-t border-white/15 flex flex-wrap items-center gap-4 text-xs text-slate-100"
                 >
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 rounded-lg bg-white/10 border border-white/20 px-3 py-1.5 backdrop-blur-xs">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          size={13}
+                          size={14}
                           className="fill-amber-400 text-amber-400"
                         />
                       ))}
                     </div>
-                    <span className="font-semibold text-white">5,0 de 5,0</span>
+                    <span className="font-bold text-white text-sm">5,0 de 5,0</span>
                   </div>
-                  <span>&bull;</span>
-                  <span>26 avaliações no Google Meu Negócio</span>
-                  <span>&bull;</span>
+                  <span className="text-white/40">&bull;</span>
+                  <span className="font-medium text-white">25 avaliações no Google Meu Negócio</span>
+                  <span className="text-white/40">&bull;</span>
                   <a
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#f5d77f] hover:underline flex items-center gap-1"
+                    className="font-bold text-[#38bdf8] hover:text-white underline flex items-center gap-1 transition-colors"
                   >
                     <span>Ver no Google</span>
-                    <ArrowUpRight size={12} />
+                    <ArrowUpRight size={13} />
                   </a>
                 </motion.div>
               </motion.div>
 
-              {/* Right Column: Lawyer Portrait with Luxury Accent */}
+              {/* Right Column: Partners Portrait Card */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -905,31 +928,31 @@ export default function Home() {
               >
                 <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
                   {/* Decorative Glowing Frame */}
-                  <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-[#d4af37]/40 via-[#f5d77f]/15 to-transparent blur-md" />
+                  <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-white/30 via-[#cbd5e1]/15 to-transparent blur-md" />
 
                   {/* Main Portrait Card */}
-                  <div className="relative overflow-hidden rounded-2xl border-2 border-[#d4af37]/50 bg-[#070d1a] shadow-2xl">
+                  <div className="relative overflow-hidden rounded-2xl border-2 border-white/60 bg-[#081626] shadow-2xl">
                     <div className="relative aspect-[4/5] w-full overflow-hidden">
                       <Image
                         src={FOTO_HERO_SRC}
-                        alt="Dr. Rômulo Marini - Advogado em Cláudio - MG"
+                        alt="Dra. Misley Nunes e Dr. Mota - Nunes & Mota Advogados Associados"
                         fill
                         priority
-                        className="object-cover object-top filter contrast-[1.03]"
+                        className="object-cover object-top filter contrast-[1.02]"
                       />
 
                       {/* Gradient Overlay for bottom text legibility */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#040812] via-[#040812]/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#050e18] via-[#050e18]/20 to-transparent" />
 
                       {/* Card Lower Badge */}
-                      <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-[#d4af37]/40 bg-[#040812]/90 p-3.5 backdrop-blur-md">
+                      <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/30 bg-[#050e18]/90 p-3.5 backdrop-blur-md">
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="font-cinzel text-sm sm:text-base font-bold text-white tracking-wide">
-                              Dr. Rômulo Marini
+                              Dra. Misley Nunes &amp; Dr. Mota
                             </p>
-                            <p className="text-[10px] sm:text-xs font-semibold text-[#f5d77f] uppercase tracking-wider mt-0.5">
-                              Advocacia em Cláudio - MG
+                            <p className="text-[10px] sm:text-xs font-semibold text-[#cbd5e1] uppercase tracking-wider mt-0.5">
+                              Nunes &amp; Mota Advogados Associados
                             </p>
                           </div>
                           <div className="flex flex-col items-end">
@@ -943,7 +966,7 @@ export default function Home() {
                               ))}
                             </div>
                             <span className="text-[10px] font-bold text-white mt-0.5">
-                              5,0 ★ no Google (26)
+                              5,0 ★ no Google (25)
                             </span>
                           </div>
                         </div>
@@ -952,22 +975,22 @@ export default function Home() {
                   </div>
 
                   {/* Floating Trust Card Top-Right */}
-                  <div className="hidden sm:flex absolute -top-5 -right-5 items-center gap-2.5 rounded-xl border border-[#d4af37]/60 bg-[#040812]/95 px-4 py-2.5 shadow-xl backdrop-blur-md">
-                    <div className="flex size-9 items-center justify-center rounded-lg bg-[#d4af37]/20 text-[#f5d77f]">
+                  <div className="hidden sm:flex absolute -top-5 -right-5 items-center gap-2.5 rounded-xl border border-white/60 bg-[#050e18]/95 px-4 py-2.5 shadow-xl backdrop-blur-md">
+                    <div className="flex size-9 items-center justify-center rounded-lg bg-white/10 text-white">
                       <Scale size={18} />
                     </div>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-[#f5d77f]">
-                        Compromisso
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-[#cbd5e1]">
+                        Tradição
                       </p>
                       <p className="text-xs font-bold text-white">
-                        Ética &amp; Dedicação
+                        Há Mais de 7 Anos
                       </p>
                     </div>
                   </div>
 
                   {/* Floating Trust Card Bottom-Left */}
-                  <div className="hidden sm:flex absolute -bottom-5 -left-5 items-center gap-2.5 rounded-xl border border-slate-700 bg-[#070d1a]/95 px-4 py-2.5 shadow-xl backdrop-blur-md">
+                  <div className="hidden sm:flex absolute -bottom-5 -left-5 items-center gap-2.5 rounded-xl border border-slate-700 bg-[#081626]/95 px-4 py-2.5 shadow-xl backdrop-blur-md">
                     <div className="flex size-9 items-center justify-center rounded-lg bg-[#25D366]/20 text-[#25D366]">
                       <WhatsAppIcon size={18} />
                     </div>
@@ -976,7 +999,7 @@ export default function Home() {
                         Atendimento Ágil
                       </p>
                       <p className="text-xs font-bold text-white">
-                        Presencial &amp; Online
+                        Presencial &amp; Digital
                       </p>
                     </div>
                   </div>
@@ -989,57 +1012,57 @@ export default function Home() {
         {/* ========================================================================= */}
         {/* 4. TRUST & AUTHORITY NUMBERS BAR                                         */}
         {/* ========================================================================= */}
-        <section className="border-y border-slate-200 bg-[#faf8f2] py-8 sm:py-10">
+        <section className="border-y border-slate-200 bg-[#f8fafc] py-8 sm:py-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:gap-8 text-center">
               <div className="flex flex-col items-center">
-                <div className="flex items-center gap-1 text-2xl sm:text-3xl font-extrabold text-[#070d1a]">
+                <div className="flex items-center gap-1 text-2xl sm:text-3xl font-extrabold text-[#081626]">
                   <span>5,0</span>
                   <div className="flex text-amber-500">
                     <Star size={18} className="fill-amber-400 text-amber-400" />
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#a37517] mt-1">
+                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#215187] mt-1">
                   Nota Máxima Google
                 </p>
                 <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
-                  26 avaliações 100% 5 estrelas
+                  25 avaliações 100% 5 estrelas
                 </p>
               </div>
 
               <div className="flex flex-col items-center">
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#070d1a]">
-                  Cláudio - MG
+                <div className="text-2xl sm:text-3xl font-extrabold text-[#081626]">
+                  +07 Anos
                 </div>
-                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#a37517] mt-1">
-                  Sede Própria no Centro
+                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#215187] mt-1">
+                  Atuação Consolidada
                 </p>
                 <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
-                  Av. Tancredo Neves, 409
+                  Solidez e tradição jurídica
                 </p>
               </div>
 
               <div className="flex flex-col items-center">
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#070d1a]">
-                  Eficiente
+                <div className="text-2xl sm:text-3xl font-extrabold text-[#081626]">
+                  Januária - MG
                 </div>
-                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#a37517] mt-1">
-                  Atenção aos Detalhes
+                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#215187] mt-1">
+                  Sede com Acessibilidade
                 </p>
                 <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
-                  Agilidade e rigor nos processos
+                  Av. Cônego Ramiro Leite, 20B
                 </p>
               </div>
 
               <div className="flex flex-col items-center">
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#070d1a]">
-                  Nacional
+                <div className="text-2xl sm:text-3xl font-extrabold text-[#081626]">
+                  Brasil
                 </div>
-                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#a37517] mt-1">
-                  Presencial &amp; Digital
+                <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#215187] mt-1">
+                  Atendimento Digital
                 </p>
                 <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
-                  Atendimento em todo o Brasil
+                  Alcance em todo o território nacional
                 </p>
               </div>
             </div>
@@ -1052,15 +1075,15 @@ export default function Home() {
         <section className="py-14 sm:py-20 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-              <div className="eyebrow-gold justify-center mb-3">
+              <div className="eyebrow-navy justify-center mb-3">
                 Diagnóstico Jurídico Estratégico
               </div>
-              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-bold text-[#070d1a]">
+              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-bold text-[#081626]">
                 Você se identifica com alguma dessas situações jurídicas?
               </h2>
               <p className="mt-4 text-sm sm:text-base text-slate-600">
                 Não deixe seus direitos desprotegidos nem adie a solução de questões
-                que envolvem seu patrimônio, sua família ou sua habilitação:
+                que envolvem seu trabalho, sua família, seu nome ou seu patrimônio:
               </p>
             </div>
 
@@ -1068,14 +1091,14 @@ export default function Home() {
               {situacoesDiagnostico.map((sit, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-slate-200 bg-[#faf8f2] p-6 sm:p-8 transition-all hover:border-[#d4af37] hover:shadow-lg flex flex-col justify-between"
+                  className="rounded-2xl border border-slate-200 bg-[#f8fafc] p-6 sm:p-8 transition-all hover:border-[#1a406c] hover:shadow-lg flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-start gap-3.5 mb-3">
-                      <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#d4af37]/20 text-[#a37517]">
+                      <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#1a406c]/10 text-[#1a406c]">
                         <AlertCircle size={20} />
                       </div>
-                      <h3 className="font-cinzel text-lg sm:text-xl font-bold text-[#070d1a] leading-snug">
+                      <h3 className="font-cinzel text-lg sm:text-xl font-bold text-[#081626] leading-snug">
                         {sit.pergunta}
                       </h3>
                     </div>
@@ -1088,14 +1111,14 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => openConsultModal(sit.area)}
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#a37517] hover:text-[#070d1a] transition-colors cursor-pointer"
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#215187] hover:text-[#081626] transition-colors cursor-pointer"
                     >
                       <span>{sit.cta}</span>
                       <ArrowRight size={14} />
                     </button>
 
                     <a
-                      href={getWhatsAppUrl(`Olá, Dr. Rômulo Marini! ${sit.pergunta}`)}
+                      href={getWhatsAppUrl(`Olá, Dra. Misley Nunes e Dr. Mota! ${sit.pergunta}`)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex size-9 items-center justify-center rounded-lg bg-[#25D366] text-white hover:brightness-110 transition-all shadow-xs"
@@ -1115,12 +1138,12 @@ export default function Home() {
         {/* ========================================================================= */}
         <section
           id="atuacao"
-          className="relative bg-gradient-to-b from-[#040812] via-[#070d1a] to-[#0c1527] text-white py-16 sm:py-24"
+          className="relative bg-gradient-to-b from-[#050e18] via-[#081626] to-[#0d2035] text-white py-16 sm:py-24"
         >
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
               <div className="eyebrow-light justify-center mb-3">
-                Pilares de Atuação &bull; Advocacia Especializada
+                Pilares de Atuação &bull; Advocacia de Excelência
               </div>
               <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white">
                 Como atuamos na defesa dos seus direitos
@@ -1137,21 +1160,21 @@ export default function Home() {
                 return (
                   <div
                     key={area.id}
-                    className="group relative flex flex-col justify-between rounded-2xl border border-slate-700/80 bg-[#0c1527]/90 p-6 sm:p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af37] hover:shadow-2xl hover:shadow-[#d4af37]/10"
+                    className="group relative flex flex-col justify-between rounded-2xl border border-slate-700/80 bg-[#0d2035]/90 p-6 sm:p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white hover:shadow-2xl hover:shadow-white/10"
                   >
                     <div>
                       {/* Top Badges */}
                       <div className="flex items-center justify-between mb-5">
-                        <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#d4af37]/20 to-[#f5d77f]/10 border border-[#d4af37]/30 text-[#f5d77f] group-hover:scale-105 transition-transform">
+                        <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-white/20 to-white/5 border border-white/30 text-white group-hover:scale-105 transition-transform">
                           <IconComponent size={22} />
                         </div>
-                        <span className="rounded-full border border-[#d4af37]/40 bg-[#d4af37]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f5d77f]">
+                        <span className="rounded-full border border-white/40 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f1f5f9]">
                           {area.badge}
                         </span>
                       </div>
 
                       {/* Card Title */}
-                      <h3 className="font-cinzel text-lg sm:text-xl font-bold text-white leading-snug group-hover:text-[#f5d77f] transition-colors">
+                      <h3 className="font-cinzel text-lg sm:text-xl font-bold text-white leading-snug group-hover:text-[#cbd5e1] transition-colors">
                         {area.title}
                       </h3>
 
@@ -1169,7 +1192,7 @@ export default function Home() {
                           >
                             <CheckCircle2
                               size={14}
-                              className="text-[#f5d77f] shrink-0 mt-0.5"
+                              className="text-[#cbd5e1] shrink-0 mt-0.5"
                             />
                             <span>{bullet}</span>
                           </div>
@@ -1183,7 +1206,7 @@ export default function Home() {
                         href={getWhatsAppUrl(area.whatsappMsg)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-[#d4af37]/50 bg-white/5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[#f5d77f] transition-all hover:bg-[#d4af37] hover:text-[#040812] hover:border-[#d4af37]"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-white/40 bg-white/5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[#f1f5f9] transition-all hover:bg-white hover:text-[#050e18] hover:border-white"
                       >
                         <WhatsAppIcon size={14} />
                         <span>Consultar no WhatsApp</span>
@@ -1195,14 +1218,14 @@ export default function Home() {
             </div>
 
             {/* Central Consultation Banner */}
-            <div className="mt-14 rounded-2xl border-2 border-[#d4af37]/60 bg-gradient-to-r from-[#040812] via-[#070d1a] to-[#0c1527] p-8 sm:p-10 shadow-2xl">
+            <div className="mt-14 rounded-2xl border-2 border-white/40 bg-gradient-to-r from-[#050e18] via-[#081626] to-[#0d2035] p-8 sm:p-10 shadow-2xl">
               <div className="flex flex-col items-center justify-between gap-6 text-center lg:flex-row lg:text-left">
                 <div>
                   <div className="eyebrow-light mb-2">
                     Precisa de Orientação Imediata?
                   </div>
                   <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white">
-                    Fale diretamente com o Dr. Rômulo Marini
+                    Fale diretamente com Nunes &amp; Mota Advogados
                   </h3>
                   <p className="mt-1.5 text-xs sm:text-sm text-slate-300 max-w-2xl">
                     Envie uma mensagem resumindo sua necessidade. Analisamos seu caso com total sigilo
@@ -1211,15 +1234,15 @@ export default function Home() {
                 </div>
 
                 <GlowingButton
-                  variant="gold"
+                  variant="silver"
                   size="lg"
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Rômulo Marini! Gostaria de uma avaliação jurídica para entender o caminho mais adequado para o meu caso."
+                    "Olá, Dra. Misley Nunes e Dr. Mota! Gostaria de uma avaliação jurídica para entender o caminho mais adequado para o meu caso."
                   )}
                   target="_blank"
                   className="shrink-0"
                 >
-                  <WhatsAppIcon size={17} className="text-[#040812]" />
+                  <WhatsAppIcon size={17} className="text-[#050e18]" />
                   <span>Tirar Dúvida Agora</span>
                 </GlowingButton>
               </div>
@@ -1228,33 +1251,33 @@ export default function Home() {
         </section>
 
         {/* ========================================================================= */}
-        {/* 7. SOBRE O ADVOGADO (DR. RÔMULO MARINI)                                    */}
+        {/* 7. SOBRE O ESCRITÓRIO & ESTRUTURA MODERNA                                */}
         {/* ========================================================================= */}
         <section id="sobre" className="py-16 sm:py-24 bg-white overflow-hidden">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-              {/* Photo on Left */}
+              {/* Photo of Modern Reception on Left */}
               <div className="relative lg:col-span-5">
                 <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
                   {/* Subtle Accent Glow */}
-                  <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-[#d4af37]/30 to-transparent blur-lg" />
+                  <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-[#1a406c]/20 to-transparent blur-lg" />
 
-                  <div className="relative overflow-hidden rounded-2xl border-2 border-[#d4af37]/60 bg-[#070d1a] shadow-2xl">
+                  <div className="relative overflow-hidden rounded-2xl border-2 border-slate-200 bg-[#081626] shadow-2xl">
                     <div className="relative aspect-[4/5] w-full">
                       <Image
-                        src={FOTO_SOBRE_SRC}
-                        alt="Dr. Rômulo Marini - Advogado em Cláudio - MG"
+                        src={FOTO_ESCRITORIO_SRC}
+                        alt="Recepção moderna de Nunes & Mota Advogados Associados em Januária - MG"
                         fill
-                        className="object-cover object-top"
+                        className="object-cover object-center"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#040812]/80 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#050e18]/80 via-transparent to-transparent" />
 
                       <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/20 bg-black/60 p-3.5 backdrop-blur-md text-white text-center">
-                        <p className="font-cinzel text-base font-bold text-[#f5d77f]">
-                          Dr. Rômulo Marini
+                        <p className="font-cinzel text-base font-bold text-white">
+                          Nossa Sede em Januária - MG
                         </p>
                         <p className="text-[11px] text-slate-200 mt-0.5">
-                          Advocacia em Cláudio - MG &bull; Inventários, Divórcio, Pensão e Trânsito
+                          Av. Cônego Ramiro Leite, 20B &bull; Estrutura Moderna &amp; Acessibilidade
                         </p>
                       </div>
                     </div>
@@ -1264,72 +1287,69 @@ export default function Home() {
 
               {/* Bio & Details on Right */}
               <div className="lg:col-span-7">
-                <div className="eyebrow-gold mb-3">Sobre o Profissional</div>
+                <div className="eyebrow-navy mb-3">Sobre o Escritório &amp; Sócios</div>
 
-                <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#070d1a] leading-tight">
-                  Atendimento aconchegante, ética rigorosa e foco intransigente em soluções eficazes.
+                <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#081626] leading-tight">
+                  Mais de 7 anos de atuação séria, ambiente moderno e dedicação absoluta a cada cliente.
                 </h2>
 
                 <div className="mt-6 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
                   <p>
-                    O <strong className="text-[#070d1a]">Dr. Rômulo Marini</strong> é advogado dedicado
-                    a prestar uma advocacia clara, estratégica e personalizada, oferecendo aos seus clientes
-                    segurança jurídica e tranquilidade em momentos cruciais.
+                    O escritório <strong className="text-[#081626]">Nunes &amp; Mota Advogados Associados</strong> nasceu
+                    com o propósito de oferecer uma advocacia moderna, técnica, combativa e profundamente comprometida
+                    com os anseios de quem busca justiça.
                   </p>
                   <p>
-                    Com escritório próprio estabelecido na <strong className="text-[#070d1a]">Av. Pres. Tancredo Neves, 409, no Centro de Cláudio - MG</strong>,
-                    sua atuação destaca-se pela facilidade de localização, ambiente aconchegante e atendimento
-                    de excelência, reconhecido com <strong className="text-[#070d1a]">nota máxima 5,0 ★ no Google</strong>.
+                    Com sede própria localizada estrategicamente na <strong className="text-[#081626]">Av. Cônego Ramiro Leite, 20B - Centro, em Januária - MG</strong>,
+                    nosso espaço foi projetado para oferecer o máximo de conforto, sofisticação e discrição, contando inclusive com{" "}
+                    <strong className="text-[#081626]">rampa de acesso para pessoas com mobilidade reduzida</strong>, conforme elogiado por nossos clientes.
                   </p>
                   <p>
-                    Seja em demandas de família (inventários, divórcios e pensão alimentícia), infrações e
-                    processos de trânsito ou litígios cíveis, o escritório conduz cada processo com atenção
-                    minuciosa aos detalhes, agilidade na execução das etapas e comunicação transparente.
+                    Liderado pela <strong className="text-[#081626]">Dra. Misley Nunes</strong> (reconhecida por clientes como uma das mais expressivas referências em causas trabalhistas do Norte de Minas)
+                    e pelo <strong className="text-[#081626]">Dr. Mota</strong>, o escritório alia mais de 7 anos de experiência forense a um atendimento acolhedor, transparente e com nota máxima 5,0 ★ no Google.
                   </p>
                 </div>
 
                 {/* Quote Box */}
-                <div className="mt-6 rounded-xl border-l-4 border-[#d4af37] bg-[#faf8f2] p-4 sm:p-5">
+                <div className="mt-6 rounded-xl border-l-4 border-[#1a406c] bg-[#f8fafc] p-4 sm:p-5">
                   <p className="italic text-sm text-slate-800">
-                    &ldquo;Excelente Profissional, um ambiente aconchegante, atendimento bom e eficiente,
-                    de fácil localização. Um profissional claro nas posições consultivas e contenciosas,
-                    atento a detalhes e ágil na execução dos processos.&rdquo;
+                    &ldquo;Ambiente moderno, sofisticado e aconchegante para atender os clientes. Possui acesso com rampa para pessoas com mobilidade reduzida... Uma excelente profissional, resolveu meus problemas trabalhistas com exatidão! Equipe maravilhosa, altamente qualificados.&rdquo;
                   </p>
-                  <p className="mt-2 text-xs font-bold text-[#a37517] uppercase tracking-wider">
-                    — Síntese das avaliações públicas dos clientes no Google Meu Negócio (Nota 5,0 ★ em 26 avaliações)
+                  <p className="mt-2 text-xs font-bold text-[#215187] uppercase tracking-wider">
+                    — Síntese dos depoimentos reais de clientes no Google Meu Negócio (Nota 5,0 ★ em 25 avaliações)
                   </p>
                 </div>
 
                 {/* Social & Contact Strip */}
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <GlowingButton
-                    variant="gold"
+                    variant="silver"
                     size="md"
                     href={getWhatsAppUrl()}
                     target="_blank"
                   >
-                    <WhatsAppIcon size={16} className="text-[#040812]" />
-                    <span>Falar Diretamente com Dr. Rômulo</span>
+                    <WhatsAppIcon size={16} className="text-[#050e18]" />
+                    <span>Falar Diretamente com os Sócios</span>
                   </GlowingButton>
 
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-xs font-bold uppercase tracking-wider text-slate-800 transition-colors hover:border-[#d4af37] hover:text-[#a37517]"
+                    className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-xs font-bold uppercase tracking-wider text-slate-800 transition-colors hover:border-[#1a406c] hover:text-[#1a406c]"
                   >
                     <InstagramIcon size={16} className="text-[#E1306C]" />
                     <span>Instagram {INSTAGRAM_HANDLE}</span>
                   </a>
 
                   <a
-                    href={BENTO_URL}
+                    href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-xs font-bold uppercase tracking-wider text-slate-800 transition-colors hover:border-[#d4af37] hover:text-[#a37517]"
+                    className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-xs font-bold uppercase tracking-wider text-slate-800 transition-colors hover:border-[#1a406c] hover:text-[#1a406c]"
                   >
-                    <Compass size={16} className="text-[#a37517]" />
-                    <span>Bento Link</span>
+                    <GoogleIcon size={16} />
+                    <span>Google Meu Negócio</span>
                   </a>
                 </div>
               </div>
@@ -1340,14 +1360,14 @@ export default function Home() {
         {/* ========================================================================= */}
         {/* 8. DIFERENCIAIS                                                           */}
         {/* ========================================================================= */}
-        <section id="diferenciais" className="py-16 sm:py-24 bg-[#faf8f2] border-t border-slate-200">
+        <section id="diferenciais" className="py-16 sm:py-24 bg-[#f8fafc] border-t border-slate-200">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
-              <div className="eyebrow-gold justify-center mb-3">
-                Por Que Escolher Nosso Escritório
+              <div className="eyebrow-navy justify-center mb-3">
+                Por Que Escolher Nunes &amp; Mota
               </div>
-              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#070d1a]">
-                Diferenciais que asseguram a satisfação dos nossos clientes
+              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#081626]">
+                Diferenciais que asseguram a satisfação absoluta dos nossos clientes
               </h2>
               <p className="mt-4 text-sm sm:text-base text-slate-600">
                 Uma experiência jurídica com seriedade, clareza didática e dedicação autêntica.
@@ -1360,12 +1380,12 @@ export default function Home() {
                 return (
                   <div
                     key={idx}
-                    className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs transition-all hover:border-[#d4af37] hover:shadow-md"
+                    className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs transition-all hover:border-[#1a406c] hover:shadow-md"
                   >
-                    <div className="flex size-12 items-center justify-center rounded-xl bg-[#d4af37]/15 text-[#a37517] mb-5">
+                    <div className="flex size-12 items-center justify-center rounded-xl bg-[#1a406c]/10 text-[#1a406c] mb-5">
                       <IconComp size={22} />
                     </div>
-                    <h3 className="font-cinzel text-lg font-bold text-[#070d1a]">
+                    <h3 className="font-cinzel text-lg font-bold text-[#081626]">
                       {dif.title}
                     </h3>
                     <p className="mt-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -1384,10 +1404,10 @@ export default function Home() {
         <section className="py-16 sm:py-24 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
-              <div className="eyebrow-gold justify-center mb-3">
+              <div className="eyebrow-navy justify-center mb-3">
                 Processo Transparente e Seguro
               </div>
-              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#070d1a]">
+              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#081626]">
                 Como funciona o seu atendimento jurídico
               </h2>
               <p className="mt-4 text-sm sm:text-base text-slate-600">
@@ -1396,54 +1416,54 @@ export default function Home() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-4">
-              <div className="relative rounded-2xl border border-slate-200 bg-[#faf8f2] p-6 text-center">
-                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#070d1a] text-[#f5d77f] font-bold text-lg mb-4">
+              <div className="relative rounded-2xl border border-slate-200 bg-[#f8fafc] p-6 text-center">
+                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#081626] text-white font-bold text-lg mb-4">
                   1
                 </div>
-                <h3 className="font-cinzel text-base font-bold text-[#070d1a]">
+                <h3 className="font-cinzel text-base font-bold text-[#081626]">
                   Primeiro Contato
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
                   Você nos envia uma mensagem no WhatsApp ou nos liga, resume sua situação e agendamos
-                  sua consulta presencial ou online.
+                  sua consulta presencial em Januária ou online.
                 </p>
               </div>
 
-              <div className="relative rounded-2xl border border-slate-200 bg-[#faf8f2] p-6 text-center">
-                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#070d1a] text-[#f5d77f] font-bold text-lg mb-4">
+              <div className="relative rounded-2xl border border-slate-200 bg-[#f8fafc] p-6 text-center">
+                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#081626] text-white font-bold text-lg mb-4">
                   2
                 </div>
-                <h3 className="font-cinzel text-base font-bold text-[#070d1a]">
+                <h3 className="font-cinzel text-base font-bold text-[#081626]">
                   Análise Técnica
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  O Dr. Rômulo Marini avalia minuciosamente documentos, certidões ou autuações para
-                  estruturar a estratégia mais eficaz.
+                  A equipe de advogados avalia minuciosamente contratos, rescisões, holerites ou documentos
+                  para estruturar a melhor estratégia.
                 </p>
               </div>
 
-              <div className="relative rounded-2xl border border-slate-200 bg-[#faf8f2] p-6 text-center">
-                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#070d1a] text-[#f5d77f] font-bold text-lg mb-4">
+              <div className="relative rounded-2xl border border-slate-200 bg-[#f8fafc] p-6 text-center">
+                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#081626] text-white font-bold text-lg mb-4">
                   3
                 </div>
-                <h3 className="font-cinzel text-base font-bold text-[#070d1a]">
+                <h3 className="font-cinzel text-base font-bold text-[#081626]">
                   Definição Estratégica
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  Apresentamos o plano com total clareza quanto a prazos, custos justos e os passos
-                  necessários para proteger seus direitos.
+                  Apresentamos o plano com total clareza quanto a prazos, honorários justos e os passos
+                  necessários para defender seus direitos.
                 </p>
               </div>
 
-              <div className="relative rounded-2xl border border-slate-200 bg-[#faf8f2] p-6 text-center">
-                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#070d1a] text-[#f5d77f] font-bold text-lg mb-4">
+              <div className="relative rounded-2xl border border-slate-200 bg-[#f8fafc] p-6 text-center">
+                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#081626] text-white font-bold text-lg mb-4">
                   4
                 </div>
-                <h3 className="font-cinzel text-base font-bold text-[#070d1a]">
+                <h3 className="font-cinzel text-base font-bold text-[#081626]">
                   Atuação &amp; Acompanhamento
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  Execução diligente e ágil no cartório, DETRAN ou fórum, com atualizações periódicas
+                  Execução diligente e combativa na Justiça do Trabalho, Fórum ou cartório, com atualizações periódicas
                   diretamente com você.
                 </p>
               </div>
@@ -1451,12 +1471,12 @@ export default function Home() {
 
             <div className="mt-12 text-center">
               <GlowingButton
-                variant="gold"
+                variant="silver"
                 size="lg"
                 href={getWhatsAppUrl()}
                 target="_blank"
               >
-                <WhatsAppIcon size={17} className="text-[#040812]" />
+                <WhatsAppIcon size={17} className="text-[#050e18]" />
                 <span>Iniciar Minha Consulta no WhatsApp</span>
               </GlowingButton>
             </div>
@@ -1468,7 +1488,7 @@ export default function Home() {
         {/* ========================================================================= */}
         <section
           id="avaliacoes"
-          className="py-16 sm:py-24 bg-gradient-to-b from-[#040812] via-[#070d1a] to-[#0c1527] text-white"
+          className="py-16 sm:py-24 bg-gradient-to-b from-[#050e18] via-[#081626] to-[#0d2035] text-white"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
@@ -1490,7 +1510,7 @@ export default function Home() {
                 </div>
                 <span className="text-xl font-bold text-white">5,0 de 5,0 estrelas</span>
                 <span className="text-sm text-slate-300">
-                  (26 avaliações verificadas no Google)
+                  (25 avaliações verificadas no Google)
                 </span>
               </div>
             </div>
@@ -1500,7 +1520,7 @@ export default function Home() {
               {depoimentosGoogle.map((dep, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-slate-700/80 bg-[#0c1527]/80 p-6 backdrop-blur-sm flex flex-col justify-between hover:border-[#d4af37] transition-all"
+                  className="rounded-2xl border border-slate-700/80 bg-[#0d2035]/80 p-6 backdrop-blur-sm flex flex-col justify-between hover:border-white transition-all"
                 >
                   <div>
                     {/* Stars and Google Icon */}
@@ -1521,7 +1541,7 @@ export default function Home() {
                     </div>
 
                     {/* Highlight */}
-                    <p className="text-xs font-bold text-[#f5d77f] mb-2 uppercase tracking-wider">
+                    <p className="text-xs font-bold text-[#cbd5e1] mb-2 uppercase tracking-wider">
                       {dep.highlight}
                     </p>
 
@@ -1533,7 +1553,7 @@ export default function Home() {
                     {/* Owner reply snippet if available */}
                     {dep.ownerReply && (
                       <div className="mt-3.5 pt-3 border-t border-slate-800 text-[11px] text-slate-400 italic">
-                        <span className="font-semibold text-[#f5d77f] not-italic">Resposta Dr. Rômulo: </span>
+                        <span className="font-semibold text-white not-italic">Resposta Nunes &amp; Mota: </span>
                         &ldquo;{dep.ownerReply}&rdquo;
                       </div>
                     )}
@@ -1541,7 +1561,7 @@ export default function Home() {
 
                   {/* Author */}
                   <div className="mt-6 pt-4 border-t border-slate-700/60 flex items-center gap-3">
-                    <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#d4af37]/20 text-xs font-bold text-[#f5d77f]">
+                    <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-xs font-bold text-white">
                       {dep.author.charAt(0)}
                     </div>
                     <div>
@@ -1563,10 +1583,10 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-600 bg-white/5 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:border-[#f5d77f] hover:bg-white/10 transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-600 bg-white/5 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:border-white hover:bg-white/10 transition-colors"
               >
                 <GoogleIcon size={16} />
-                <span>Ver Todas as 26 Avaliações no Google Meu Negócio</span>
+                <span>Ver Todas as 25 Avaliações no Google Meu Negócio</span>
                 <ArrowUpRight size={14} />
               </a>
             </div>
@@ -1579,10 +1599,10 @@ export default function Home() {
         <section id="faq" className="py-16 sm:py-24 bg-white">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="eyebrow-gold justify-center mb-3">
+              <div className="eyebrow-navy justify-center mb-3">
                 Dúvidas Frequentes
               </div>
-              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#070d1a]">
+              <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#081626]">
                 Perguntas Frequentes sobre Atuação &amp; Serviços
               </h2>
               <p className="mt-3 text-sm sm:text-base text-slate-600">
@@ -1596,18 +1616,18 @@ export default function Home() {
                 return (
                   <div
                     key={idx}
-                    className="overflow-hidden rounded-2xl border border-slate-200 bg-[#faf8f2] transition-colors"
+                    className="overflow-hidden rounded-2xl border border-slate-200 bg-[#f8fafc] transition-colors"
                   >
                     <button
                       type="button"
                       onClick={() => setActiveFaq(isOpen ? null : idx)}
-                      className="flex w-full items-center justify-between p-5 text-left text-sm sm:text-base font-bold text-[#070d1a] hover:text-[#a37517] transition-colors cursor-pointer"
+                      className="flex w-full items-center justify-between p-5 text-left text-sm sm:text-base font-bold text-[#081626] hover:text-[#215187] transition-colors cursor-pointer"
                       aria-expanded={isOpen}
                     >
                       <span className="pr-4">{faq.question}</span>
                       <ChevronDown
                         size={18}
-                        className={`shrink-0 text-[#a37517] transition-transform duration-200 ${
+                        className={`shrink-0 text-[#215187] transition-transform duration-200 ${
                           isOpen ? "rotate-180" : ""
                         }`}
                       />
@@ -1632,21 +1652,21 @@ export default function Home() {
               })}
             </div>
 
-            <div className="mt-12 rounded-2xl border border-[#d4af37]/40 bg-[#faf8f2] p-6 text-center">
-              <p className="font-cinzel text-base font-bold text-[#070d1a]">
+            <div className="mt-12 rounded-2xl border border-slate-200 bg-[#f8fafc] p-6 text-center">
+              <p className="font-cinzel text-base font-bold text-[#081626]">
                 Ainda tem alguma dúvida sobre a sua situação específica?
               </p>
               <p className="mt-1 text-xs sm:text-sm text-slate-600">
-                O Dr. Rômulo Marini está à disposição para esclarecer seu caso com ética, sigilo e rapidez.
+                A equipe de Nunes &amp; Mota Advogados está à disposição para esclarecer seu caso com ética, sigilo e rapidez.
               </p>
               <div className="mt-4">
                 <GlowingButton
-                  variant="gold"
+                  variant="silver"
                   size="md"
-                  href={getWhatsAppUrl("Olá, Dr. Rômulo Marini! Tenho uma dúvida sobre o meu caso e gostaria de orientação jurídica.")}
+                  href={getWhatsAppUrl("Olá, Dra. Misley Nunes e Dr. Mota! Tenho uma dúvida sobre o meu caso e gostaria de orientação jurídica.")}
                   target="_blank"
                 >
-                  <WhatsAppIcon size={15} className="text-[#040812]" />
+                  <WhatsAppIcon size={15} className="text-[#050e18]" />
                   <span>Tirar Dúvida no WhatsApp</span>
                 </GlowingButton>
               </div>
@@ -1655,40 +1675,43 @@ export default function Home() {
         </section>
 
         {/* ========================================================================= */}
-        {/* 12. CONTATO & SEDE EM CLÁUDIO - MG                                        */}
+        {/* 12. CONTATO & SEDE EM JANUÁRIA - MG                                       */}
         {/* ========================================================================= */}
-        <section id="contato" className="py-16 sm:py-24 bg-[#faf8f2] border-t border-slate-200">
+        <section id="contato" className="py-16 sm:py-24 bg-[#f8fafc] border-t border-slate-200">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Contact Info Column */}
               <div className="lg:col-span-6 flex flex-col justify-between">
                 <div>
-                  <div className="eyebrow-gold mb-3">Atendimento &amp; Sede</div>
-                  <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#070d1a]">
+                  <div className="eyebrow-navy mb-3">Atendimento &amp; Sede</div>
+                  <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#081626]">
                     Entre em contato e agende sua consulta
                   </h2>
                   <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-                    Atendimento presencial no Centro de Cláudio - MG ou 100% digital
-                    com atendimento para clientes em todo o Brasil. Escolha o canal de sua preferência.
+                    Atendimento presencial no Centro de Januária - MG ou 100% digital
+                    com atendimento ágil para clientes em todo o Brasil. Escolha o canal de sua preferência.
                   </p>
 
                   <div className="mt-8 space-y-4">
                     <div className="flex items-start gap-3.5">
-                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#d4af37]/20 text-[#a37517]">
+                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#1a406c]/10 text-[#1a406c]">
                         <MapPin size={20} />
                       </div>
                       <div>
-                        <p className="text-xs font-bold text-[#070d1a] uppercase tracking-wider">
+                        <p className="text-xs font-bold text-[#081626] uppercase tracking-wider">
                           Endereço da Sede
                         </p>
                         <p className="text-sm text-slate-700 mt-0.5">
                           {ADDRESS_TEXT}
                         </p>
+                        <p className="text-xs text-slate-500 mt-0.5">
+                          Com acesso e rampa para pessoas com mobilidade reduzida
+                        </p>
                         <a
                           href={GOOGLE_MAPS_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-[#a37517] hover:underline"
+                          className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-[#215187] hover:underline"
                         >
                           <span>Como chegar no Google Maps</span>
                           <ArrowUpRight size={12} />
@@ -1697,18 +1720,18 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#d4af37]/20 text-[#a37517]">
+                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#1a406c]/10 text-[#1a406c]">
                         <Phone size={20} />
                       </div>
                       <div>
-                        <p className="text-xs font-bold text-[#070d1a] uppercase tracking-wider">
+                        <p className="text-xs font-bold text-[#081626] uppercase tracking-wider">
                           Telefone &amp; WhatsApp
                         </p>
                         <a
                           href={getWhatsAppUrl()}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm font-semibold text-slate-800 hover:text-[#a37517] mt-0.5 block"
+                          className="text-sm font-semibold text-slate-800 hover:text-[#215187] mt-0.5 block"
                         >
                           {PHONE_DISPLAY}
                         </a>
@@ -1716,16 +1739,16 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#d4af37]/20 text-[#a37517]">
+                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#1a406c]/10 text-[#1a406c]">
                         <Mail size={20} />
                       </div>
                       <div>
-                        <p className="text-xs font-bold text-[#070d1a] uppercase tracking-wider">
+                        <p className="text-xs font-bold text-[#081626] uppercase tracking-wider">
                           E-mail de Contato
                         </p>
                         <a
                           href={`mailto:${EMAIL_CONTACT}`}
-                          className="text-sm font-semibold text-slate-800 hover:text-[#a37517] mt-0.5 block"
+                          className="text-sm font-semibold text-slate-800 hover:text-[#215187] mt-0.5 block"
                         >
                           {EMAIL_CONTACT}
                         </a>
@@ -1733,37 +1756,37 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#d4af37]/20 text-[#a37517]">
+                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#1a406c]/10 text-[#1a406c]">
                         <InstagramIcon size={20} />
                       </div>
                       <div>
-                        <p className="text-xs font-bold text-[#070d1a] uppercase tracking-wider">
+                        <p className="text-xs font-bold text-[#081626] uppercase tracking-wider">
                           Instagram Oficial
                         </p>
                         <a
                           href={INSTAGRAM_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm font-semibold text-slate-800 hover:text-[#a37517] mt-0.5 block"
+                          className="text-sm font-semibold text-slate-800 hover:text-[#215187] mt-0.5 block"
                         >
-                          {INSTAGRAM_HANDLE} (1.020 seguidores)
+                          {INSTAGRAM_HANDLE}
                         </a>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#d4af37]/20 text-[#a37517]">
+                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#1a406c]/10 text-[#1a406c]">
                         <Clock size={20} />
                       </div>
                       <div>
-                        <p className="text-xs font-bold text-[#070d1a] uppercase tracking-wider">
+                        <p className="text-xs font-bold text-[#081626] uppercase tracking-wider">
                           Horário de Funcionamento
                         </p>
                         <p className="text-sm text-slate-700 mt-0.5">
-                          Segunda a Sexta a partir das 09:00
+                          Segunda a Sexta das 08:00 às 17:30
                         </p>
                         <p className="text-xs text-slate-500">
-                          Atendimento com agendamento prévio para seu conforto
+                          Atendimento presencial e digital com agendamento prévio
                         </p>
                       </div>
                     </div>
@@ -1772,13 +1795,13 @@ export default function Home() {
 
                 <div className="mt-8 pt-6 border-t border-slate-200">
                   <GlowingButton
-                    variant="gold"
+                    variant="silver"
                     size="lg"
                     href={getWhatsAppUrl()}
                     target="_blank"
                     className="w-full justify-center"
                   >
-                    <WhatsAppIcon size={18} className="text-[#040812]" />
+                    <WhatsAppIcon size={18} className="text-[#050e18]" />
                     <span>Falar no WhatsApp Agora</span>
                   </GlowingButton>
                 </div>
@@ -1792,32 +1815,32 @@ export default function Home() {
                       <div className="relative size-8 shrink-0">
                         <Image
                           src={LOGO_SYMBOL_SRC}
-                          alt="Rômulo Marini Advocacia"
+                          alt="Nunes & Mota Advogados Associados"
                           fill
                           className="object-contain"
                         />
                       </div>
                       <div>
-                        <p className="font-cinzel text-sm font-bold text-[#070d1a]">
-                          Rômulo Marini Advocacia
+                        <p className="font-cinzel text-sm font-bold text-[#081626]">
+                          Nunes &amp; Mota Advogados Associados
                         </p>
                         <p className="text-[10px] text-slate-500">
-                          Cláudio - MG
+                          Januária - MG
                         </p>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-1 rounded-md bg-amber-50 px-2 py-1 text-xs font-bold text-amber-700 border border-amber-200">
                       <Star size={12} className="fill-amber-400 text-amber-500" />
-                      <span>5,0 ★ Google (26)</span>
+                      <span>5,0 ★ Google (25)</span>
                     </div>
                   </div>
 
                   {/* Interactive Map Container */}
                   <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
                     <iframe
-                      title="Localização do Escritório Rômulo Marini Advocacia em Cláudio - MG"
-                      src="https://maps.google.com/maps?q=Av.+Pres.+Tancredo+Neves,+409+-+Cl%C3%A1udio,+MG,+35530-000&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                      title="Localização do Escritório Nunes & Mota Advogados Associados em Januária - MG"
+                      src="https://maps.google.com/maps?q=Av.+C%C3%B4nego+Ramiro+Leite,+20B+-+Centro,+Janu%C3%A1ria+-+MG,+39480-000&t=&z=16&ie=UTF8&iwloc=&output=embed"
                       className="size-full border-0"
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
@@ -1825,12 +1848,12 @@ export default function Home() {
                   </div>
 
                   <div className="mt-4 flex items-center justify-between text-xs text-slate-600">
-                    <span>Av. Pres. Tancredo Neves, 409 - Centro</span>
+                    <span>Av. Cônego Ramiro Leite, 20B - Centro, Januária - MG</span>
                     <a
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-bold text-[#a37517] hover:underline flex items-center gap-1"
+                      className="font-bold text-[#215187] hover:underline flex items-center gap-1"
                     >
                       <span>Abrir Rotas no GPS</span>
                       <ArrowUpRight size={12} />
@@ -1845,7 +1868,7 @@ export default function Home() {
         {/* ========================================================================= */}
         {/* 13. FOOTER                                                                */}
         {/* ========================================================================= */}
-        <footer className="border-t border-[#1b2945] bg-gradient-to-b from-[#040812] to-[#02050b] text-white py-12 sm:py-16">
+        <footer className="border-t border-[#1a3a5c] bg-gradient-to-b from-[#050e18] to-[#02070e] text-white py-12 sm:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-12 pb-12 border-b border-slate-800">
               {/* Brand Column */}
@@ -1857,17 +1880,17 @@ export default function Home() {
                   <div className="relative size-13 sm:size-14 shrink-0">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Rômulo Marini Advocacia"
+                      alt="Nunes & Mota Advogados Associados"
                       fill
                       className="object-contain"
                     />
                   </div>
                   <div className="flex flex-col">
                     <span className="font-cinzel text-lg sm:text-xl font-extrabold tracking-[0.14em] text-white leading-tight">
-                      RÔMULO MARINI
+                      NUNES &amp; MOTA
                     </span>
-                    <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.22em] text-[#f5d77f] uppercase mt-0.5">
-                      ADVOCACIA &bull; CLÁUDIO - MG
+                    <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.22em] text-[#cbd5e1] uppercase mt-0.5">
+                      ADVOGADOS ASSOCIADOS &bull; JANUÁRIA - MG
                     </span>
                   </div>
                 </a>
@@ -1881,8 +1904,8 @@ export default function Home() {
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-white/5 text-slate-300 transition-colors hover:border-[#f5d77f] hover:text-[#f5d77f]"
-                    aria-label="Instagram de Rômulo Marini Advocacia"
+                    className="flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-white/5 text-slate-300 transition-colors hover:border-white hover:text-white"
+                    aria-label="Instagram de Nunes & Mota Advogados Associados"
                   >
                     <InstagramIcon size={16} />
                   </a>
@@ -1891,7 +1914,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-white/5 text-slate-300 transition-colors hover:border-[#25D366] hover:text-[#25D366]"
-                    aria-label="WhatsApp de Rômulo Marini Advocacia"
+                    aria-label="WhatsApp de Nunes & Mota Advogados Associados"
                   >
                     <WhatsAppIcon size={16} />
                   </a>
@@ -1904,47 +1927,38 @@ export default function Home() {
                   >
                     <GoogleIcon size={16} />
                   </a>
-                  <a
-                    href={BENTO_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-white/5 text-slate-300 transition-colors hover:border-[#f5d77f] hover:text-[#f5d77f]"
-                    aria-label="Bento de Rômulo Marini"
-                  >
-                    <Compass size={16} />
-                  </a>
                 </div>
               </div>
 
               {/* Navigation Links */}
               <div className="lg:col-span-3">
-                <p className="font-cinzel text-xs font-bold uppercase tracking-[0.16em] text-[#f5d77f] mb-4">
+                <p className="font-cinzel text-xs font-bold uppercase tracking-[0.16em] text-[#cbd5e1] mb-4">
                   Áreas de Atuação
                 </p>
                 <ul className="space-y-2.5 text-xs text-slate-300">
                   <li>
                     <a className="footer-link" href="#atuacao">
-                      Inventários &amp; Sucessões
+                      Direito Trabalhista
                     </a>
                   </li>
                   <li>
                     <a className="footer-link" href="#atuacao">
-                      Divórcio &amp; Partilha de Bens
+                      Direito Cível &amp; Contratos
                     </a>
                   </li>
                   <li>
                     <a className="footer-link" href="#atuacao">
-                      Pensão Alimentícia &amp; Guarda
+                      Direito do Consumidor
                     </a>
                   </li>
                   <li>
                     <a className="footer-link" href="#atuacao">
-                      Direito de Trânsito &amp; CNH
+                      Família &amp; Sucessões (Inventários)
                     </a>
                   </li>
                   <li>
                     <a className="footer-link" href="#atuacao">
-                      Direito Civil &amp; Contratos
+                      Direito Previdenciário (INSS)
                     </a>
                   </li>
                   <li>
@@ -1957,12 +1971,12 @@ export default function Home() {
 
               {/* Legal & Office */}
               <div className="lg:col-span-4">
-                <p className="font-cinzel text-xs font-bold uppercase tracking-[0.16em] text-[#f5d77f] mb-4">
+                <p className="font-cinzel text-xs font-bold uppercase tracking-[0.16em] text-[#cbd5e1] mb-4">
                   Sede &amp; Contato
                 </p>
                 <div className="space-y-2.5 text-xs text-slate-300">
                   <p className="flex items-start gap-2">
-                    <MapPin size={14} className="text-[#f5d77f] shrink-0 mt-0.5" />
+                    <MapPin size={14} className="text-[#cbd5e1] shrink-0 mt-0.5" />
                     <span>{ADDRESS_TEXT}</span>
                   </p>
                   <p className="flex items-center gap-2">
@@ -1970,11 +1984,11 @@ export default function Home() {
                     <span>WhatsApp: {PHONE_DISPLAY}</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <Mail size={14} className="text-[#f5d77f] shrink-0" />
+                    <Mail size={14} className="text-[#cbd5e1] shrink-0" />
                     <span>{EMAIL_CONTACT}</span>
                   </p>
                   <p className="text-[11px] text-slate-400 mt-3 pt-3 border-t border-slate-800">
-                    Atendimento de Segunda a Sexta a partir das 09:00.
+                    Atendimento de Segunda a Sexta das 08:00 às 17:30.
                   </p>
                 </div>
               </div>
@@ -1983,7 +1997,7 @@ export default function Home() {
             {/* Bottom Copyright & OAB Ethics Notice */}
             <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-400 text-center md:text-left">
               <p>
-                &copy; {new Date().getFullYear()} Rômulo Marini Advocacia.
+                &copy; {new Date().getFullYear()} Nunes &amp; Mota Advogados Associados.
                 Todos os direitos reservados.
               </p>
               <p className="max-w-xl text-[10px] leading-relaxed">
@@ -2003,11 +2017,11 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center gap-2.5 rounded-full border-2 border-white/80 bg-[#25D366] px-4 py-3 text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:bg-[#1ebe5d]"
-            aria-label="Falar com o Dr. Rômulo Marini no WhatsApp"
+            aria-label="Falar com Nunes & Mota Advogados no WhatsApp"
           >
             <span className="absolute -top-1 -right-1 flex size-3">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#f5d77f] opacity-75" />
-              <span className="relative inline-flex size-3 rounded-full bg-[#f5d77f]" />
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-white opacity-75" />
+              <span className="relative inline-flex size-3 rounded-full bg-white" />
             </span>
             <WhatsAppIcon size={22} className="text-white" />
             <span className="hidden sm:inline text-xs font-bold tracking-wide uppercase">
@@ -2034,7 +2048,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95, y: 16 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 16 }}
-                className="relative z-10 w-full max-w-lg rounded-2xl border-2 border-[#d4af37]/60 bg-gradient-to-b from-[#040812] to-[#070d1a] p-6 sm:p-8 text-white shadow-2xl"
+                className="relative z-10 w-full max-w-lg rounded-2xl border-2 border-white/60 bg-gradient-to-b from-[#050e18] to-[#081626] p-6 sm:p-8 text-white shadow-2xl"
               >
                 <button
                   type="button"
@@ -2049,7 +2063,7 @@ export default function Home() {
                   <div className="relative size-10 shrink-0">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Rômulo Marini Advocacia"
+                      alt="Nunes & Mota Advogados Associados"
                       fill
                       className="object-contain"
                     />
@@ -2058,7 +2072,7 @@ export default function Home() {
                     <h3 className="font-cinzel text-lg font-bold text-white">
                       Análise Jurídica Especializada
                     </h3>
-                    <p className="text-xs text-[#f5d77f] font-semibold">
+                    <p className="text-xs text-[#cbd5e1] font-semibold">
                       {modalArea}
                     </p>
                   </div>
@@ -2066,32 +2080,32 @@ export default function Home() {
 
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   Para analisar sua demanda com sigilo, agilidade e rigor técnico, você será
-                  redirecionado ao atendimento oficial do{" "}
-                  <strong className="text-white">Dr. Rômulo Marini</strong>.
+                  redirecionado ao atendimento oficial de{" "}
+                  <strong className="text-white">Nunes &amp; Mota Advogados Associados</strong>.
                 </p>
 
                 <div className="mt-5 space-y-2 rounded-xl border border-slate-700 bg-white/5 p-4 text-xs text-slate-300">
-                  <p className="font-bold text-white uppercase tracking-wider text-[11px] text-[#f5d77f]">
+                  <p className="font-bold text-white uppercase tracking-wider text-[11px] text-[#cbd5e1]">
                     O que ter em mãos (se aplicável):
                   </p>
                   <ul className="space-y-1 pl-1">
                     <li>&bull; Nome completo e cidade onde reside</li>
                     <li>&bull; Breve resumo da situação ou litígio</li>
-                    <li>&bull; Notificações, certidões ou documentos relativos ao caso</li>
+                    <li>&bull; Documentos, comprovantes ou contratos relativos ao caso</li>
                   </ul>
                 </div>
 
                 <div className="mt-6 flex flex-col gap-2.5">
                   <GlowingButton
-                    variant="gold"
+                    variant="silver"
                     size="md"
                     href={getWhatsAppUrl(
-                      `Olá, Dr. Rômulo Marini! Gostaria de uma avaliação jurídica sobre: ${modalArea}.`
+                      `Olá, Dra. Misley Nunes e Dr. Mota! Gostaria de uma avaliação jurídica sobre: ${modalArea}.`
                     )}
                     target="_blank"
                     className="w-full justify-center"
                   >
-                    <WhatsAppIcon size={16} className="text-[#040812]" />
+                    <WhatsAppIcon size={16} className="text-[#050e18]" />
                     <span>Prosseguir para o WhatsApp</span>
                   </GlowingButton>
 

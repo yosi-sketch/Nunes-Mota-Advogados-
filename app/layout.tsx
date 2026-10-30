@@ -36,77 +36,79 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#040812",
+  themeColor: "#050e18",
   colorScheme: "light dark",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bento.me/romulomarini"),
+  metadataBase: new URL("https://nunesemotaadv.com.br"),
   title:
-    "Rômulo Marini Advocacia | Advogado em Cláudio - MG · Inventários, Divórcio, Pensão, Trânsito",
+    "Nunes & Mota Advogados Associados | Advocacia em Januária - MG · Trabalhista, Cível e Consumidor",
   description:
-    "⚖️ Rômulo Marini Advocacia — Escritório de advocacia em Cláudio - MG. Atuação especializada em Inventários, Divórcio, Pensão Alimentícia, Direito de Família, Direito de Trânsito e Defesa de CNH. Nota máxima 5,0 ★ no Google (26 avaliações). Sede na Av. Pres. Tancredo Neves, 409 - Centro, Cláudio - MG.",
+    "⚖️ Nunes & Mota Advogados Associados — Há mais de 7 anos prestando advocacia de excelência em Januária - MG e em todo o Brasil. Atuação especializada e resolutiva em Direito Trabalhista, Cível, Consumidor, Família e Previdenciário. Nota máxima 5,0 ★ no Google (25 avaliações). Sede na Av. Cônego Ramiro Leite, 20B - Centro, Januária - MG.",
   keywords: [
-    "Rômulo Marini Advocacia",
-    "Dr. Rômulo Marini",
-    "Advogado Cláudio MG",
-    "Advocacia Cláudio Minas Gerais",
-    "Inventário Cláudio MG",
-    "Divórcio Cláudio MG",
-    "Pensão Alimentícia Cláudio MG",
-    "Advogado de Família Cláudio MG",
-    "Direito de Trânsito Cláudio MG",
-    "Recurso de Multa Cláudio MG",
-    "Suspensão CNH Cláudio MG",
-    "Cassação CNH Cláudio MG",
-    "romulo.marini",
-    "Advogado Centro Cláudio",
-    "Inventário Extrajudicial Cláudio",
-    "Partilha de Bens Cláudio MG",
-    "Advogado Minas Gerais",
+    "Nunes & Mota Advogados Associados",
+    "Nunes e Mota Advogados",
+    "Dra. Misley Nunes",
+    "Dr. Mota Advogado",
+    "Advogado Januária MG",
+    "Advocacia Januária Minas Gerais",
+    "Advogado Trabalhista Januária MG",
+    "Causas Trabalhistas Januária",
+    "Direito Cível Januária MG",
+    "Direito do Consumidor Januária MG",
+    "Advogado Norte de Minas Gerais",
+    "nunesemotaadv",
+    "Escritório de Advocacia Januária",
+    "Advogado Centro Januária",
+    "Acessibilidade Januária MG",
+    "Advogado OAB GO Januária",
   ],
-  authors: [{ name: "Dr. Rômulo Marini" }],
-  creator: "Rômulo Marini Advocacia",
-  publisher: "Rômulo Marini Advocacia",
+  authors: [
+    { name: "Dra. Misley Nunes" },
+    { name: "Nunes & Mota Advogados Associados" },
+  ],
+  creator: "Nunes & Mota Advogados Associados",
+  publisher: "Nunes & Mota Advogados Associados",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=rm1", sizes: "any" },
-      { url: "/favicon-32x32.png?v=rm1", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=rm1", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=rm1", type: "image/png", sizes: "192x192" },
-      { url: "/icon-512x512.png?v=rm1", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=nm2", sizes: "any" },
+      { url: "/favicon-32x32.png?v=nm2", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=nm2", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=nm2", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512x512.png?v=nm2", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/favicon.ico?v=rm1",
-    apple: [{ url: "/apple-icon.png?v=rm1", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=nm2",
+    apple: [{ url: "/apple-icon.png?v=nm2", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://bento.me/romulomarini",
+    url: "https://nunesemotaadv.com.br",
     title:
-      "Rômulo Marini Advocacia | Advogado em Cláudio - MG · Inventários, Divórcio, Pensão, Trânsito",
+      "Nunes & Mota Advogados Associados | Advocacia em Januária - MG · Trabalhista, Cível e Consumidor",
     description:
-      "⚖️ Advocacia de excelência, ética inegociável e defesa estratégica em Inventários, Divórcio, Pensão e Trânsito. Nota 5,0 ★ no Google (26 avaliações). Sede na Av. Pres. Tancredo Neves, 409 - Centro, Cláudio - MG.",
-    siteName: "Rômulo Marini Advocacia",
+      "⚖️ Há mais de 7 anos dedicados à defesa combativa e estratégica dos seus direitos. Nota máxima 5,0 ★ no Google (25 avaliações). Sede na Av. Cônego Ramiro Leite, 20B - Centro, Januária - MG.",
+    siteName: "Nunes & Mota Advogados Associados",
     images: [
       {
         url: "/logo.png",
         width: 1024,
         height: 512,
-        alt: "Rômulo Marini Advocacia",
+        alt: "Nunes & Mota Advogados Associados",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Rômulo Marini Advocacia | Advogado em Cláudio - MG · Inventários, Divórcio, Pensão, Trânsito",
+      "Nunes & Mota Advogados Associados | Advocacia em Januária - MG",
     description:
-      "⚖️ Advocacia com rigor técnico, atendimento aconchegante e resolutivo. Nota 5,0 ★ no Google (26 avaliações). Sede na Av. Pres. Tancredo Neves, 409 - Centro, Cláudio - MG.",
+      "⚖️ Advocacia com rigor técnico, atendimento acolhedor e alta resolutividade. Nota 5,0 ★ no Google (25 avaliações). Sede na Av. Cônego Ramiro Leite, 20B - Centro, Januária - MG.",
     images: ["/logo.png"],
   },
 };
@@ -119,41 +121,42 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Rômulo Marini Advocacia",
-    alternateName: "Dr. Rômulo Marini | Advogado em Cláudio - MG",
-    legalName: "Rômulo Marini Advocacia",
-    telephone: "+55-37-98414-2250",
-    email: "romulomarini1@hotmail.com",
-    url: "https://bento.me/romulomarini",
+    name: "Nunes & Mota Advogados Associados",
+    alternateName: "Nunes & Mota Advogados | Januária - MG",
+    legalName: "Nunes & Mota Advogados Associados",
+    telephone: "+55-38-99948-0028",
+    email: "contato@nunesemotaadv.com.br",
+    url: "https://nunesemotaadv.com.br",
     image: "/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Av. Pres. Tancredo Neves, 409 - Centro",
-      addressLocality: "Cláudio",
+      streetAddress: "Av. Cônego Ramiro Leite, 20B - Centro",
+      addressLocality: "Januária",
       addressRegion: "MG",
-      postalCode: "35530-000",
+      postalCode: "39480-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "-20.4439",
-      longitude: "-44.7674",
+      latitude: "-15.4833",
+      longitude: "-44.3667",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "26",
+      reviewCount: "25",
       bestRating: "5",
       worstRating: "1",
     },
     areaServed: [
-      "Cláudio",
-      "Divinópolis",
-      "Carmo do Cajuru",
-      "Itapecerica",
-      "Oliveira",
-      "Carmópolis de Minas",
+      "Januária",
+      "Montes Claros",
+      "São Francisco",
+      "Pedras de Maria da Cruz",
+      "Itacarambi",
+      "Manga",
+      "Norte de Minas Gerais",
       "Minas Gerais",
       "Brasil",
     ],
@@ -167,14 +170,13 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "09:00",
-        closes: "18:00",
+        opens: "08:00",
+        closes: "17:30",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/romulo.marini/",
-      "https://bento.me/romulomarini",
-      "https://wa.me/5537984142250",
+      "https://www.instagram.com/nunesemotaadv/",
+      "https://wa.me/5538999480028",
     ],
   };
 
@@ -184,20 +186,20 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth dark`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=rm1" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rm1" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rm1" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=rm1" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/icon-512x512.png?v=rm1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=rm1" />
-        <link rel="shortcut icon" href="/favicon.ico?v=rm1" />
-        <meta name="theme-color" content="#040812" />
+        <link rel="icon" href="/favicon.ico?v=nm2" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=nm2" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=nm2" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=nm2" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon-512x512.png?v=nm2" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=nm2" />
+        <link rel="shortcut icon" href="/favicon.ico?v=nm2" />
+        <meta name="theme-color" content="#050e18" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#d4af37] selection:text-[#040812]">
+      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#16365b] selection:text-white">
         {children}
       </body>
     </html>

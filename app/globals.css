@@ -3,34 +3,42 @@
 :root {
   color-scheme: light dark;
   
-  /* Primary Midnight Onyx & Deep Navy Base */
-  --color-black-pure: #040812;
-  --color-black-surface: #070d1a;
-  --color-black-card: #0c1527;
-  --color-black-hover: #121e36;
+  /* Primary Deep Navy & Oceanic Midnight Base (Nunes & Mota Advogados) */
+  --color-black-pure: #050e18;
+  --color-black-surface: #081626;
+  --color-black-card: #0d2035;
+  --color-black-hover: #132b45;
+  --color-black-border: #1a3a5c;
 
   --color-white-pure: #ffffff;
-  --color-white-surface: #faf8f2;
+  --color-white-surface: #f8fafc;
   --color-white-card: #ffffff;
-  --color-white-muted: #f4efe6;
+  --color-white-muted: #f1f5f9;
 
-  /* Primary Logo Accent: 3D Polished Imperial Warm Gold (Rômulo Marini Advocacia) */
-  --brand-gold-shimmer: #fff4bd;
-  --brand-gold-blush: #fbf0cb;
-  --brand-gold-light: #f5d77f;
-  --brand-gold-accent: #e5b842;
-  --brand-gold-primary: #d4af37;
-  --brand-gold-rich: #a37517;
-  --brand-gold-deep: #74520a;
-  --brand-gold-dark: #4a3305;
+  /* Primary Logo Accent: 3D Sculpted Platinum & Metallic Chrome Silver */
+  --brand-silver-shimmer: #ffffff;
+  --brand-silver-platinum: #f1f5f9;
+  --brand-silver-light: #e2e8f0;
+  --brand-silver-accent: #cbd5e1;
+  --brand-silver-primary: #94a3b8;
+  --brand-silver-steel: #64748b;
+  --brand-silver-deep: #475569;
+  --brand-silver-dark: #334155;
 
-  /* Secondary Navy & Slate Tones */
-  --brand-navy-light: #e6edf7;
-  --brand-navy-muted: #8899b3;
-  --brand-navy-primary: #121e36;
-  --brand-navy-deep: #0c1527;
-  --brand-navy-midnight: #070d1a;
-  --brand-navy-pure: #040812;
+  /* Warm Architectural Lighting Accent (Office Sconces & Reception Glow) */
+  --brand-amber-shimmer: #fffbeb;
+  --brand-amber-light: #fef3c7;
+  --brand-amber-accent: #fde68a;
+  --brand-amber-primary: #f59e0b;
+  --brand-amber-deep: #d97706;
+
+  /* Deep Oceanic Slate & Navy Tones */
+  --brand-navy-light: #e2e8f0;
+  --brand-navy-muted: #849bbb;
+  --brand-navy-primary: #102947;
+  --brand-navy-deep: #0d2035;
+  --brand-navy-midnight: #081626;
+  --brand-navy-pure: #050e18;
 }
 
 @theme inline {
@@ -38,29 +46,29 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Playfair Display", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-gold-50: #fffbf0;
-  --color-gold-100: #fff4bd;
-  --color-gold-200: #fbf0cb;
-  --color-gold-300: #f5d77f;
-  --color-gold-400: #e5b842;
-  --color-gold-500: #d4af37;
-  --color-gold-600: #c59b27;
-  --color-gold-700: #a37517;
-  --color-gold-800: #74520a;
-  --color-gold-900: #4a3305;
+  --color-silver-50: #f8fafc;
+  --color-silver-100: #f1f5f9;
+  --color-silver-200: #e2e8f0;
+  --color-silver-300: #cbd5e1;
+  --color-silver-400: #94a3b8;
+  --color-silver-500: #64748b;
+  --color-silver-600: #475569;
+  --color-silver-700: #334155;
+  --color-silver-800: #1e293b;
+  --color-silver-900: #0f172a;
 
-  --color-navy-50: #eef3f9;
-  --color-navy-100: #dae4f2;
-  --color-navy-200: #b9cde6;
-  --color-navy-300: #8baed4;
-  --color-navy-400: #5889bf;
-  --color-navy-500: #366ba4;
-  --color-navy-600: #234f82;
-  --color-navy-700: #1b3964;
-  --color-navy-800: #121e36;
-  --color-navy-900: #0c1527;
-  --color-navy-950: #070d1a;
-  --color-navy-990: #040812;
+  --color-navy-50: #edf3fa;
+  --color-navy-100: #d6e4f3;
+  --color-navy-200: #b0cbe8;
+  --color-navy-300: #7eaad7;
+  --color-navy-400: #4d86c2;
+  --color-navy-500: #2f69a5;
+  --color-navy-600: #215187;
+  --color-navy-700: #1a406c;
+  --color-navy-800: #16365b;
+  --color-navy-900: #0d2035;
+  --color-navy-950: #081626;
+  --color-navy-990: #050e18;
 }
 
 html {
@@ -71,24 +79,25 @@ html {
 
 body {
   background: #ffffff;
-  color: #0b121e;
+  color: #0b1a2d;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #d4af37;
+  caret-color: #2f69a5;
 }
 
 ::selection {
-  background: #d4af37;
-  color: #040812;
+  background: #1a406c;
+  color: #ffffff;
 }
 
 .font-cinzel {
   font-family: var(--font-cinzel), "Cinzel", "Playfair Display", serif;
 }
 
-.eyebrow-gold,
+.eyebrow-silver,
 .eyebrow-navy,
 .eyebrow-dark,
-.eyebrow-light {
+.eyebrow-light,
+.eyebrow-amber {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -99,12 +108,12 @@ body {
   text-transform: uppercase;
 }
 
-.eyebrow-gold {
-  color: #c59b27;
+.eyebrow-silver {
+  color: #94a3b8;
 }
 
 .eyebrow-navy {
-  color: #121e36;
+  color: #16365b;
 }
 
 .eyebrow-dark {
@@ -112,13 +121,18 @@ body {
 }
 
 .eyebrow-light {
-  color: #f5d77f;
+  color: #cbd5e1;
 }
 
-.eyebrow-gold::before,
+.eyebrow-amber {
+  color: #d97706;
+}
+
+.eyebrow-silver::before,
 .eyebrow-navy::before,
 .eyebrow-dark::before,
-.eyebrow-light::before {
+.eyebrow-light::before,
+.eyebrow-amber::before {
   width: 1.75rem;
   height: 1.5px;
   flex: none;
@@ -151,7 +165,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #d4af37;
+  background: #16365b;
   content: "";
   transform: scaleX(0);
   transform-origin: center;
@@ -159,7 +173,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #070d1a;
+  color: #081626;
 }
 
 .nav-link:hover::after {
@@ -173,13 +187,31 @@ body {
 }
 
 .footer-link:hover {
-  color: #f5d77f;
+  color: #f1f5f9;
   transform: translateX(2px);
 }
 
-/* Luxury 3D gold text gradient calibrated to the logo */
-.text-gradient-gold {
-  background: linear-gradient(135deg, #fff4bd 0%, #f5d77f 30%, #d4af37 60%, #e5b842 80%, #a37517 100%);
+/* 3D Platinum / Silver Sculpted Text Gradient Calibrated to the Nunes & Mota Logo */
+.text-gradient-silver {
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 45%, #e0f2fe 75%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-platinum {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 45%, #f1f5f9 75%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-navy {
+  background: linear-gradient(135deg, #050e18 0%, #0d2035 50%, #1a406c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-amber {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 35%, #fde68a 70%, #f59e0b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
